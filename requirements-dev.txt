@@ -1,0 +1,5 @@
+-r requirements.txt
+black
+flake8
+pdoc3
+twine
