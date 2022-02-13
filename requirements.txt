@@ -1,0 +1,2 @@
+aiohttp>=3.8.0
+dacite>=1.6.0
