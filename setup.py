@@ -46,8 +46,9 @@ class PublishCommand(Command):
 
 setup(
     name="tmdb-python",
-    version="0.0.1",
+    version="0.0.2",
     description="Asynchronous Python library for The Movie Database (TMDB) API v3",
+    long_description=long_description,
     url="https://github.com/leandcesar/tmdb-python",
     author="Leandro César",
     author_email="ccleandroc@gmail.com",

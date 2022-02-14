@@ -1,8 +1,7 @@
-
 |PyPI Version| |PyPI License| |Code style: black|
 
 TMDb Python
-========
+===========
 
 **tmdb-python**, an async Python library for TMDb API.
 
@@ -25,9 +24,6 @@ The `TMDB API <https://www.themoviedb.org/documentation/api>`__ service
 is for those of you interested in using our movie, TV show or actor
 images and/or data in your application.
 
-To view all the methods available, you should head over to `TMDB API
-Documentation <https://developers.themoviedb.org/3>`__.
-
 A `TMDB user account <https://www.themoviedb.org/account/signup>`__ is
 required to request an API key.
 
@@ -37,9 +33,8 @@ Getting started
 Requirements
 ------------
 
--  ``python`` (Python 3.9+)
+-  ``python`` (Python >=3.9)
 -  ``pip`` (Python package manager)
--  ``aiohttp`` (Asynchronous HTTP Client/Server for Python)
 
 Install
 -------
@@ -78,9 +73,11 @@ The first step is to initialize a TMDB object and set your API Key.
     async def main():
         base = route.Base()
         base.key = "YOUR_API_KEY"
+
         movies = await route.Movie().search("fight club")
         for movie in movies:
             print(movie["name"])
+
         movies = movies.to(entity.Movies)  # convert `dict` to `entity.Movies`
         for movie in movies:
             print(movie.name)
@@ -113,8 +110,7 @@ For more information, see the `docs <https://leandcesar.github.io/tmdb-python/>`
 Configuration
 =============
 
-Initialize a TMDB object and set your API Key, language, region and
-debug logger.
+Initialize a TMDB object and set your API Key, language and region.
 
 .. code:: py
 
@@ -124,13 +120,12 @@ debug logger.
     async def main():
         base = route.Base()
         base.key = "YOUR_API_KEY"
-        base.debug = 1
         base.language = "pt-BR"
         base.region = "BR"
 
         providers = await route.Movie().providers_list()
 
-Alternatively, you can export your API key, language, region and debug
+Alternatively, you can export your API key, language and region
 logger as an environment variable.
 
 .. code:: bash
@@ -138,15 +133,13 @@ logger as an environment variable.
     $ export TMDB_KEY="YOUR_API_KEY"
     $ export TMDB_LANGUAGE="pt-BR"  # ISO 639-1
     $ export TMDB_REGION="BR"  # ISO-3166-1
-    $ export TMDB_DEBUG=1
 
-And then you will no longer need to set your API key, language, region
-and debug logger.
+And then you will no longer need to set your API key, language and region.
 
 .. code:: py
 
     async def main():
-        # implicit env vars: TMDB_KEY="YOUR_API_KEY" TMDB_LANGUAGE="pt-BR" TMDB_REGION="BR" TMDB_DEBUG=1
+        # implicit env vars: TMDB_KEY="YOUR_API_KEY" TMDB_LANGUAGE="pt-BR" TMDB_REGION="BR"
         providers = await route.Movie().providers_list()
 
 You also can set language and region on object instantiation.
@@ -154,7 +147,7 @@ You also can set language and region on object instantiation.
 .. code:: py
 
     async def main():
-        # implicit env vars: TMDB_KEY="YOUR_API_KEY" TMDB_LANGUAGE="pt-BR" TMDB_REGION="BR" TMDB_DEBUG=1
+        # implicit env vars: TMDB_KEY="YOUR_API_KEY" TMDB_LANGUAGE="pt-BR" TMDB_REGION="BR"
         movies = await route.Movie().discover()  # discover with the BR regional release date
         movies = await route.Movie(language="en-US", region="US").discover()  # discover with the US regional release date
 

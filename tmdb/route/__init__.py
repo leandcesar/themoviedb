@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from .base import Base, Response  # NOQA
+from .base import Base, Response, Response  # NOQA
 from .collection import Collection  # NOQA
 from .company import Company  # NOQA
 from .credit import Credit  # NOQA

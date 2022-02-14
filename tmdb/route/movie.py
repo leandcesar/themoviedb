@@ -1,37 +1,37 @@
 # -*- coding: utf-8 -*-
-from .base import Base
+from .base import Base, Response
 
 
 class Movie(Base):
-    async def details(self, movie_id: int, *, append: str = None, image_language: str = "null") -> dict:
+    async def details(self, movie_id: int, *, append: str = None, image_language: str = "null") -> Response:
         """Get the primary information about a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-details
         """
         return await self.request(f"movie/{movie_id}", append_to_response=append, include_image_language=image_language)
 
-    async def alternative_titles(self, movie_id: int, *, country: str = None) -> dict:
+    async def alternative_titles(self, movie_id: int, *, country: str = None) -> Response:
         """Get all of the alternative titles for a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-alternative-titles
         """
         return await self.request(f"movie/{movie_id}/alternative_titles", country=country)
 
-    async def certifications(self) -> dict:
+    async def certifications(self) -> Response:
         """Get an up to date list of the officially supported movie certifications on TMDB.
 
         See more: https://developers.themoviedb.org/3/certifications/get-movie-certifications
         """
         return await self.request("certification/movie/list")
 
-    async def changes(self, movie_id: int, *, start_date: str = None, end_date: str = None, page: int = 1) -> dict:
+    async def changes(self, movie_id: int, *, start_date: str = None, end_date: str = None, page: int = 1) -> Response:
         """Get the changes for a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-changes
         """
         return await self.request(f"movie/{movie_id}/changes", start_date=start_date, end_date=end_date, page=page)
 
-    async def credits(self, movie_id: int) -> dict:
+    async def credits(self, movie_id: int) -> Response:
         """Get the cast and crew for a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-credits
@@ -74,7 +74,7 @@ class Movie(Base):
         with_watch_providers: str = None,
         watch_region: str = None,
         with_watch_monetization_types: str = None,
-    ) -> dict:
+    ) -> Response:
         """Discover movies by different types of data.
 
         See more: https://developers.themoviedb.org/3/discover/movie-discover
@@ -116,91 +116,91 @@ class Movie(Base):
             with_watch_monetization_types=with_watch_monetization_types,
         )
 
-    async def external_ids(self, movie_id: int) -> dict:
+    async def external_ids(self, movie_id: int) -> Response:
         """Get the external ids for a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-external-ids
         """
         return await self.request(f"movie/{movie_id}/external_ids")
 
-    async def genres(self) -> dict:
+    async def genres(self) -> Response:
         """Get the list of official genres for movies.
 
         See more: https://developers.themoviedb.org/3/genres/get-movie-list
         """
         return await self.request("genre/movie/list")
 
-    async def keywords(self, movie_id: int) -> dict:
+    async def keywords(self, movie_id: int) -> Response:
         """Get the keywords that have been added to a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-keywords
         """
         return await self.request(f"movie/{movie_id}/keywords")
 
-    async def images(self, movie_id: int, *, include_image_language: str = None) -> dict:
+    async def images(self, movie_id: int, *, include_image_language: str = None) -> Response:
         """Get the images that belong to a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-images
         """
         return await self.request(f"movie/{movie_id}/images", include_image_language=include_image_language)
 
-    async def latest(self) -> dict:
+    async def latest(self) -> Response:
         """Get the most newly created movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-latest-movie
         """
         return await self.request("movie/latest")
 
-    async def lists(self, movie_id: int, *, page: int = 1) -> dict:
+    async def lists(self, movie_id: int, *, page: int = 1) -> Response:
         """Get a list of lists that this movie belongs to.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-lists
         """
         return await self.request(f"movie/{movie_id}/lists", page=page)
 
-    async def now_playing(self, *, page: int = 1) -> dict:
+    async def now_playing(self, *, page: int = 1) -> Response:
         """Get a list of movies in theatres.
 
         See more: https://developers.themoviedb.org/3/movies/get-now-playing
         """
         return await self.request("movie/now_playing", page=page)
 
-    async def popular(self, *, page: int = 1) -> dict:
+    async def popular(self, *, page: int = 1) -> Response:
         """Get a list of the current popular movies on TMDB.
 
         See more: https://developers.themoviedb.org/3/movies/get-popular-movies
         """
         return await self.request("movie/popular", page=page)
 
-    async def providers(self, movie_id: int) -> dict:
+    async def providers(self, movie_id: int) -> Response:
         """Get a list of the availabilities per country by provider.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-watch-providers
         """
         return await self.request(f"movie/{movie_id}/watch/providers")
 
-    async def providers_list(self) -> dict:
+    async def providers_list(self) -> Response:
         """Returns a list of the watch provider (OTT/streaming) data we have available for movies.
 
         See more: https://developers.themoviedb.org/3/watch-providers/get-movie-providers
         """
         return await self.request("watch/providers/movie", watch_region=self.region)
 
-    async def recommendations(self, movie_id: int, *, page: int = 1) -> dict:
+    async def recommendations(self, movie_id: int, *, page: int = 1) -> Response:
         """Get a list of recommended movies for a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-recommendations
         """
         return await self.request(f"movie/{movie_id}/recommendations", page=page)
 
-    async def release_dates(self, movie_id: int, *, page: int = 1) -> dict:
+    async def release_dates(self, movie_id: int, *, page: int = 1) -> Response:
         """Get the release date along with the certification for a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-release-dates
         """
         return await self.request(f"movie/{movie_id}/release_dates", page=page)
 
-    async def reviews(self, movie_id: int, *, page: int = 1) -> dict:
+    async def reviews(self, movie_id: int, *, page: int = 1) -> Response:
         """Get the user reviews for a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-reviews
@@ -215,7 +215,7 @@ class Movie(Base):
         include_adult: bool = False,
         year: int = None,
         primary_release_year: int = None,
-    ) -> dict:
+    ) -> Response:
         """Search for movies.
 
         See more: https://developers.themoviedb.org/3/search/search-movies
@@ -229,42 +229,42 @@ class Movie(Base):
             primary_release_year=primary_release_year,
         )
 
-    async def similar(self, movie_id: int, *, page: int = 1) -> dict:
+    async def similar(self, movie_id: int, *, page: int = 1) -> Response:
         """Get a list of similar movies.
 
         See more: https://developers.themoviedb.org/3/movies/get-similar-movies
         """
         return await self.request(f"movie/{movie_id}/similar", page=page)
 
-    async def top_rated(self, *, page: int = 1) -> dict:
+    async def top_rated(self, *, page: int = 1) -> Response:
         """Get the top rated movies on TMDB.
 
         See more: https://developers.themoviedb.org/3/movies/get-top-rated-movies
         """
         return await self.request("movie/top_rated", page=page)
 
-    async def translations(self, movie_id: int) -> dict:
+    async def translations(self, movie_id: int) -> Response:
         """Get a list of translations that have been created for a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-translations
         """
         return await self.request(f"movie/{movie_id}/translations")
 
-    async def trending(self, *, interval: str = "day") -> dict:
+    async def trending(self, *, interval: str = "day") -> Response:
         """Get the daily (`interval=day`) or weekly (`interval=week`) trending movies.
 
         See more: https://developers.themoviedb.org/3/trending/get-trending
         """
         return await self.request(f"trending/movie/{interval}")
 
-    async def upcoming(self, *, page: int = 1) -> dict:
+    async def upcoming(self, *, page: int = 1) -> Response:
         """Get a list of upcoming movies in theatres.
 
         See more: https://developers.themoviedb.org/3/movies/get-upcoming
         """
         return await self.request("movie/upcoming", page=page)
 
-    async def videos(self, movie_id: int, *, page: int = 1) -> dict:
+    async def videos(self, movie_id: int, *, page: int = 1) -> Response:
         """Get the videos that have been added to a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-videos
