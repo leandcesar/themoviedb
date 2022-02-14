@@ -67,8 +67,7 @@ The first step is to initialize a TMDB object and set your API Key.
 .. code:: py
 
     import asyncio
-    from tmdb import entity, route
-
+    from tmdb import route, schema
 
     async def main():
         base = route.Base()
@@ -78,7 +77,7 @@ The first step is to initialize a TMDB object and set your API Key.
         for movie in movies:
             print(movie["name"])
 
-        movies = movies.to(entity.Movies)  # convert `dict` to `entity.Movies`
+        movies = movies.to(schema.Movies)  # convert `dict` to `schema.Movies`
         for movie in movies:
             print(movie.name)
 
@@ -115,7 +114,6 @@ Initialize a TMDB object and set your API Key, language and region.
 .. code:: py
 
     from tmdb import route
-
 
     async def main():
         base = route.Base()
