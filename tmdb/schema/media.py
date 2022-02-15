@@ -39,11 +39,12 @@ class Media:
         self.genre_ids = [int(genre_id) for genre_id in self.genre_ids]
         self.name = self.title or self.name or self.original_title or self.original_name
         self.original_name = self.original_title or self.original_name
+        self.media_type = "movie" if self.original_title else "tv"
 
     def __str__(self) -> str:
         if self.year:
             return f"{self.name} ({self.year})"
-        return f"{self.name}"
+        return self.name
 
     @property
     def description(self) -> Optional[str]:
