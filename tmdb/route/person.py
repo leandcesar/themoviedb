@@ -96,9 +96,9 @@ class Person(Base):
         """
         return await self.request(f"person/{person_id}/translations")
 
-    async def trending(self, *, interval: str = "day") -> Response:
+    async def trending(self, *, interval: str = "day", page: int = 1) -> Response:
         """Get the daily (`interval=day`) or weekly (`interval=week`) trending TV shows.
 
         See more: https://developers.themoviedb.org/3/trending/get-trending
         """
-        return await self.request(f"trending/person/{interval}")
+        return await self.request(f"trending/person/{interval}", page=page)

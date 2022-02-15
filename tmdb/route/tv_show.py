@@ -251,12 +251,12 @@ class Show(Base):
         """
         return await self.request(f"tv/{tv_id}/translations")
 
-    async def trending(self, *, interval: str = "day") -> Response:
+    async def trending(self, *, interval: str = "day", page: int = 1) -> Response:
         """Get the daily (`interval=day`) or weekly (`interval=week`) trending TV shows.
 
         See more: https://developers.themoviedb.org/3/trending/get-trending
         """
-        return await self.request(f"trending/tv/{interval}")
+        return await self.request(f"trending/tv/{interval}", page=page)
 
     async def videos(self, tv_id: int) -> Response:
         """Get the videos that have been added to a TV show.

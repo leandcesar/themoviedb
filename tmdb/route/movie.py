@@ -250,12 +250,12 @@ class Movie(Base):
         """
         return await self.request(f"movie/{movie_id}/translations")
 
-    async def trending(self, *, interval: str = "day") -> Response:
+    async def trending(self, *, interval: str = "day", page: int = 1) -> Response:
         """Get the daily (`interval=day`) or weekly (`interval=week`) trending movies.
 
         See more: https://developers.themoviedb.org/3/trending/get-trending
         """
-        return await self.request(f"trending/movie/{interval}")
+        return await self.request(f"trending/movie/{interval}", page=page)
 
     async def upcoming(self, *, page: int = 1) -> Response:
         """Get a list of upcoming movies in theatres.
