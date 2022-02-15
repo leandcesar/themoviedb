@@ -4,7 +4,7 @@ from typing import Optional
 
 
 @dataclass
-class Flatrate:
+class Data:
     display_priority: Optional[int]
     logo_path: Optional[str]
     provider_id: Optional[int]
@@ -21,9 +21,9 @@ class Flatrate:
 
 @dataclass
 class ProviderData:
-    buy: Optional[list[Flatrate]]
-    flatrate: Optional[list[Flatrate]]
-    free: Optional[list[Flatrate]]
+    buy: Optional[list[Data]]
+    flatrate: Optional[list[Data]]
+    free: Optional[list[Data]]
     link: Optional[str]
 
     def __str__(self) -> str:

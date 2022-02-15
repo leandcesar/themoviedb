@@ -87,6 +87,11 @@ class Job:
     def __post_init__(self) -> None:
         self.name = self.title or self.name or self.original_title or self.original_name
 
+    def __str__(self) -> str:
+        if self.year:
+            return f"{self.name} ({self.year})"
+        return self.name
+
     @property
     def description(self) -> Optional[str]:
         return self.overview
@@ -189,7 +194,7 @@ class Person:
         return age.year
 
     @property
-    def known_for(self) -> Optional[list]:
+    def known_for(self) -> Optional[list[Job]]:
         if self.known_for_department == "Acting":
             return self.combined_credits.cast
         return self.combined_credits.crew
