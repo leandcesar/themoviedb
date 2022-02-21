@@ -130,7 +130,7 @@ class Jobs:
     crew: Optional[list[Job]]
 
     def __bool__(self) -> bool:
-        return self.cast or self.crew
+        return bool(self.cast or self.crew)
 
 
 @dataclass

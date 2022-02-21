@@ -38,7 +38,7 @@ class Images:
     profiles: Optional[list[Image]]
 
     def __bool__(self) -> bool:
-        return (
+        return bool(
             self.backdrops
             or self.logos
             or self.posters

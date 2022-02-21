@@ -39,7 +39,7 @@ class Credits:
     crew: Optional[list[Credit]]
 
     def __bool__(self) -> bool:
-        return self.cast or self.crew
+        return bool(self.cast or self.crew)
 
     @property
     def directors(self) -> Optional[list[str]]:

@@ -19,7 +19,7 @@ class AlternativeNames:
     results: Optional[list[AlternativeName]]
 
     def __bool__(self) -> bool:
-        return self.alternative_names or self.results
+        return bool(self.alternative_names or self.results)
 
     def __iter__(self) -> iter:
         return iter(self.alternative_names or self.results)

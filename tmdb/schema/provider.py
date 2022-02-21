@@ -30,7 +30,7 @@ class ProviderData:
         return self.link
 
     def __bool__(self) -> bool:
-        return self.buy or self.flatrate or self.free
+        return bool(self.buy or self.flatrate or self.free)
 
 
 @dataclass
@@ -45,7 +45,7 @@ class Providers:
     results: Optional[Provider]
 
     def __bool__(self) -> bool:
-        return self.results
+        return bool(self.results)
 
     def __getitem__(self, region: str) -> ProviderData:
         return self.results[region.upper()]

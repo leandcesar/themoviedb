@@ -41,7 +41,7 @@ class Videos:
     results: Optional[list[Video]]
 
     def __bool__(self) -> bool:
-        return self.results
+        return bool(self.results)
 
     def __iter__(self) -> iter:
         return iter(self.results)

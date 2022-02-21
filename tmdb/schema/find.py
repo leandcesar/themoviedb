@@ -15,7 +15,7 @@ class Find:
     tv_season_results: Optional[list[Media]]
 
     def __bool__(self) -> bool:
-        return (
+        return bool(
             self.movie_results
             or self.person_results
             or self.tv_episode_results

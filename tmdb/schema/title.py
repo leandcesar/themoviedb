@@ -20,7 +20,7 @@ class Titles:
     titles: Optional[list[Title]]
 
     def __bool__(self) -> bool:
-        return self.results or self.titles
+        return bool(self.results or self.titles)
 
     def __iter__(self) -> iter:
         return iter(self.results or self.titles)
