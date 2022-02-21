@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
-from datetime import date
+from datetime import date, datetime
 from typing import Any
 
 import aiohttp
@@ -9,7 +9,11 @@ from dacite import Config, from_dict
 
 class Response(dict):
     def to(self, class_type: Any) -> Any:
-        return from_dict(data_class=class_type, data=self, config=Config(type_hooks={date: date.fromisoformat}))
+        return from_dict(
+            data_class=class_type,
+            data=self,
+            config=Config(type_hooks={date: date.fromisoformat, datetime: datetime.fromisoformat}),
+        )
 
 
 class Base:
