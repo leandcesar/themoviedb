@@ -30,7 +30,7 @@ class Base:
         language: str = None,
         region: str = None,
     ):
-        self._session = session
+        self._session = session or aiohttp.ClientSession()
         self._language = language if language is not None else os.environ.get(self.TMDB_LANGUAGE, "en-US")
         self._region = region if region is not None else os.environ.get(self.TMDB_REGION, "US")
 
@@ -49,6 +49,14 @@ class Base:
     @key.setter
     def key(self, key: str) -> None:
         os.environ[self.TMDB_KEY] = key
+
+    @property
+    def session(self) -> aiohttp.ClientSession:
+        return self._session
+
+    @session.setter
+    def session(self, session: aiohttp.ClientSession) -> None:
+        self._session = session
 
     @property
     def language(self) -> str:
@@ -76,7 +84,6 @@ class Base:
         }
 
     async def request(self, path: str, method: str = "GET", **kwargs) -> Response:
-        session = self._session or aiohttp.ClientSession()
         url = f"{self.host}/{self.version}/{path}"
         params = {
             k.replace("__", "."): "true" if v is True else "false" if v is False else v
@@ -85,9 +92,7 @@ class Base:
         }
         params = {**self.default_params, **params}
 
-        response = await session.request(method, url=url, params=params)
-        if self._session is None:
-            await session.close()
+        response = await self.session.request(method, url=url, params=params)
         if not response.ok:
             response.raise_for_status()
         result = await response.json()
