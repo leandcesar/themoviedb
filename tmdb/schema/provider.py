@@ -48,4 +48,4 @@ class Providers:
         return bool(self.results)
 
     def __getitem__(self, region: str) -> ProviderData:
-        return getattr(self.results, region.upper(), None)
+        return getattr(self.results, region.upper(), ProviderData())
