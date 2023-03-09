@@ -1,0 +1,11 @@
+name: reviewdog (code review)
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: reviewdog
+    steps:
+      - uses: reviewdog/action-setup@v1
+      - run: reviewdog -version
