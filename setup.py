@@ -17,15 +17,15 @@ test_requirements = [
 
 setup(
     name="themoviedb",
-    description="Asynchronous Python library for The Movie Database (TMDb) API v3",
+    description="A modern and easy to use API wrapper for The Movie Database (TMDb) API v3 written in Python",
     long_description=readme,
-    author="Leandro César Cassimiro",
+    author="Leandro César",
     author_email="ccleandroc@gmail.com",
     url="https://github.com/leandcesar/themoviedb",
-    version="0.2.0",
+    version="0.2.1",
     license="MIT",
     python_requires=">=3.7",
-    packages=find_packages(include=["gcsa_slots", "gcsa_slots.*"]),
+    packages=find_packages(include=["themoviedb", "themoviedb.*"]),
     include_package_data=True,
     classifiers=[
         "License :: OSI Approved :: MIT License",
