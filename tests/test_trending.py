@@ -14,7 +14,7 @@ async def test_trending_movie_daily(get_data, assert_data):
         movies = await routes.Trending().movie_daily()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/trending/movie/day",
+            "https://api.themoviedb.org/3/trending/movie/day",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -37,7 +37,7 @@ async def test_trending_movie_weekly(get_data, assert_data):
         movies = await routes.Trending().movie_weekly()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/trending/movie/week",
+            "https://api.themoviedb.org/3/trending/movie/week",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -60,7 +60,7 @@ async def test_trending_person_daily(get_data, assert_data):
         people = await routes.Trending().person_daily()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/trending/person/day",
+            "https://api.themoviedb.org/3/trending/person/day",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -83,7 +83,7 @@ async def test_trending_person_weekly(get_data, assert_data):
         people = await routes.Trending().person_weekly()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/trending/person/week",
+            "https://api.themoviedb.org/3/trending/person/week",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -106,7 +106,7 @@ async def test_trending_tv_daily(get_data, assert_data):
         tvs = await routes.Trending().tv_daily()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/trending/tv/day",
+            "https://api.themoviedb.org/3/trending/tv/day",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -129,7 +129,7 @@ async def test_trending_tv_weekly(get_data, assert_data):
         tvs = await routes.Trending().tv_weekly()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/trending/tv/week",
+            "https://api.themoviedb.org/3/trending/tv/week",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",

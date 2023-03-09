@@ -368,7 +368,7 @@ async def test_movies_latest(get_data, assert_data):
         movie = await routes.Movies().latest()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/movie/latest",
+            "https://api.themoviedb.org/3/movie/latest",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -390,7 +390,7 @@ async def test_movies_now_playing(get_data, assert_data):
         movies = await routes.Movies().now_playing()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/movie/now_playing",
+            "https://api.themoviedb.org/3/movie/now_playing",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -413,7 +413,7 @@ async def test_movies_popular(get_data, assert_data):
         movies = await routes.Movies().popular()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/movie/popular",
+            "https://api.themoviedb.org/3/movie/popular",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -436,7 +436,7 @@ async def test_movies_top_rated(get_data, assert_data):
         movies = await routes.Movies().top_rated()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/movie/top_rated",
+            "https://api.themoviedb.org/3/movie/top_rated",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -459,7 +459,7 @@ async def test_movies_upcoming(get_data, assert_data):
         movies = await routes.Movies().upcoming()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/movie/upcoming",
+            "https://api.themoviedb.org/3/movie/upcoming",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
