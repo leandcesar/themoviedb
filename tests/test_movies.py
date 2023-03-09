@@ -85,7 +85,7 @@ async def test_movie_credits(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        credits = await routes.Movie(movie_id).credits()
+        credits_ = await routes.Movie(movie_id).credits()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/movie/{movie_id}/credits",
@@ -97,8 +97,8 @@ async def test_movie_credits(get_data, assert_data):
             },
         )
 
-    assert isinstance(credits, schemas.Credits)
-    assert assert_data(credits, data)
+    assert isinstance(credits_, schemas.Credits)
+    assert assert_data(credits_, data)
 
 
 @pytest.mark.asyncio
