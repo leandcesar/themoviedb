@@ -1,0 +1,20 @@
+name: codecov (coverage tests)
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Codecov
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Install requirements
+      run: pip install -r requirements-dev.txt
+    - name: Run tests and collect coverage
+      run: pytest --cov themoviedb/
+    - name: Upload coverage reports to Codecov
+      run: |
+        curl -Os https://uploader.codecov.io/latest/linux/codecov
+        chmod +x codecov
+        ./codecov -t ${CODECOV_TOKEN}
