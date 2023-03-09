@@ -1,0 +1,60 @@
+{
+    "id": 550,
+    "titles": [
+        {
+            "iso_3166_1": "AR",
+            "title": "El club de la pelea",
+            "type": ""
+        },
+        {
+            "iso_3166_1": "RS",
+            "title": "Borilački klub",
+            "type": ""
+        },
+        {
+            "iso_3166_1": "HU",
+            "title": "Harcosok Klubbja",
+            "type": ""
+        },
+        {
+            "iso_3166_1": "IL",
+            "title": "Mo'adon Krav",
+            "type": "romanization"
+        },
+        {
+            "iso_3166_1": "BR",
+            "title": "Clube da Luta",
+            "type": ""
+        },
+        {
+            "iso_3166_1": "US",
+            "title": "Fight Club",
+            "type": ""
+        },
+        {
+            "iso_3166_1": "HN",
+            "title": "El Club de la Pelea",
+            "type": ""
+        },
+        {
+            "iso_3166_1": "KR",
+            "title": "파이트 클럽",
+            "type": ""
+        },
+        {
+            "iso_3166_1": "JP",
+            "title": "ファイト・クラブ",
+            "type": ""
+        },
+        {
+            "iso_3166_1": "CN",
+            "title": "鬥陣俱樂部",
+            "type": ""
+        },
+        {
+            "iso_3166_1": "RU",
+            "title": "Бойцовский клуб",
+            "type": ""
+        }
+    ]
+}

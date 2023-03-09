@@ -1,0 +1,547 @@
+{
+    "id": 550,
+    "results": [
+        {
+            "iso_3166_1": "EG",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "2000-03-01T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "SI",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "2000-02-24T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "ZA",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "2000-01-28T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "HU",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "2000-01-27T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "EE",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "2000-01-07T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "RU",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "2000-01-13T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "JP",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-12-11T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "MY",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "2000-01-13T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "PH",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "note": "Davao",
+                    "release_date": "1999-11-17T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "IL",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-16T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "UY",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-12T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "NO",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-12T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "PL",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "2000-02-11T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "IE",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-12T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "HK",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-11T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "MX",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-05T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "DK",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-05T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "BR",
+            "release_dates": [
+                {
+                    "certification": "18",
+                    "iso_639_1": "",
+                    "note": "",
+                    "release_date": "1999-10-29T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "CH",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "de",
+                    "release_date": "1999-11-04T00:00:00.000Z",
+                    "type": 3
+                },
+                {
+                    "certification": "",
+                    "iso_639_1": "fr",
+                    "release_date": "1999-11-10T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "SK",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "2000-02-10T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "NL",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-04T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "ES",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "note": "",
+                    "release_date": "1999-11-05T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "CA",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-10-15T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "KR",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-13T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "GR",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "note": "",
+                    "release_date": "2000-02-18T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "AU",
+            "release_dates": [
+                {
+                    "certification": "R18+",
+                    "iso_639_1": "",
+                    "note": "",
+                    "release_date": "1999-11-11T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "HR",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "2000-03-09T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "SG",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-04T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "MT",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-24T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "BG",
+            "release_dates": [
+                {
+                    "certification": "c",
+                    "iso_639_1": "",
+                    "note": "",
+                    "release_date": "2012-08-28T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "FI",
+            "release_dates": [
+                {
+                    "certification": "K-18",
+                    "iso_639_1": "",
+                    "note": "",
+                    "release_date": "1999-11-12T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "AR",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-04T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "GB",
+            "release_dates": [
+                {
+                    "certification": "18",
+                    "iso_639_1": "",
+                    "note": "",
+                    "release_date": "1999-11-12T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "DE",
+            "release_dates": [
+                {
+                    "certification": "18",
+                    "iso_639_1": "",
+                    "note": "",
+                    "release_date": "1999-11-11T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "TW",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-11T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "SE",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-12-25T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "CZ",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "note": "Febio Film Festival",
+                    "release_date": "2000-01-25T00:00:00.000Z",
+                    "type": 1
+                },
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "2000-02-10T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "IS",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-05T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "US",
+            "release_dates": [
+                {
+                    "certification": "R",
+                    "iso_639_1": "",
+                    "note": "CMJ Film Festival",
+                    "release_date": "1999-09-21T00:00:00.000Z",
+                    "type": 1
+                },
+                {
+                    "certification": "R",
+                    "iso_639_1": "",
+                    "note": "Westwood, California",
+                    "release_date": "1999-10-06T00:00:00.000Z",
+                    "type": 1
+                },
+                {
+                    "certification": "R",
+                    "iso_639_1": "",
+                    "note": "",
+                    "release_date": "1999-10-15T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "BE",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-10T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "PT",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-12T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "FR",
+            "release_dates": [
+                {
+                    "certification": "16",
+                    "iso_639_1": "",
+                    "note": "",
+                    "release_date": "1999-11-10T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "NZ",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "release_date": "1999-11-11T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "TR",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "note": "",
+                    "release_date": "1999-12-10T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        },
+        {
+            "iso_3166_1": "IT",
+            "release_dates": [
+                {
+                    "certification": "",
+                    "iso_639_1": "",
+                    "note": "Venice Film Festival",
+                    "release_date": "1999-09-10T00:00:00.000Z",
+                    "type": 1
+                },
+                {
+                    "certification": "VM14",
+                    "iso_639_1": "",
+                    "note": "",
+                    "release_date": "1999-10-29T00:00:00.000Z",
+                    "type": 3
+                }
+            ]
+        }
+    ]
+}

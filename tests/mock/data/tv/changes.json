@@ -1,0 +1,545 @@
+{
+    "changes": [
+        {
+            "key": "season",
+            "items": [
+                {
+                    "id": "5725bbf49251411e9f002658",
+                    "action": "updated",
+                    "time": "2016-05-01 08:19:00 UTC",
+                    "value": {
+                        "season_id": 71881,
+                        "season_number": 6
+                    }
+                },
+                {
+                    "id": "572623e892514177440033da",
+                    "action": "updated",
+                    "time": "2016-05-01 15:42:32 UTC",
+                    "value": {
+                        "season_id": 3626,
+                        "season_number": 3
+                    }
+                },
+                {
+                    "id": "57273ad99251410387001935",
+                    "action": "updated",
+                    "time": "2016-05-02 11:32:41 UTC",
+                    "value": {
+                        "season_id": 3625,
+                        "season_number": 2
+                    }
+                },
+                {
+                    "id": "572758829251417744006124",
+                    "action": "updated",
+                    "time": "2016-05-02 13:39:14 UTC",
+                    "value": {
+                        "season_id": 71881,
+                        "season_number": 6
+                    }
+                },
+                {
+                    "id": "572777f29251416dfb00154a",
+                    "action": "updated",
+                    "time": "2016-05-02 15:53:22 UTC",
+                    "value": {
+                        "season_id": 62090,
+                        "season_number": 5
+                    }
+                },
+                {
+                    "id": "572889b69251414d730022d9",
+                    "action": "updated",
+                    "time": "2016-05-03 11:21:26 UTC",
+                    "value": {
+                        "season_id": 71881,
+                        "season_number": 6
+                    }
+                },
+                {
+                    "id": "5728dd779251414d73002c47",
+                    "action": "updated",
+                    "time": "2016-05-03 17:18:47 UTC",
+                    "value": {
+                        "season_id": 3627,
+                        "season_number": 0
+                    }
+                },
+                {
+                    "id": "57296e569251414e19000b56",
+                    "action": "updated",
+                    "time": "2016-05-04 03:36:54 UTC",
+                    "value": {
+                        "season_id": 71881,
+                        "season_number": 6
+                    }
+                },
+                {
+                    "id": "572a5a25c3a36827a4000682",
+                    "action": "updated",
+                    "time": "2016-05-04 20:23:01 UTC",
+                    "value": {
+                        "season_id": 3628,
+                        "season_number": 4
+                    }
+                },
+                {
+                    "id": "572a603cc3a368279900075e",
+                    "action": "updated",
+                    "time": "2016-05-04 20:49:00 UTC",
+                    "value": {
+                        "season_id": 3626,
+                        "season_number": 3
+                    }
+                },
+                {
+                    "id": "572af5cbc3a368121a0001da",
+                    "action": "updated",
+                    "time": "2016-05-05 07:27:07 UTC",
+                    "value": {
+                        "season_id": 71881,
+                        "season_number": 6
+                    }
+                },
+                {
+                    "id": "572cb71d92514165ee00025f",
+                    "action": "updated",
+                    "time": "2016-05-06 15:24:13 UTC",
+                    "value": {
+                        "season_id": 71881,
+                        "season_number": 6
+                    }
+                },
+                {
+                    "id": "572d7e3392514165f5001e07",
+                    "action": "updated",
+                    "time": "2016-05-07 05:33:39 UTC",
+                    "value": {
+                        "season_id": 3626,
+                        "season_number": 3
+                    }
+                },
+                {
+                    "id": "572e99abc3a3680fe5004815",
+                    "action": "updated",
+                    "time": "2016-05-08 01:43:07 UTC",
+                    "value": {
+                        "season_id": 71881,
+                        "season_number": 6
+                    }
+                },
+                {
+                    "id": "572ff78cc3a3682f5b00241c",
+                    "action": "updated",
+                    "time": "2016-05-09 02:35:56 UTC",
+                    "value": {
+                        "season_id": 71881,
+                        "season_number": 6
+                    }
+                },
+                {
+                    "id": "5732195bc3a36864e7000010",
+                    "action": "updated",
+                    "time": "2016-05-10 17:24:43 UTC",
+                    "value": {
+                        "season_id": 71881,
+                        "season_number": 6
+                    }
+                },
+                {
+                    "id": "57327b67c3a368695c00073b",
+                    "action": "updated",
+                    "time": "2016-05-11 00:23:03 UTC",
+                    "value": {
+                        "season_id": 3628,
+                        "season_number": 4
+                    }
+                },
+                {
+                    "id": "57327bbec3a368696100075c",
+                    "action": "updated",
+                    "time": "2016-05-11 00:24:30 UTC",
+                    "value": {
+                        "season_id": 62090,
+                        "season_number": 5
+                    }
+                },
+                {
+                    "id": "57327c40925141656f0006c3",
+                    "action": "updated",
+                    "time": "2016-05-11 00:26:40 UTC",
+                    "value": {
+                        "season_id": 71881,
+                        "season_number": 6
+                    }
+                },
+                {
+                    "id": "573280f2c3a3686a360007b7",
+                    "action": "updated",
+                    "time": "2016-05-11 00:46:42 UTC",
+                    "value": {
+                        "season_id": 3626,
+                        "season_number": 3
+                    }
+                },
+                {
+                    "id": "57328182925141656f00081e",
+                    "action": "updated",
+                    "time": "2016-05-11 00:49:06 UTC",
+                    "value": {
+                        "season_id": 3625,
+                        "season_number": 2
+                    }
+                },
+                {
+                    "id": "573287009251416575000a46",
+                    "action": "updated",
+                    "time": "2016-05-11 01:12:32 UTC",
+                    "value": {
+                        "season_id": 3624,
+                        "season_number": 1
+                    }
+                },
+                {
+                    "id": "573603bcc3a3687e1d0004c0",
+                    "action": "updated",
+                    "time": "2016-05-13 16:41:32 UTC",
+                    "value": {
+                        "season_id": 71881,
+                        "season_number": 6
+                    }
+                },
+                {
+                    "id": "57360669c3a3687e210004e7",
+                    "action": "updated",
+                    "time": "2016-05-13 16:52:57 UTC",
+                    "value": {
+                        "season_id": 3627,
+                        "season_number": 0
+                    }
+                },
+                {
+                    "id": "573722bcc3a3683fa30009d9",
+                    "action": "updated",
+                    "time": "2016-05-14 13:06:04 UTC",
+                    "value": {
+                        "season_id": 71881,
+                        "season_number": 6
+                    }
+                },
+                {
+                    "id": "5737239fc3a368051600025e",
+                    "action": "updated",
+                    "time": "2016-05-14 13:09:51 UTC",
+                    "value": {
+                        "season_id": 3624,
+                        "season_number": 1
+                    }
+                },
+                {
+                    "id": "573724379251410b27003ad4",
+                    "action": "updated",
+                    "time": "2016-05-14 13:12:23 UTC",
+                    "value": {
+                        "season_id": 3625,
+                        "season_number": 2
+                    }
+                },
+                {
+                    "id": "573724dcc3a36823b4002e32",
+                    "action": "updated",
+                    "time": "2016-05-14 13:15:08 UTC",
+                    "value": {
+                        "season_id": 3626,
+                        "season_number": 3
+                    }
+                },
+                {
+                    "id": "57372560c3a36805ab00028d",
+                    "action": "updated",
+                    "time": "2016-05-14 13:17:20 UTC",
+                    "value": {
+                        "season_id": 3628,
+                        "season_number": 4
+                    }
+                },
+                {
+                    "id": "5737275d9251417b3a002e53",
+                    "action": "updated",
+                    "time": "2016-05-14 13:25:49 UTC",
+                    "value": {
+                        "season_id": 62090,
+                        "season_number": 5
+                    }
+                }
+            ]
+        },
+        {
+            "key": "overview",
+            "items": [
+                {
+                    "id": "5727611ac3a3682dee000640",
+                    "action": "updated",
+                    "time": "2016-05-02 14:15:54 UTC",
+                    "iso_639_1": "el",
+                    "value": "Από τις κόκκινες αμμουδιές του Νότου και τις άγριες πεδιάδες της Ανατολής έως τον παγωμένο Βορρά και το αρχαίο Τείχος, που προστατεύει το Στέμμα από σκοτεινά όντα, οι ισχυρές οικογένειες των Επτά Βασιλείων επιδίδονται σε μια ανελέητη μάχη στη διαδοχή του Σιδερένιου Θρόνου. Μια ιστορία γεμάτη ίντριγκες και προδοσίες, ιπποτισμό και τιμή, κατακτήσεις και θριάμβους. Στο Παιχνίδι του Στέμματος, θα νικήσεις ή θα πεθάνεις.",
+                    "original_value": "Από τις κόκκινες αμμουδιές του Νότου και τις άγριες πεδιάδες της Ανατολής έως τον παγωμένο Βορρά και το αρχαίο Τοίχος, που προστατεύει το Στέμμα από σκοτεινά όντα, οι ισχυρές οικογένειες των Επτά Βασιλείων επιδίδονται σε μια ανελέητη μάχη στη διαδοχή του Σιδερένιου Θρόνου. Μια ιστορία γεμάτη ίντριγκες και προδοσίες, ιπποτισμό και τιμή, κατακτήσεις και θριάμβους. Στο Παιχνίδι του Στέμματος, θα νικήσεις ή θα πεθάνεις."
+                },
+                {
+                    "id": "5731f00ec3a36803b9000253",
+                    "action": "updated",
+                    "time": "2016-05-10 14:28:30 UTC",
+                    "iso_639_1": "uk",
+                    "value": "Серіал \"Гра Престолів\" знято за сюжетом фентезі-бестселерів \"Пісня льоду і полум'я\" Джорджа Р.Р. Мартіна (володаря премій Г'юґо та Неб'юла). З моменту свого створення \"Гра Престолів\" став одним з найдорожчих фентезі-серіалів в історії телебачення. Це одна з причин, з якої телекритики вважають серіал головним претендентом на лаври \"Володара перстенів\" (як першовідкривача жанру) на телебаченні.\n\nПодії серіалу розгортаються у фентезійному світі, мешканцями якого - амбіційні чоловіки та жінки, котрим притаманні як гідність, так і розпуста. Найцінніша річ у цьому Королівстві – Залізний Трон. Той, хто ним володіє, отримує неймовірну владу і визнання.\n\nЗа панування у Королівстві бореться одразу декілька відомих родин. Серед них: благородні Старки, змовники Ланністери, принцеса драконів Дейнеріс і її жорстокий брат Візеріс.\n\n\"Гра престолів\" – це історія про двовладдя і зраду, гідність і безчестя, завоювання й тріумф. І кожного учасника цієї гри очікує або перемога, або смерть.",
+                    "original_value": "Серіал \"Гра Престолів\" знято за сюжетом фентезі-бестселерів \"Пісня льоду і полум'я\" Джрорджа Р.Р. Мартіна (володаря премій Г'юґо та Неб'юла). З моменту свого створення \"Гра Престолів\" став одним з найдорожчих фентезі-серіалів в історії телебачення. Це одна з причин, з якої телекритики вважають серіал головним претендентом на лаври \"Володара перстенів\" (як першовідкривача жанру) на телебаченні.\n\nПодії серіалу розгортаються у фентезійному світі, мешканцями якого - амбіційні чоловіки та жінки, котрим притаманні як гідність, так і розпуста. Найцінніша річ у цьому Королівстві – Залізний Трон. Той, хто ним володіє, отримує неймовірну владу і визнання.\n\nЗа панування у Королівстві бореться одразу декілька відомих родин. Серед них: благородні Старки, змовники Ланністери, принцеса драконів Дейнеріс і її жорстокий брат Візеріс.\n\n\"Гра престолів\" – це історія про двовладдя і зраду, гідність і безчестя, завоювання й тріумф. І кожного учасника цієї гри очікує або перемога, або смерть. "
+                }
+            ]
+        },
+        {
+            "key": "production_companies",
+            "items": [
+                {
+                    "id": "57277eafc3a3681da20000df",
+                    "action": "added",
+                    "time": "2016-05-02 16:22:07 UTC",
+                    "value": {
+                        "id": 76043,
+                        "name": "Revolution Sun Studios"
+                    }
+                },
+                {
+                    "id": "57277eafc3a3681da20000e0",
+                    "action": "added",
+                    "time": "2016-05-02 16:22:07 UTC",
+                    "value": {
+                        "id": 12525,
+                        "name": "Television 360"
+                    }
+                },
+                {
+                    "id": "57277eafc3a3681da20000e1",
+                    "action": "added",
+                    "time": "2016-05-02 16:22:07 UTC",
+                    "value": {
+                        "id": 5820,
+                        "name": "Generator Entertainment"
+                    }
+                },
+                {
+                    "id": "57277eafc3a3681da20000e2",
+                    "action": "added",
+                    "time": "2016-05-02 16:22:07 UTC",
+                    "value": {
+                        "id": 12526,
+                        "name": "Bighead Littlehead"
+                    }
+                },
+                {
+                    "id": "57277eafc3a3681da20000e3",
+                    "action": "deleted",
+                    "time": "2016-05-02 16:22:07 UTC",
+                    "original_value": {
+                        "id": 4220,
+                        "name": "Management 360"
+                    }
+                }
+            ]
+        },
+        {
+            "key": "season_regular",
+            "items": [
+                {
+                    "id": "57279627c3a3681da20004ae",
+                    "action": "added",
+                    "time": "2016-05-02 18:02:15 UTC",
+                    "value": {
+                        "add_to_every_season": false,
+                        "character": "Myrcella Baratheon",
+                        "credit_id": "556b61d2c3a36826f800209b",
+                        "order": 132,
+                        "person_id": 1472584,
+                        "season_id": 71881
+                    }
+                },
+                {
+                    "id": "572796309251415f10000c27",
+                    "action": "deleted",
+                    "time": "2016-05-02 18:02:24 UTC",
+                    "original_value": {
+                        "credit_id": "556b61d2c3a36826f800209b",
+                        "person_id": 1472584,
+                        "season_id": 71881
+                    }
+                },
+                {
+                    "id": "57296f95c3a36820a7000b18",
+                    "action": "deleted",
+                    "time": "2016-05-04 03:42:13 UTC",
+                    "original_value": {
+                        "credit_id": "5256c8c019c2956ff6048504",
+                        "person_id": 73288,
+                        "season_id": 71881
+                    }
+                },
+                {
+                    "id": "57296f9bc3a3680905000b60",
+                    "action": "deleted",
+                    "time": "2016-05-04 03:42:19 UTC",
+                    "original_value": {
+                        "credit_id": "5256c8b719c2956ff60482c6",
+                        "person_id": 1223787,
+                        "season_id": 71881
+                    }
+                },
+                {
+                    "id": "57296f9fc3a3680902000bd4",
+                    "action": "deleted",
+                    "time": "2016-05-04 03:42:23 UTC",
+                    "original_value": {
+                        "credit_id": "5256c8c019c2956ff60484ca",
+                        "person_id": 1223794,
+                        "season_id": 71881
+                    }
+                },
+                {
+                    "id": "572a13dfc3a36832970018f3",
+                    "action": "added",
+                    "time": "2016-05-04 15:23:11 UTC",
+                    "value": {
+                        "add_to_every_season": false,
+                        "character": "actor",
+                        "credit_id": "572a13dfc3a36832970018f0",
+                        "order": 132,
+                        "person_id": 1615217,
+                        "season_id": 71881
+                    }
+                }
+            ]
+        },
+        {
+            "key": "images",
+            "items": [
+                {
+                    "id": "57301731c3a36874eb002c3c",
+                    "action": "added",
+                    "time": "2016-05-09 04:50:57 UTC",
+                    "value": {
+                        "poster": {
+                            "file_path": "/ciCbuYerIGdcxM8cOLcJ4qR1MLM.jpg"
+                        }
+                    }
+                },
+                {
+                    "id": "57301757c3a3685b5c0041cc",
+                    "action": "updated",
+                    "time": "2016-05-09 04:51:35 UTC",
+                    "iso_639_1": "en",
+                    "value": {
+                        "poster": {
+                            "file_path": "/ciCbuYerIGdcxM8cOLcJ4qR1MLM.jpg",
+                            "iso_639_1": "en"
+                        }
+                    },
+                    "original_value": {
+                        "poster": {
+                            "file_path": "/ciCbuYerIGdcxM8cOLcJ4qR1MLM.jpg",
+                            "iso_639_1": null
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "key": "crew",
+            "items": [
+                {
+                    "id": "5731f8bc92514153ba000016",
+                    "action": "deleted",
+                    "time": "2016-05-10 15:05:32 UTC",
+                    "original_value": {
+                        "credit_id": "5256c8c819c2956ff6048800",
+                        "department": "Production",
+                        "job": "Producer",
+                        "person_id": 176489,
+                        "season_id": 3627
+                    }
+                },
+                {
+                    "id": "5731f8c592514153ba000017",
+                    "action": "deleted",
+                    "time": "2016-05-10 15:05:41 UTC",
+                    "original_value": {
+                        "credit_id": "5256c8c819c2956ff6048800",
+                        "department": "Production",
+                        "job": "Producer",
+                        "person_id": 176489,
+                        "season_id": 3624
+                    }
+                },
+                {
+                    "id": "5731f8d5925141197c001623",
+                    "action": "deleted",
+                    "time": "2016-05-10 15:05:57 UTC",
+                    "original_value": {
+                        "credit_id": "5256c8c819c2956ff6048800",
+                        "department": "Production",
+                        "job": "Producer",
+                        "person_id": 176489,
+                        "season_id": 3628
+                    }
+                },
+                {
+                    "id": "5731f8dd9251411903001618",
+                    "action": "deleted",
+                    "time": "2016-05-10 15:06:05 UTC",
+                    "original_value": {
+                        "credit_id": "5256c8c819c2956ff6048800",
+                        "department": "Production",
+                        "job": "Producer",
+                        "person_id": 176489,
+                        "season_id": 3626
+                    }
+                },
+                {
+                    "id": "5731f8e892514143f900024f",
+                    "action": "deleted",
+                    "time": "2016-05-10 15:06:16 UTC",
+                    "original_value": {
+                        "credit_id": "5256c8c819c2956ff6048800",
+                        "department": "Production",
+                        "job": "Producer",
+                        "person_id": 176489,
+                        "season_id": 3625
+                    }
+                },
+                {
+                    "id": "5731f9169251411903001622",
+                    "action": "added",
+                    "time": "2016-05-10 15:07:02 UTC",
+                    "value": {
+                        "add_to_every_season": false,
+                        "credit_id": "5731f9169251411903001621",
+                        "department": "Production",
+                        "job": "Co-Executive Producer",
+                        "person_id": 176489,
+                        "season_id": 3625
+                    }
+                },
+                {
+                    "id": "5731f928925141439f000287",
+                    "action": "added",
+                    "time": "2016-05-10 15:07:20 UTC",
+                    "value": {
+                        "add_to_every_season": false,
+                        "credit_id": "5731f9169251411903001621",
+                        "department": "Production",
+                        "job": "Co-Executive Producer",
+                        "person_id": 176489,
+                        "season_id": 3626
+                    }
+                }
+            ]
+        }
+    ]
+}

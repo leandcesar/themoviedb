@@ -1,0 +1,57 @@
+{
+    "id": 3624,
+    "results": [
+        {
+            "id": 63056,
+            "episode_number": 1,
+            "rated": {
+                "value": 9
+            }
+        },
+        {
+            "id": 63057,
+            "episode_number": 2,
+            "rated": false
+        },
+        {
+            "id": 63058,
+            "episode_number": 3,
+            "rated": false
+        },
+        {
+            "id": 63059,
+            "episode_number": 4,
+            "rated": false
+        },
+        {
+            "id": 63060,
+            "episode_number": 5,
+            "rated": false
+        },
+        {
+            "id": 63061,
+            "episode_number": 6,
+            "rated": false
+        },
+        {
+            "id": 63062,
+            "episode_number": 7,
+            "rated": false
+        },
+        {
+            "id": 63063,
+            "episode_number": 8,
+            "rated": false
+        },
+        {
+            "id": 63064,
+            "episode_number": 9,
+            "rated": false
+        },
+        {
+            "id": 63065,
+            "episode_number": 10,
+            "rated": false
+        }
+    ]
+}

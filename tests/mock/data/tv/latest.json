@@ -1,0 +1,56 @@
+{
+    "backdrop_path": null,
+    "created_by": [],
+    "episode_run_time": [
+        30
+    ],
+    "first_air_date": "2016-08-23",
+    "genres": [
+        {
+            "id": 35,
+            "name": "Comedy"
+        },
+        {
+            "id": 10764,
+            "name": "Reality"
+        }
+    ],
+    "homepage": "http://www.trutv.com/shows/you-can-do-better",
+    "id": 67625,
+    "in_production": true,
+    "languages": [
+        "en"
+    ],
+    "last_air_date": "2016-08-30",
+    "name": "You Can Do Better",
+    "networks": [
+        {
+            "id": 364,
+            "name": "truTV"
+        }
+    ],
+    "number_of_episodes": 1,
+    "number_of_seasons": 1,
+    "origin_country": [
+        "US"
+    ],
+    "original_language": "en",
+    "original_name": "You Can Do Better",
+    "overview": null,
+    "popularity": 0,
+    "poster_path": null,
+    "production_companies": [],
+    "seasons": [
+        {
+            "air_date": "2016-08-23",
+            "episode_count": 2,
+            "id": 79695,
+            "poster_path": null,
+            "season_number": 1
+        }
+    ],
+    "status": "Returning Series",
+    "type": "Reality",
+    "vote_average": 10,
+    "vote_count": 1
+}

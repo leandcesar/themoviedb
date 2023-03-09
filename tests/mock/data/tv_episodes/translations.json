@@ -1,0 +1,445 @@
+{
+    "id": 63056,
+    "translations": [
+        {
+            "iso_3166_1": "US",
+            "iso_639_1": "en",
+            "name": "English",
+            "english_name": "English",
+            "data": {
+                "name": "Winter Is Coming",
+                "overview": "Jon Arryn, the Hand of the King, is dead. King Robert Baratheon plans to ask his oldest friend, Eddard Stark, to take Jon's place. Across the sea, Viserys Targaryen plans to wed his sister to a nomadic warlord in exchange for an army."
+            }
+        },
+        {
+            "iso_3166_1": "RS",
+            "iso_639_1": "sr",
+            "name": "Srpski",
+            "english_name": "Serbian",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "TH",
+            "iso_639_1": "th",
+            "name": "ภาษาไทย",
+            "english_name": "Thai",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "DE",
+            "iso_639_1": "de",
+            "name": "Deutsch",
+            "english_name": "German",
+            "data": {
+                "name": "Der Winter naht",
+                "overview": "Ein Deserteur der Nachtwache bringt erschreckende Nachrichten von den Ländern nördlich der Mauer, und Lord Eddard \"Ned\" Stark soll die Hand des Königs Robert Baratheon werden."
+            }
+        },
+        {
+            "iso_3166_1": "CN",
+            "iso_639_1": "zh",
+            "name": "普通话",
+            "english_name": "Mandarin",
+            "data": {
+                "name": "凛冬将至",
+                "overview": "一名守夜人军团的逃兵在临冬城外被抓获，领主艾德（奈德）·史塔克下令将其处斩。奈德对绝境长城之外的形势忧心忡忡。行刑结束后，奈德回到城中，他的夫人凯特琳带来一个令人震惊的消息：奈德的良师益友、现任首相琼恩·艾林在都城离奇死亡，罗伯特国王正启程赶往北方，希望奈德接替琼恩·艾林出任国王之手。与此同时，在狭海对岸的潘托斯，韦赛里斯·坦格利安正计划与多斯拉克游牧民族的一位重要首领卓戈卡奥结盟，凭借多斯拉克人的力量夺回本属于他的铁王座。他妹妹丹妮莉斯的终身幸福成了他手中最重要的筹码。罗伯特国王带着瑟曦·兰尼斯特王后及兰尼斯特家族的重要成员抵达临冬城。他的随行人员包括：王后的弟弟詹姆和提力昂，他们一个英俊潇洒，一个却是侏儒；12岁的乔佛里王子，王位的继承人。奈德无法拒绝国王的盛情邀请，决定南下君临城帮助国王稳定国内局势。就在罗伯特和奈德动身之前，奈德的私生子琼恩·雪诺决定北上黑城堡加盟守夜人军团，对守夜人颇为好奇的提力昂打算和雪诺一同前往。厄运突然降临到奈德的次子布兰身上，奈德和琼恩都被迫推迟了行程。"
+            }
+        },
+        {
+            "iso_3166_1": "PT",
+            "iso_639_1": "pt",
+            "name": "Português",
+            "english_name": "Portuguese",
+            "data": {
+                "name": "O Inverno Está a Chegar",
+                "overview": "Os Stark de Winterfell recebem a visita da família real. O Rei Robert Baratheon faz a Eddard Stark, Lorde de Winterfell, uma oferta que ele não pode recusar. Do outro lado do oceano, o exilado Príncipe Viserys Targaryen cria uma aliança para reconquistar o Trono de Ferro; ele dará sua irmã, Daenerys, em casamento para o selvagem Khal Drogo em troca de seu exército. De volta a Winterfell, Catelyn Stark recebe uma pista que pode implicar membros família real em um assassinato, enquanto o jovem Bran Stark faz uma perigosa descoberta."
+            }
+        },
+        {
+            "iso_3166_1": "BG",
+            "iso_639_1": "bg",
+            "name": "български език",
+            "english_name": "Bulgarian",
+            "data": {
+                "name": "Зимата идва",
+                "overview": "На север от Стената дебнат предатели и лорд Едард Старк разбира за това, след като залавя шпионин. Крал Робърт пътува на север, за да предложи на Нед Арин позицията на съветника на краля. В същото време, отвъд Тясното море Висерис Таргариен готви план да си върне трона. Той иска да омъжи сестра си Данерис за номадския командир Кал Дрого. Крал Робърт пристига във Винтерфел, където заварва съпругата си Серсей и семейство Ланистер."
+            }
+        },
+        {
+            "iso_3166_1": "IT",
+            "iso_639_1": "it",
+            "name": "Italiano",
+            "english_name": "Italian",
+            "data": {
+                "name": "L'inverno sta arrivando",
+                "overview": "Robert Baratheon, Re di Westeros, chiede aiuto al suo vecchio amico Eddard Stark per governare il suo regno. Allo stesso tempo, i due giovani Targaryen, figli del precedente sovrano, stanno cercando degli alleati per detronizzare re Robert."
+            }
+        },
+        {
+            "iso_3166_1": "RO",
+            "iso_639_1": "ro",
+            "name": "Română",
+            "english_name": "Romanian",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "ES",
+            "iso_639_1": "es",
+            "name": "Español",
+            "english_name": "Spanish",
+            "data": {
+                "name": "Se acerca el invierno",
+                "overview": "El Lord Ned Stark está preocupado por los perturbantes reportes de un desertor del Nights Watch; El Rey Robert y los Lannisters llegan a Winterfell; el exiliado Viserys Targaryen forja una nueva y poderosa alianza."
+            }
+        },
+        {
+            "iso_3166_1": "UA",
+            "iso_639_1": "uk",
+            "name": "Український",
+            "english_name": "Ukrainian",
+            "data": {
+                "name": "Зима близько",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "IL",
+            "iso_639_1": "he",
+            "name": "עִבְרִית",
+            "english_name": "Hebrew",
+            "data": {
+                "name": "החורף מתקרב",
+                "overview": "עיבוד טלוויזיוני לסדרת רבי-המכר. הסדרה מגוללת את סיפור המאבק עקוב הדם על כס המלוכה של המלך רוברט באראתיאון, ששולט על ממלכת ווסטרוז בעזרת יד ימינו, הלורד אדארד סטארק."
+            }
+        },
+        {
+            "iso_3166_1": "HR",
+            "iso_639_1": "hr",
+            "name": "Hrvatski",
+            "english_name": "Croatian",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "NL",
+            "iso_639_1": "nl",
+            "name": "Nederlands",
+            "english_name": "Dutch",
+            "data": {
+                "name": "Winter Is Coming",
+                "overview": "Er roert iets in het land waar de zomers decennia duren en de winters een leven lang kunnen aanslepen. Achter een eeuwenoude, gigantische muur van ijs in het uiterste noorden van Westeros maakt een kille vijand zich op om het land onder de voet te lopen. Robert Baratheon, de vorst van Westeros, strijkt met zijn hofhouding neer in Winterfell, bezuiden de Muur, om de hulp van zijn oude vriend Eddard Stark in te roepen. Terzelfdertijd, op een ander continent, gaan de laatste overlevenden van het vorige Targaryenregime op zoek naar een nieuwe alliantie. Ze willen hun rijk gewapenderhand heroveren op de \"usurpator\", Koning Robert..."
+            }
+        },
+        {
+            "iso_3166_1": "HU",
+            "iso_639_1": "hu",
+            "name": "Magyar",
+            "english_name": "Hungarian",
+            "data": {
+                "name": "Közeleg a tél",
+                "overview": "Westeros királyság északi határát hatalmas jeges fal választja el az örök tél birodalmától. Lord Eddard \"Ned\" Stark az északi birodalom, Deres (Winterfell) ura és az északi nemesek vezére, az ő ősei építették a Falat, amelyet az Éjszakai Őrség véd. Amikor Robert király tanácsadója és Ned mentora, Jon Arryn meghal, Robert Baratheon a barátját, Nedet kéri fel, hogy lépjen a helyébe. Eközben a régi uralkodóház, a Targaryenek utolsó leszármazottja, Viserys azt tervezi, hogy visszaszerzi a trónt. Szövetséget köt a nomád dothraki harcosokkal, és vezérüknek, Khal Drogónak adja a húga, Daenerys kezét. Baratheon király és a felesége, a Lannister-házbeli Cersei királyné Deresbe utazik. Velük tart a Lannister família több tagja: a királyné ikertestvére, Jaime, a másik testvére, a törpe Tyrion, illetve a királyné tizenkét éves fia, a trón örököse, Joffrey. Ned nem utasíthatja vissza öreg királya és barátja kérését, így a birodalom fővárosába készül. Mindeközben Havas Jon elhatározza, hogy északra utazik a Fekete Kastélyba, hogy csatlakozzon az Éjszakai Őrséghez, ahová a kíváncsi Tyrion is elkíséri. De az ifjú Bran sötét titokra bukkan, ami nem várt következményekkel jár."
+            }
+        },
+        {
+            "iso_3166_1": "BS",
+            "iso_639_1": "bs",
+            "name": "Bosanski",
+            "english_name": "Bosnian",
+            "data": {
+                "name": "Winter Is Coming",
+                "overview": "Dezerter iz Noćne straže pronađen je izvan Zimogora, na što lord Eddard \"Ned\" Stark reagira promptno i pravedno. Ujedno, događaj podiže zabrinutost zbog opasnosti u zemljama sjeverno od Zida u kojima vlada bezakonje. Po povratku kući Ned od supruge Catelyn saznaje da je njegov mentor, Jon Arryn, preminuo u glavnom gradu Zapadnih zemalja, Kraljevom Pristanu, te da se kralj Robert zaputio na sjever kako bi Nedu ponudio Arrynov položaj kraljeve desnice.\n\nZa to vrijeme, s druge strane Tijesnog mora, u Pentosu, Viserys Targaryen kuje plan kako da ponovno zasjedne na tron - sklapanjem saveza s nomadskim ratnicima Dothrakima, čijem će vođi khalu Drogou dati za ženu svoju ljupku sestru Daenerys.\n\nRobert stiže u Zimogor sa svojom suprugom, kraljicom Cersei, i ostalim članovima obitelji Lannister: njezinim bratom blizancem Jamiejem, bratom patuljkom Tyrionom i Cerseinim sinom, 12-godišnjim prijestolonasljednikom Joffreyem. Ne mogavši odbiti starog prijatelja i kralja, Ned se sprema napustiti Kraljev Pristan dok Jon Snijeg odlučuje otputovati na sjever u Crni dvorac kako bi se priključio Noćnoj straži, u pratnji znatiželjnog Tyriona. No iznenadni izdajnički čin usmjeren prema mladom Branu možda će odgoditi njihov odlazak."
+            }
+        },
+        {
+            "iso_3166_1": "RU",
+            "iso_639_1": "ru",
+            "name": "Pусский",
+            "english_name": "Russian",
+            "data": {
+                "name": "Зима близко",
+                "overview": "Отправленный на поиски одичалых отряд воинов сталкивается с куда более пугающим злом, чем племя диких людей. Винтерфелл. Лорд Эддард Старк узнает о поимке дезертира, утверждающего о возвращении белых ходоков, а дети лорда заводят домашних питомцев. Из Королевской гавани приходит известие о смерти советника короля, а также новость о намечающемся визите королевской семьи. Король Роберт Баратеон предлагает Старку не только новую должность, но и объединение семей. Пентос. Ради достижения власти Визерис Таргариен принуждает сестру Дэйенерис заключить брачный союз с кхалом Дрого."
+            }
+        },
+        {
+            "iso_3166_1": "SA",
+            "iso_639_1": "ar",
+            "name": "العربية",
+            "english_name": "Arabic",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "CZ",
+            "iso_639_1": "cs",
+            "name": "Český",
+            "english_name": "Czech",
+            "data": {
+                "name": "Zima se blíží",
+                "overview": "Lord Eddard 'Ned' Stark z Winterfellu je navštíven královskou rodinou. Jeho starý přítel a král Robert Baratheon mu učiní nabídku, kterou nemůže odmítnout. Catelyn Stark, Nedova žena, dostane vzkaz od své sestry Lysy, díky kterému by mohla obvinit členy královské rodiny z vraždy. Nedův mladý syn Bran učiní ohromující objev, díky kterému bude bojovat o holý život. Přes Úzké moře deportovaný princ Viserys Targaryen tvoří alianci s vidinou zisku Železného trůnu. Divokému válečníkovi khalu Drogovi dá za manželku svou sestru Daenerys výměnou za jeho vojenskou podporu."
+            }
+        },
+        {
+            "iso_3166_1": "FI",
+            "iso_639_1": "fi",
+            "name": "suomi",
+            "english_name": "Finnish",
+            "data": {
+                "name": "Talvi on tulossa",
+                "overview": "Kuningas Robert Baratheon saapuu Talvivaaraan tarjoamaan lordi Ned Starkille virkaa valtakunnan kakkosmiehenä."
+            }
+        },
+        {
+            "iso_3166_1": "GR",
+            "iso_639_1": "el",
+            "name": "ελληνικά",
+            "english_name": "Greek",
+            "data": {
+                "name": "Winter Is Coming",
+                "overview": "H ιστορία αρχίζει 298 χρόνια μετά την κατάκτηση της ηπείρου του Westeros από τον Aegon τον κατακτητή. Όταν ο βαρύς χειμώνας έρχεται, μια σειρά από γεγονότα ανατρέπουν την πολιτική κατάσταση και πυροδοτούν τον πόλεμο των επτά Βασιλέων."
+            }
+        },
+        {
+            "iso_3166_1": "ID",
+            "iso_639_1": "id",
+            "name": "Bahasa indonesia",
+            "english_name": "Indonesian",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "MX",
+            "iso_639_1": "es",
+            "name": "Español",
+            "english_name": "Spanish",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "PL",
+            "iso_639_1": "pl",
+            "name": "Polski",
+            "english_name": "Polish",
+            "data": {
+                "name": "Nadciąga zima",
+                "overview": "Dezerter z Nocnej Straży, będący świadkiem niewytłumaczalnych zjawisk, zostaje pojmany tuż za murami Winterfell i poddany pod sąd Lorda Eddarda \"Neda\" Starka. Po powrocie do domu Ned dowiaduje się od żony Catelyn, że jego mentor, Jon Arryn, zmarł w Królewskiej Przystani w stolicy królestwa Westeros. W tym samym czasie na drugim krańcu Wąskiego Morza w Pentos, Viserys Targaryen knuje plan, by odzyskać utracony przez jego rodzinę tron przy wsparciu koczowniczych dotrackich wojowników. W imię sojuszu jest gotów zaoferować Khalowi Drogo, przywódcy plemienia, swoją piękną siostrę Daenerys. Król Robert wraz z żoną Cersei, przybywają do Winterfell. Towarzyszą im pozostali członkowie rodziny Lannisterów - brat bliźniak królowej Jaime, kolejny brat Tyrion oraz 12-letni Joffrey. Król Robert proponuje Nedowi objęcie stanowiska namiestnika. Ned nie umie odmówić władcy, który jest jego starym przyjacielem. Przyjmuje złożoną mu propozycję i szykuje się do wyjazdu do Królewskiej Przystani. Jon Snow, pozamałżeński syn Neda, opuszcza Winterfell, by dołączyć do Nocnej Straży. Towarzyszą mu Benjen Stark i Tyrion Lannister."
+            }
+        },
+        {
+            "iso_3166_1": "TR",
+            "iso_639_1": "tr",
+            "name": "Türkçe",
+            "english_name": "Turkish",
+            "data": {
+                "name": "Bölüm 1 : Winter Is Coming",
+                "overview": "Game of Thrones’un ekranlara merhaba dediği bölüm. Karakterler arasında kimin kim olduğunu anlamamız yanında Dany’nin evlenmesi ve Bran’in pencereden aşağı atılması bölümün öne çıkan detayları arasında."
+            }
+        },
+        {
+            "iso_3166_1": "KR",
+            "iso_639_1": "ko",
+            "name": "한국어/조선말",
+            "english_name": "Korean",
+            "data": {
+                "name": "겨울이 오고 있다",
+                "overview": "블랙캐슬에서 세명의 나이트워치는 성벽밖으로 순찰한다. 그 나이트워치 중 한명이 야인들이 죽은 것을 보고, 블랙캐슬로 돌아가자고 하지만 죽은 야인들을 보지 못한 순찰대장은 이를 무시하는데..."
+            }
+        },
+        {
+            "iso_3166_1": "FR",
+            "iso_639_1": "fr",
+            "name": "Français",
+            "english_name": "French",
+            "data": {
+                "name": "L'hiver vient",
+                "overview": "Sur le continent de Westeros, un jeune patrouilleur de la Garde de Nuit, chargée de veiller sur le Mur, est condamné à mort pour désertion par Eddard Stark, seigneur de Winterfell et Gardien du Nord. Mais de sombres nouvelles arrivent de Port-Réal, la capitale des Sept Couronnes : Jon Arryn, ami intime d'Eddard et Main du roi Robert Baratheon, vient de mourir. Le roi Robert et sa cour entreprennent alors un voyage vers Winterfell, pour gratifier son ami Eddard de la charge de Main du roi. Pendant ce temps, les descendants des rois Targaryen en exil, renversés par Robert, fomentent leur retour en Westeros par un jeu d'alliance avec les Dothrakis, une tribu de guerriers nomades.\n\nAlors qu'à Winterfell les festivités vont bon train durant le séjour du roi, Brandon, l'un des fils d'Eddard Stark, fait une découverte qui lui attire les foudres de la famille royale…"
+            }
+        },
+        {
+            "iso_3166_1": "IR",
+            "iso_639_1": "fa",
+            "name": "فارسی",
+            "english_name": "Persian",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "SK",
+            "iso_639_1": "sk",
+            "name": "Slovenčina",
+            "english_name": "Slovak",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "IS",
+            "iso_639_1": "is",
+            "name": "Íslenska",
+            "english_name": "Icelandic",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "LT",
+            "iso_639_1": "lt",
+            "name": "Lietuvių",
+            "english_name": "Lithuanian",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "TW",
+            "iso_639_1": "tw",
+            "name": "",
+            "english_name": "Twi",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "BR",
+            "iso_639_1": "pt",
+            "name": "Português",
+            "english_name": "Portuguese",
+            "data": {
+                "name": "O Inverno Está Chegando",
+                "overview": "Os Stark de Winterfell recebem a visita da família real. O Rei Robert Baratheon faz a Eddard Stark uma oferta que ele não pode recusar. Do outro lado do oceano, o exilado Príncipe Viserys Targaryen cria uma aliança para reconquistar o Trono de Ferro; ele dará sua irmã, Daenerys, em casamento para o selvagem Khal Drogo em troca de seu exército. De volta a Winterfell, Catelyn Stark recebe uma pista que pode implicar no envolvimento de membros da família real em um assassinato, enquanto o jovem Bran Stark faz uma perigosa descoberta."
+            }
+        },
+        {
+            "iso_3166_1": "LB",
+            "iso_639_1": "lb",
+            "name": "",
+            "english_name": "Letzeburgesch",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "VN",
+            "iso_639_1": "vi",
+            "name": "Tiếng Việt",
+            "english_name": "Vietnamese",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "TW",
+            "iso_639_1": "zh",
+            "name": "普通话",
+            "english_name": "Mandarin",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "DK",
+            "iso_639_1": "da",
+            "name": "Dansk",
+            "english_name": "Danish",
+            "data": {
+                "name": "",
+                "overview": "En desertør opspores uden for Winterfell, hvilket fører til hurtig rettergang ved dommer Lord Eddard \"Ned\" Stark og giver anledning til bekymringer om farerne i nord. Neds mentor Jon Arryn er død i hovedstaden, og Kong Robert er på vej for at tilbyde ham Arryns job som kongens hjælper. Imens i Pentos udtænker Viserys Targaryen en plan for en alliance med Dothraki nomadekrigerne. Robert ankommer med Dronning Cersei og deres følge, og Ned forbereder sig på at tage af sted, da Jon Snow beslutter at slutte sig til Night's Watch. Men et overraskende forræderi kan sætte en stoppe for begges afgang."
+            }
+        },
+        {
+            "iso_3166_1": "EO",
+            "iso_639_1": "eo",
+            "name": "Esperanto",
+            "english_name": "Esperanto",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "SE",
+            "iso_639_1": "sv",
+            "name": "svenska",
+            "english_name": "Swedish",
+            "data": {
+                "name": "Winter Is Coming",
+                "overview": "Man hittar en desertör från Nattens Väktare utanför Winterfell, vilket leder till att lord Eddard \"Ned\" Stark skipar omedelbar rättvisa, men det ger också upphov till oro över farorna som lurar norr om muren. På andra sidan havet planerar Viserys Targaryen att ta tillbaka tronen genom att äkta sin vackra syster Daenerys med dothrakiernas ledare Khal Drogo. Kung Robert anländer till Winterfell med sin fru, drottning Cersei, och andra medlemmar av familjen Lannister. Ned tar jobbet som kungens hand och förbereder sig att lämna Winterfell, men ett dåd mot unga Bran kan fördröja avresan."
+            }
+        },
+        {
+            "iso_3166_1": "NO",
+            "iso_639_1": "no",
+            "name": "Norsk",
+            "english_name": "Norwegian",
+            "data": {
+                "name": "Winter Is Coming",
+                "overview": "En desertør fra Nattevakten blir funnet nær Vinterfall, og Lord Eddard \"Ned\" Stark må fullbyrde straffen. Neds hustru Catelyn forteller at hans mentor, Jon Arryn, har dødd i hovedstaden Kongshavn, og at kong Robert er på vei nordover for å tilby Ned stillingen som kongens hånd. Viserys Targaryen vil danne en allianse med de nomadiske Dothraki-krigerne ved å gi sin søster Daenerys til deres leder, khal Drogo. Robert ankommer med sin hustru, dronning Cersei, og andre fra Lannister-slekten: Hennes tvillingbror Jaime, dvergbroren Tyrion og hennes sønn og tronarving Joffrey. Ned kan ikke si nei til sin gamle venn kongen, og Jon Snø velger å verve seg i Nattevakten. Men en grufull handling mot unge Bran kan stanse alle planer."
+            }
+        },
+        {
+            "iso_3166_1": "CA",
+            "iso_639_1": "fr",
+            "name": "Français",
+            "english_name": "French",
+            "data": {
+                "name": "L'hiver vient",
+                "overview": "Au delà d'un gigantesque mur de protection de glace dans le nord de Westeros. Robert Baratheon, le roi, arrive avec son cortège au sud du mur de Winterfell pour demander de l'aide à son vieil ami Eddard Stark. Dans le même temps, sur un autre continent, les derniers survivants de l'ancien régime Targaryen sont à la recherche d'une nouvelle alliance pour reprendre leur royaume de \"l'usurpateur\" roi Robert..."
+            }
+        },
+        {
+            "iso_3166_1": "LV",
+            "iso_639_1": "lv",
+            "name": "Latviešu",
+            "english_name": "Latvian",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "BY",
+            "iso_639_1": "be",
+            "name": "беларуская мова",
+            "english_name": "Belarusian",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        },
+        {
+            "iso_3166_1": "CN",
+            "iso_639_1": "cn",
+            "name": "广州话 / 廣州話",
+            "english_name": "Cantonese",
+            "data": {
+                "name": "",
+                "overview": ""
+            }
+        }
+    ]
+}

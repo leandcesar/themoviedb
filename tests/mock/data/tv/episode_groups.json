@@ -1,0 +1,106 @@
+{
+    "results": [
+        {
+            "description": "All episodes chronologically split by calendar year.",
+            "episode_count": 903,
+            "group_count": 23,
+            "id": "5af83d88c3a3682ac8007b28",
+            "name": "Year Split",
+            "network": {
+                "id": 569,
+                "logo_path": "/cIMyE9cw1W4kMFGxmC17HKTnVz9.png",
+                "name": "Yomiuri Telecasting Corporation",
+                "origin_country": "JP"
+            },
+            "type": 1
+        },
+        {
+            "description": "All specials chronologically split by different groups of specials, for examples, OVAs and Magic Files.",
+            "episode_count": 50,
+            "group_count": 7,
+            "id": "5b09cf3892514146fb007a0e",
+            "name": "Specials",
+            "network": null,
+            "type": 1
+        },
+        {
+            "description": "Order in which the episodes are distributed on DVD in Japanese. The DVDs are organized in \"Parts\", while every part has several \"Volumes\" that contain the episodes. The order is a bit different from the original airing.",
+            "episode_count": 842,
+            "group_count": 26,
+            "id": "5b05d643c3a3684c89003ccb",
+            "name": "Region 2 DVD Order",
+            "network": null,
+            "type": 3
+        },
+        {
+            "description": "Order in which the episodes are distributed on DVD in german. Note: The original Japanese 1 and 2 hour specials were edited into shorter episodes of 30 minutes for German television and aired on several days. It's impossible to display this alteration here on TMDB, so the different German parts are combined and mapped to the original Japanese special.",
+            "episode_count": 140,
+            "group_count": 5,
+            "id": "5b142e06c3a368534f001141",
+            "name": "German DVD Order",
+            "network": null,
+            "type": 3
+        },
+        {
+            "description": "Order in which this show was first broadcast on German television. Note: The original Japanese 1 and 2 hour specials were edited into shorter episodes of 30 minutes for German television and aired on several days. It's impossible to display this alteration here on TMDB, so the different German parts are combined and mapped to the original Japanese special.",
+            "episode_count": 308,
+            "group_count": 4,
+            "id": "5afdcddd92514127a0001878",
+            "name": "German Broadcast",
+            "network": {
+                "id": 411,
+                "logo_path": "/ybTppkzqb3XOWKNcco144BFlosB.png",
+                "name": "RTL II",
+                "origin_country": "DE"
+            },
+            "type": 7
+        },
+        {
+            "description": "Funimation acquired the rights to distribute the first 104 episodes in North America in 2003, where they started airing on \"Cartoon Network\" on May 24, 2004. No more than 50 episodes were broadcast until Funimation made the episodes available with the launch of the \"Funimation Channel\" in November 2005 and later on their official website.",
+            "episode_count": 123,
+            "group_count": 5,
+            "id": "5afe8a960e0a262487005adf",
+            "name": "US Broadcast",
+            "network": {
+                "id": 728,
+                "logo_path": "/a5oMoSOlNaH6AydiqLm6Gf5dnAx.png",
+                "name": "Funimation Channel",
+                "origin_country": "US"
+            },
+            "type": 7
+        },
+        {
+            "description": "",
+            "episode_count": 724,
+            "group_count": 15,
+            "id": "5b05e73a9251410d94003dc1",
+            "name": "Italian Broadcast",
+            "network": null,
+            "type": 7
+        },
+        {
+            "description": "The first 73 episodes were broadcast in 2000 on network \"KBS 2\" and later replayed by \"Tooniverse\" until 2004, when the subsequent episodes were continued only on \"Tooniverse\". Note: The original Japanese 1 and 2 hour specials were edited into shorter episodes of 30 minutes and aired on several days. It's impossible to display this alteration here on TMDB, so the different Korean parts are combined and mapped to the original Japanese special.",
+            "episode_count": 691,
+            "group_count": 15,
+            "id": "5b0aaec39251411e5400769b",
+            "name": "Korean Broadcast",
+            "network": {
+                "id": 2498,
+                "logo_path": null,
+                "name": "Tooniverse",
+                "origin_country": ""
+            },
+            "type": 7
+        },
+        {
+            "description": "Order in which the episodes were broadcast in France on television channels France 3, Cartoon Network, NT1 or AB1.",
+            "episode_count": 218,
+            "group_count": 2,
+            "id": "5b0af3d59251411d2f00ace6",
+            "name": "French Broadcast",
+            "network": null,
+            "type": 7
+        }
+    ],
+    "id": 30983
+}

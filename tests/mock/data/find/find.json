@@ -1,0 +1,128 @@
+{
+    "movie_results": [
+        {
+            "adult": false,
+            "backdrop_path": "/yzpZVgaTZzDrAP1yVeCbKZH9jmA.jpg",
+            "id": 559969,
+            "title": "El Camino: A Breaking Bad Movie",
+            "original_language": "en",
+            "original_title": "El Camino: A Breaking Bad Movie",
+            "overview": "In the wake of his dramatic escape from captivity, Jesse Pinkman must come to terms with his past in order to forge some kind of future.",
+            "poster_path": "/ePXuKdXZuJx8hHMNr2yM4jY2L7Z.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                80,
+                18,
+                53,
+                28
+            ],
+            "popularity": 26.075,
+            "release_date": "2019-10-11",
+            "video": false,
+            "vote_average": 6.938,
+            "vote_count": 4207
+        }
+    ],
+    "person_results": [
+        {
+            "adult": false,
+            "id": 17419,
+            "name": "Bryan Cranston",
+            "original_name": "Bryan Cranston",
+            "media_type": "person",
+            "popularity": 74.159,
+            "gender": 2,
+            "known_for_department": "Acting",
+            "profile_path": "/7Jahy5LZX2Fo8fGJltMreAI49hC.jpg",
+            "known_for": [
+                {
+                    "adult": false,
+                    "backdrop_path": "/84XPpjGvxNyExjSuLQe0SzioErt.jpg",
+                    "id": 1396,
+                    "name": "Breaking Bad",
+                    "original_language": "en",
+                    "original_name": "Breaking Bad",
+                    "overview": "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+                    "poster_path": "/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+                    "media_type": "tv",
+                    "genre_ids": [
+                        18
+                    ],
+                    "popularity": 374.007,
+                    "first_air_date": "2008-01-20",
+                    "vote_average": 8.874,
+                    "vote_count": 11241,
+                    "origin_country": [
+                        "US"
+                    ]
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/jB5zHG1eHh0OC1S61itXNApZlLD.jpg",
+                    "id": 399174,
+                    "title": "Isle of Dogs",
+                    "original_language": "en",
+                    "original_title": "Isle of Dogs",
+                    "overview": "In the future, an outbreak of canine flu leads the mayor of a Japanese city to banish all dogs to an island that's a garbage dump. The outcasts must soon embark on an epic journey when a 12-year-old boy arrives on the island to find his beloved pet.",
+                    "poster_path": "/c0nUX6Q1ZB0P2t1Jo6EeFSVnOGQ.jpg",
+                    "media_type": "movie",
+                    "genre_ids": [
+                        12,
+                        35,
+                        16
+                    ],
+                    "popularity": 19.863,
+                    "release_date": "2018-03-23",
+                    "video": false,
+                    "vote_average": 7.861,
+                    "vote_count": 4200
+                },
+                {
+                    "adult": false,
+                    "backdrop_path": "/iVk4mVKwNE66JbBcoDwcYFvuUXM.jpg",
+                    "id": 68734,
+                    "title": "Argo",
+                    "original_language": "en",
+                    "original_title": "Argo",
+                    "overview": "As the Iranian revolution reaches a boiling point, a CIA 'exfiltration' specialist concocts a risky plan to free six Americans who have found shelter at the home of the Canadian ambassador.",
+                    "poster_path": "/m5gPWFZFIp4UJFABgWyLkbXv8GX.jpg",
+                    "media_type": "movie",
+                    "genre_ids": [
+                        18,
+                        53
+                    ],
+                    "popularity": 18.649,
+                    "release_date": "2012-10-11",
+                    "video": false,
+                    "vote_average": 7.3,
+                    "vote_count": 7507
+                }
+            ]
+        }
+    ],
+    "tv_results": [
+        {
+            "adult": false,
+            "backdrop_path": "/84XPpjGvxNyExjSuLQe0SzioErt.jpg",
+            "id": 1396,
+            "name": "Breaking Bad",
+            "original_language": "en",
+            "original_name": "Breaking Bad",
+            "overview": "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
+            "poster_path": "/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 374.007,
+            "first_air_date": "2008-01-20",
+            "vote_average": 8.874,
+            "vote_count": 11240,
+            "origin_country": [
+                "US"
+            ]
+        }
+    ],
+    "tv_episode_results": [],
+    "tv_season_results": []
+}

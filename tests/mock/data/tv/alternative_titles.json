@@ -1,0 +1,21 @@
+{
+    "id": 1399,
+    "results": [
+        {
+            "title": "Game of Thrones - Das Lied von Eis und Feuer",
+            "iso_3166_1": "DE"
+        },
+        {
+            "title": "Le Trône de fer",
+            "iso_3166_1": "FR"
+        },
+        {
+            "title": "Παιχνίδι Του Στέμματος",
+            "iso_3166_1": "GR"
+        },
+        {
+            "title": "صراع العروش",
+            "iso_3166_1": "SA"
+        }
+    ]
+}

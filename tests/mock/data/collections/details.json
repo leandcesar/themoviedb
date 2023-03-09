@@ -1,0 +1,27 @@
+{
+    "id": 10,
+    "name": "Star Wars Collection",
+    "overview": "An epic space opera theatrical film series created by George Lucas.\r The first film in the franchise was originally released on May 25, 1977, by 20th Century Fox, and became a worldwide pop culture  phenomenon, followed by two sequels, released at three-year intervals. Sixteen years after the release of the trilogy's final film, the first in a new prequel trilogy of films was released, again released at three-year intervals, with the final film released on May 19, 2005.",
+    "poster_path": null,
+    "backdrop_path": "/shDFE0i7josMt9IKXdYpnMFFgNV.jpg",
+    "parts": [
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                12
+            ],
+            "id": 11,
+            "original_language": "en",
+            "original_title": "Star Wars: Episode IV - A New Hope",
+            "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+            "release_date": "1977-05-23",
+            "poster_path": "/AbJBXaVPrdXROwb8KmgWUPU2XJX.jpg",
+            "popularity": 1.411624,
+            "title": "Star Wars: Episode IV - A New Hope",
+            "video": false,
+            "vote_average": 7.7,
+            "vote_count": 2472
+        }
+    ]
+}

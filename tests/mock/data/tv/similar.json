@@ -1,0 +1,424 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "backdrop_path": "/AwB0BmQm1GxP0BH8ZL7WPNDTkb5.jpg",
+            "first_air_date": "2016-01-05",
+            "genre_ids": [
+                10759,
+                10765
+            ],
+            "id": 64122,
+            "original_language": "en",
+            "original_name": "The Shannara Chronicles",
+            "overview": "A young Healer armed with an unpredictable magic guides a runaway Elf in her perilous quest to save the peoples of the Four Lands from an age-old Demon scourge.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/aurZJ8UsXqhGwwBnNuZsPNepY8y.jpg",
+            "popularity": 9.523348,
+            "name": "The Shannara Chronicles",
+            "vote_average": 5.5,
+            "vote_count": 61
+        },
+        {
+            "backdrop_path": "/erYc6rPUSsoxwMx4hStEjVP3X3J.jpg",
+            "first_air_date": "2012-08-07",
+            "genre_ids": [
+                16,
+                10759,
+                10765,
+                35
+            ],
+            "id": 44305,
+            "original_language": "en",
+            "original_name": "DreamWorks Dragons",
+            "overview": "DreamWorks Dragons is an American computer-animated television series airing on Cartoon Network based on the 2010 film How to Train Your Dragon. The series serves as a bridge between the first film and its 2014 sequel. Riders of Berk follows Hiccup as he tries to keep balance within the new cohabitation of Dragons and Vikings. Alongside keeping up with Berk's newest installment — A Dragon Training Academy — Hiccup, Toothless, and the rest of the Viking Teens are put to the test when they are faced with new worlds harsher than Berk, new dragons that can't all be trained, and new enemies who are looking for every reason to destroy the harmony between Vikings and Dragons all together.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/8T8bAVzaKKyDNGQ6DQB3HF80wbJ.jpg",
+            "popularity": 11.861156,
+            "name": "DreamWorks Dragons",
+            "vote_average": 7.3,
+            "vote_count": 14
+        },
+        {
+            "backdrop_path": "/kgadTwNJYYGZ7LTrw9X7KDiRCfV.jpg",
+            "first_air_date": "2006-10-01",
+            "genre_ids": [
+                18,
+                9648
+            ],
+            "id": 1405,
+            "original_language": "en",
+            "original_name": "Dexter",
+            "overview": "Dexter is an American television drama series. The series centers on Dexter Morgan, a blood spatter pattern analyst for 'Miami Metro Police Department' who also leads a secret life as a serial killer, hunting down criminals who have slipped through the cracks of justice.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/ydmfheI5cJ4NrgcupDEwk8I8y5q.jpg",
+            "popularity": 11.085982,
+            "name": "Dexter",
+            "vote_average": 7.8,
+            "vote_count": 250
+        },
+        {
+            "backdrop_path": "/d6Aidd0YoC2WYEYSJRAl63kQnYK.jpg",
+            "first_air_date": "2010-07-25",
+            "genre_ids": [
+                80,
+                18,
+                9648
+            ],
+            "id": 19885,
+            "original_language": "en",
+            "original_name": "Sherlock",
+            "overview": "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
+            "origin_country": [
+                "GB"
+            ],
+            "poster_path": "/vHXZGe5tz4fcrqki9ZANkJISVKg.jpg",
+            "popularity": 9.623731,
+            "name": "Sherlock",
+            "vote_average": 7.9,
+            "vote_count": 270
+        },
+        {
+            "backdrop_path": "/qUnPcXUBrNQn9r7i3nYxBONG9Az.jpg",
+            "first_air_date": "2007-09-19",
+            "genre_ids": [
+                35
+            ],
+            "id": 1395,
+            "original_language": "en",
+            "original_name": "Gossip Girl",
+            "overview": "Gossip Girl is an American teen drama television series based on the book series of the same name written by Cecily von Ziegesar. The series, created by Josh Schwartz and Stephanie Savage, originally ran on The CW for six seasons from September 19, 2007 to December 17, 2012. Narrated by the omniscient blogger \"Gossip Girl,\" voiced by Kristen Bell, the series revolves around the lives of privileged young adults on Manhattan's Upper East Side in New York City.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/2lDiCu0SLo0XfCL9DRQN7JRPNAv.jpg",
+            "popularity": 9.574471,
+            "name": "Gossip Girl",
+            "vote_average": 6.5,
+            "vote_count": 34
+        },
+        {
+            "backdrop_path": "/iiCCD2IEDDNSRSmWYHxw6epMNw5.jpg",
+            "first_air_date": "2015-06-30",
+            "genre_ids": [
+                18,
+                10759,
+                10765
+            ],
+            "id": 62517,
+            "original_language": "en",
+            "original_name": "Zoo",
+            "overview": "Set amidst a wave of violent animal attacks sweeping across the planet, a young renegade scientist is thrust into a race to unlock the mystery behind this pandemic before time runs out for animals and humans alike.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/8blVYBMPzLDEIeWNGFbhofL9muj.jpg",
+            "popularity": 8.719523,
+            "name": "Zoo",
+            "vote_average": 5.4,
+            "vote_count": 52
+        },
+        {
+            "backdrop_path": "/c1nR2MRShXYqY04I6V3qwebvkB7.jpg",
+            "first_air_date": "2008-09-20",
+            "genre_ids": [
+                10759,
+                18,
+                10751,
+                10765
+            ],
+            "id": 7225,
+            "original_language": "en",
+            "original_name": "Merlin",
+            "overview": "Merlin is a British fantasy-adventure television programme by Julian Jones, Jake Michie, Julian Murphy and Johnny Capps. It was broadcast on BBC One from 20 September 2008 to 24 December 2012. The show is loosely based on the Arthurian legends of the young wizard Merlin and his relationship with Arthur Pendragon but differs from traditional versions in many ways. The show was influenced by the US drama series Smallville, about the early years of Superman, and was produced by independent production company Shine Limited.\n\nThe show was greenlit by the BBC in 2006, after unsuccessful attempts. The series premiered in 2008 to mixed reviews but decent ratings, and proved popular on the BBC's digital catch-up service, iPlayer. It was commissioned by the BBC for a second series, and was picked up in the United States by one of the main broadcasters, NBC, though it later moved to the cable network Syfy due to low ratings. In 2012, the show's producers announced that its fifth series would be its last, with a two-part finale finishing the show on 24 December 2012.",
+            "origin_country": [
+                "GB"
+            ],
+            "poster_path": "/uK7Y7ajLx9bmM34COQzQ35HqlSr.jpg",
+            "popularity": 7.267267,
+            "name": "Merlin",
+            "vote_average": 6.5,
+            "vote_count": 20
+        },
+        {
+            "backdrop_path": "/abYmoifJHK2h6i4L4NatiqOCd68.jpg",
+            "first_air_date": "2015-05-14",
+            "genre_ids": [
+                18,
+                9648,
+                10765
+            ],
+            "id": 53425,
+            "original_language": "en",
+            "original_name": "Wayward Pines",
+            "overview": "Imagine the perfect American town... beautiful homes, manicured lawns, children playing safely in the streets. Now imagine never being able to leave. You have no communication with the outside world. You think you're going insane. You must be in Wayward Pines.\n\nBased on the best-selling novel “Pines” by Blake Crouch and brought to life by suspenseful storyteller M. Night Shyamalan, “Wayward Pines” is the intense new mind-bending 10-episode event thriller evocative of the classic hit “Twin Peaks.”",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/dlGyl2HuB1RFHhMtHOI8WKnR5qY.jpg",
+            "popularity": 6.170831,
+            "name": "Wayward Pines",
+            "vote_average": 6.1,
+            "vote_count": 68
+        },
+        {
+            "backdrop_path": "/qkKHndnjcb8Wxg0eEtRRFVqtkCS.jpg",
+            "first_air_date": "1989-01-08",
+            "genre_ids": [
+                18,
+                9648,
+                80,
+                10770
+            ],
+            "id": 790,
+            "original_language": "en",
+            "original_name": "Agatha Christie's Poirot",
+            "overview": "Agatha Christie's Poirot is a British television drama that premiered on ITV in 1989, where it has remained throughout its airing. David Suchet stars as the titular detective, Agatha Christie's fictional Hercule Poirot. Initially produced by LWT, the current production company is ITV Studios. In the United States, PBS and A&E have aired it as Poirot, which was the title prior to 2004. Series 13 premiered June 9, 2013 and will end with the finale, Curtain, based on the final novel Christie wrote featuring Poirot. At the programs' conclusion, every major literary work by Christie that featured the title character will have been adapted.",
+            "origin_country": [
+                "GB"
+            ],
+            "poster_path": "/5shIDhTIfRnmUAXMS4wF2GF0NFO.jpg",
+            "popularity": 5.997767,
+            "name": "Agatha Christie's Poirot",
+            "vote_average": 6.6,
+            "vote_count": 19
+        },
+        {
+            "backdrop_path": "/qUQYNMnd7YsvIWde75g5WGlmEhh.jpg",
+            "first_air_date": "2013-09-28",
+            "genre_ids": [
+                18,
+                14,
+                12,
+                10749
+            ],
+            "id": 47054,
+            "original_language": "en",
+            "original_name": "Atlantis",
+            "overview": "A fantasy drama set in a world of legendary heroes and mythical creatures. Far from home and desperate for answers, Jason washes up on the shores of an ancient land. A mysterious place; a world of bull leaping, of snake haired goddesses and of palaces so vast it was said they were built by giants - this is the city of Atlantis. Aided by his two new friends, Pythagoras and Hercules, Jason embarks on a voyage of discovery, and salvation, which sees him brush shoulders with Medusa, come face to face with the Minotaur and even do battle with the dead.",
+            "origin_country": [
+                "GB"
+            ],
+            "poster_path": "/uu8MzxgPFuLmpKU9tkmTTngKmZq.jpg",
+            "popularity": 5.962557,
+            "name": "Atlantis",
+            "vote_average": 6.5,
+            "vote_count": 13
+        },
+        {
+            "backdrop_path": "/lYy3CCH3CLmTpzi2zT3sIMQjUvh.jpg",
+            "first_air_date": "2015-12-16",
+            "genre_ids": [
+                18,
+                14,
+                27
+            ],
+            "id": 64432,
+            "original_language": "en",
+            "original_name": "The Magicians",
+            "overview": "Brakebills University is a secret institution specializing in magic. There, amidst an unorthodox education of spellcasting, a group of twenty-something friends soon discover that a magical fantasy world they read about as children is all too real— and poses grave danger to humanity.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/epouilElDvE9FggEmIcArpuzaq.jpg",
+            "popularity": 5.960019,
+            "name": "The Magicians",
+            "vote_average": 6.5,
+            "vote_count": 34
+        },
+        {
+            "backdrop_path": "/4kHJEYFrQI37G5BksGNovDJCovR.jpg",
+            "first_air_date": "2008-09-07",
+            "genre_ids": [
+                18
+            ],
+            "id": 10545,
+            "original_language": "en",
+            "original_name": "True Blood",
+            "overview": "True Blood is an American television drama series created and produced by Alan Ball. It is based on The Southern Vampire Mysteries series of novels by Charlaine Harris, detailing the co-existence of vampires and humans in Bon Temps, a fictional, small town in northwestern Louisiana. The series centers on the adventures of Sookie Stackhouse, a telepathic waitress with an otherworldly quality.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/fuj32CbJSWl5UldUNWFa0xDW93.jpg",
+            "popularity": 5.935627,
+            "name": "True Blood",
+            "vote_average": 7.2,
+            "vote_count": 100
+        },
+        {
+            "backdrop_path": "/eiq8Xwi06l4ZDNxGW1JfjmkmYfB.jpg",
+            "first_air_date": "2016-09-01",
+            "genre_ids": [
+                14
+            ],
+            "id": 62417,
+            "original_language": "en",
+            "original_name": "Emerald City",
+            "overview": "In the blink of a tornado’s eye, 20-year-old Dorothy Gale and her K9 police dog are transported to another world, one far removed from our own — a mystical land of competing kingdoms, lethal warriors, dark magic and a bloody battle for supremacy. This is the fabled Land of Oz in a way you’ve never seen before, where wicked witches don’t stay dead for long and a young girl becomes a headstrong warrior who holds the fate of kingdoms in her hands.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/uCegP14SuNmUyGARqJOeEUD3Pnq.jpg",
+            "popularity": 6.312121,
+            "name": "Emerald City",
+            "vote_average": 7,
+            "vote_count": 1
+        },
+        {
+            "backdrop_path": "/hUrQL8gwgIBv2LrxjObQs9kmOUy.jpg",
+            "first_air_date": "2014-07-27",
+            "genre_ids": [
+                18,
+                10768
+            ],
+            "id": 61112,
+            "original_language": "en",
+            "original_name": "Manhattan",
+            "overview": "Set against the backdrop of the greatest clandestine race against time in the history of science with the mission to build the world's first atomic bomb in Los Alamos, New Mexico. Flawed scientists and their families attempt to co-exist in a world where secrets and lies infiltrate every aspect of their lives.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/kd1lODKq9ehIYeMBKfrtwdq7Rki.jpg",
+            "popularity": 5.752142,
+            "name": "Manhattan",
+            "vote_average": 7.7,
+            "vote_count": 19
+        },
+        {
+            "backdrop_path": "/1LrtAhWPSEetJLjblXvnaYtl7eA.jpg",
+            "first_air_date": "2001-09-09",
+            "genre_ids": [
+                18,
+                10768
+            ],
+            "id": 4613,
+            "original_language": "en",
+            "original_name": "Band of Brothers",
+            "overview": "Drawn from interviews with survivors of Easy Company, as well as their journals and letters, Band of Brothers chronicles the experiences of these men from paratrooper training in Georgia through the end of the war. As an elite rifle company parachuting into Normandy early on D-Day morning, participants in the Battle of the Bulge, and witness to the horrors of war, the men of Easy knew extraordinary bravery and extraordinary fear - and became the stuff of legend. Based on Stephen E. Ambrose's acclaimed book of the same name.",
+            "origin_country": [
+                "GB",
+                "US"
+            ],
+            "poster_path": "/bUrt6oeXd04ImEwQjO9oLjRguaA.jpg",
+            "popularity": 5.557027,
+            "name": "Band of Brothers",
+            "vote_average": 7.7,
+            "vote_count": 93
+        },
+        {
+            "backdrop_path": "/jPT0fSpq1VPgqFbOgQgrG88u6ao.jpg",
+            "first_air_date": "2010-03-14",
+            "genre_ids": [
+                36,
+                18,
+                12,
+                10752,
+                10759
+            ],
+            "id": 16997,
+            "original_language": "en",
+            "original_name": "The Pacific",
+            "overview": "The series is a companion piece to the 2001 miniseries Band of Brothers and focuses on the United States Marine Corps' actions in the Pacific Theater of Operations within the wider Pacific War. Whereas Band of Brothers followed one company of the 506th Parachute Infantry Regiment through the European Theater, The Pacific centers on the experiences of three Marines who were all in different regiments of the 1st Marine Division.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/xV7FKNqOwnO3aJSiRM8WCrwdRS8.jpg",
+            "popularity": 5.48438,
+            "name": "The Pacific",
+            "vote_average": 7.7,
+            "vote_count": 25
+        },
+        {
+            "backdrop_path": "/uM821Y4vXii5fJaY85cg9gNzatK.jpg",
+            "first_air_date": "2016-08-14",
+            "genre_ids": [
+                18,
+                10751
+            ],
+            "id": 67265,
+            "original_language": "en",
+            "original_name": "Chesapeake Shores",
+            "overview": "A divorced mom deals with an old romance and complicated family issues when she returns to her hometown with her twin daughters.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/5V0BByqbw4eE4OWkDLJsoY6y3dS.jpg",
+            "popularity": 5.374845,
+            "name": "Chesapeake Shores",
+            "vote_average": 8,
+            "vote_count": 1
+        },
+        {
+            "backdrop_path": "/zPPZJUsWxHq1vXTcjDLTcc8MR4H.jpg",
+            "first_air_date": "2014-08-09",
+            "genre_ids": [
+                12,
+                18,
+                14,
+                10749
+            ],
+            "id": 56570,
+            "original_language": "en",
+            "original_name": "Outlander",
+            "overview": "The story of Claire Randall, a married combat nurse from 1945 who is mysteriously swept back in time to 1743, where she is immediately thrown into an unknown world where her life is threatened. When she is forced to marry Jamie, a chivalrous and romantic young Scottish warrior, a passionate affair is ignited that tears Claire's heart between two vastly different men in two irreconcilable lives.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/vDlzurRFx55zfvuxieMuiG8Fvzc.jpg",
+            "popularity": 5.297085,
+            "name": "Outlander",
+            "vote_average": 5.8,
+            "vote_count": 109
+        },
+        {
+            "backdrop_path": "/kiQHXeRqfACKzR0cBPdrVPWOjbU.jpg",
+            "first_air_date": "2015-10-10",
+            "genre_ids": [
+                28,
+                36,
+                10749
+            ],
+            "id": 63333,
+            "original_language": "en",
+            "original_name": "The Last Kingdom",
+            "overview": "A show of heroic deeds and epic battles with a thematic depth that embraces politics, religion, warfare, courage, love, loyalty and our universal search for identity. Combining real historical figures and events with fictional characters, it is the story of how a people combined their strength under one of the most iconic kings of history in order to reclaim their land for themselves and build a place they call home.",
+            "origin_country": [
+                "GB"
+            ],
+            "poster_path": "/52fBNs8N0xZXHcCm1MDs0nvLQKK.jpg",
+            "popularity": 5.329834,
+            "name": "The Last Kingdom",
+            "vote_average": 7.7,
+            "vote_count": 20
+        },
+        {
+            "backdrop_path": "/cJotBRRn7zj4Ed95ibusfU4pqis.jpg",
+            "first_air_date": "2013-06-24",
+            "genre_ids": [
+                18,
+                9648,
+                10765
+            ],
+            "id": 46331,
+            "original_language": "en",
+            "original_name": "Under the Dome",
+            "overview": "Under the Dome is based on the novel of the same name by Stephen King. It tells the story of the residents of the small town of Chester's Mill in Maine, where a massive, transparent, indestructible dome suddenly cuts them off from the rest of the world. With no Internet access, no mobile signals and limited radio communication, the people trapped inside must find their own ways to survive with diminishing resources and rising tensions. While military forces, the government and the media positioned outside of this surrounding barrier attempt to break it down, a small group of people inside attempt to figure out what the dome is, where it came from, and when (and if) it will go away.",
+            "origin_country": [
+                "US"
+            ],
+            "poster_path": "/iFnCH70twxNDICQlDuCcoEt4Jma.jpg",
+            "popularity": 4.961561,
+            "name": "Under the Dome",
+            "vote_average": 6.6,
+            "vote_count": 134
+        }
+    ],
+    "total_pages": 10,
+    "total_results": 185
+}

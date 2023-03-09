@@ -1,0 +1,417 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/wUvnilQQ6LWNvSHrYZb5x4ALjL1.jpg",
+            "id": 937278,
+            "title": "A Man Called Otto",
+            "original_language": "en",
+            "original_title": "A Man Called Otto",
+            "overview": "When a lively young family moves in next door, grumpy widower Otto Anderson meets his match in a quick-witted, pregnant woman named Marisol, leading to an unlikely friendship that turns his world upside down.",
+            "poster_path": "/130H1gap9lFfiTF9iDrqNIkFvC9.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "popularity": 788.46,
+            "release_date": "2022-12-28",
+            "video": false,
+            "vote_average": 7.855,
+            "vote_count": 455
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/26YLjaC1udGEmSvlM1P5eBGWO5h.jpg",
+            "id": 677179,
+            "title": "Creed III",
+            "original_language": "en",
+            "original_title": "Creed III",
+            "overview": "After dominating the boxing world, Adonis Creed has been thriving in both his career and family life. When a childhood friend and former boxing prodigy, Damien Anderson, resurfaces after serving a long sentence in prison, he is eager to prove that he deserves his shot in the ring. The face-off between former friends is more than just a fight. To settle the score, Adonis must put his future on the line to battle Damien - a fighter who has nothing to lose.",
+            "poster_path": "/cvsXj3I9Q2iyyIo95AecSd1tad7.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                18,
+                28
+            ],
+            "popularity": 1194.546,
+            "release_date": "2023-03-01",
+            "video": false,
+            "vote_average": 7.187,
+            "vote_count": 131
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8QMWSEeotCy7dhB8EAZgCuNaQtb.jpg",
+            "id": 850871,
+            "title": "Sayen",
+            "original_language": "es",
+            "original_title": "Sayen",
+            "overview": "Sayen is hunting down the men who murdered her grandmother. Using her training and knowledge of nature, she is able to turn the tables on them, learning of a conspiracy from a corporation that threatens her people's ancestral lands.",
+            "poster_path": "/aCy61aU7BMG7SfhkaAaasS0KzUO.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                53,
+                28
+            ],
+            "popularity": 22.681,
+            "release_date": "2023-03-03",
+            "video": false,
+            "vote_average": 7.8,
+            "vote_count": 5
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/wVxlmhk4OS2eCr0wTQcM4zJ20ml.jpg",
+            "id": 906221,
+            "title": "Magic Mike's Last Dance",
+            "original_language": "en",
+            "original_title": "Magic Mike's Last Dance",
+            "overview": "Mike Lane takes to the stage again after a lengthy hiatus, following a business deal that went bust, leaving him broke and taking bartender gigs in Florida. For what he hopes will be one last hurrah, Mike heads to London with a wealthy socialite who lures him with an offer he can’t refuse… and an agenda all her own. With everything on the line, once Mike discovers what she truly has in mind, will he—and the roster of hot new dancers he’ll have to whip into shape—be able to pull it off?",
+            "poster_path": "/5C9rerMqV1X0jnRdbbsM1BswVI2.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                35,
+                18,
+                10749
+            ],
+            "popularity": 380.902,
+            "release_date": "2023-02-09",
+            "video": false,
+            "vote_average": 7.027,
+            "vote_count": 91
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/7WrT7uLg54716D3pZIavAfmR0uB.jpg",
+            "id": 818648,
+            "title": "Love at First Kiss",
+            "original_language": "es",
+            "original_title": "Eres tú",
+            "overview": "The story of Javier who, at the age of 16, while kissing a girl for the first time, realized that he had a gift of romantic clairvoyance. Javier can see the future... and he finally knows who the love of his life is.",
+            "poster_path": "/cyawjtxqR4XesB5sJuwV4SsMmuc.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                10749,
+                35
+            ],
+            "popularity": 62.887,
+            "release_date": "2023-03-03",
+            "video": false,
+            "vote_average": 6,
+            "vote_count": 27
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6A42xrhuyHboDRCsEOkMI0RZicS.jpg",
+            "id": 760099,
+            "title": "Living",
+            "original_language": "en",
+            "original_title": "Living",
+            "overview": "In 1950s London, a humorless civil servant decides to take time off work to experience life after receiving a grim diagnosis.",
+            "poster_path": "/ftUdaxguhUoPAtwTkSLNglAaqfd.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 30.871,
+            "release_date": "2022-11-04",
+            "video": false,
+            "vote_average": 7.189,
+            "vote_count": 66
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/5fxTB08O7CW1hAcN2MWOKodp1h1.jpg",
+            "id": 615777,
+            "title": "Babylon",
+            "original_language": "en",
+            "original_title": "Babylon",
+            "overview": "A tale of outsized ambition and outrageous excess, tracing the rise and fall of multiple characters in an era of unbridled decadence and depravity during Hollywood's transition from silent films and to sound films in the late 1920s.",
+            "poster_path": "/wjOHjWCUE0YzDiEzKv8AfqHj3ir.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                18,
+                35
+            ],
+            "popularity": 331.539,
+            "release_date": "2022-12-22",
+            "video": false,
+            "vote_average": 7.589,
+            "vote_count": 1244
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/b1Y8SUb12gPHCSSSNlbX4nB3IKy.jpg",
+            "id": 315162,
+            "title": "Puss in Boots: The Last Wish",
+            "original_language": "en",
+            "original_title": "Puss in Boots: The Last Wish",
+            "overview": "Puss in Boots discovers that his passion for adventure has taken its toll: He has burned through eight of his nine lives, leaving him with only one life left. Puss sets out on an epic journey to find the mythical Last Wish and restore his nine lives.",
+            "poster_path": "/kuf6dutpsT0vSVehic3EZIqkOBt.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                16,
+                12,
+                35,
+                10751
+            ],
+            "popularity": 2820.651,
+            "release_date": "2022-12-07",
+            "video": false,
+            "vote_average": 8.426,
+            "vote_count": 4259
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg",
+            "id": 505642,
+            "title": "Black Panther: Wakanda Forever",
+            "original_language": "en",
+            "original_title": "Black Panther: Wakanda Forever",
+            "overview": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death.  As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+            "poster_path": "/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "popularity": 2949.117,
+            "release_date": "2022-11-09",
+            "video": false,
+            "vote_average": 7.367,
+            "vote_count": 3809
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/r7Dfg9aRZ78gJsmDlCirIIlNH3d.jpg",
+            "id": 785084,
+            "title": "The Whale",
+            "original_language": "en",
+            "original_title": "The Whale",
+            "overview": "A reclusive English teacher suffering from severe obesity attempts to reconnect with his estranged teenage daughter for one last chance at redemption.",
+            "poster_path": "/jQ0gylJMxWSL490sy0RrPj1Lj7e.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 784.344,
+            "release_date": "2022-12-09",
+            "video": false,
+            "vote_average": 7.988,
+            "vote_count": 760
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/22z44LPkMyf5nyyXvv8qQLsbom.jpg",
+            "id": 631842,
+            "title": "Knock at the Cabin",
+            "original_language": "en",
+            "original_title": "Knock at the Cabin",
+            "overview": "While vacationing at a remote cabin, a young girl and her two fathers are taken hostage by four armed strangers who demand that the family make an unthinkable choice to avert the apocalypse. With limited access to the outside world, the family must decide what they believe before all is lost.",
+            "poster_path": "/dm06L9pxDOL9jNSK4Cb6y139rrG.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                27,
+                9648,
+                53
+            ],
+            "popularity": 4286.16,
+            "release_date": "2023-02-01",
+            "video": false,
+            "vote_average": 6.566,
+            "vote_count": 774
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/72Cz99QcfnlcyUy7PePQZISVxxr.jpg",
+            "id": 1073337,
+            "title": "10 Days of a Good Man",
+            "original_language": "tr",
+            "original_title": "İyi Adamın 10 Günü",
+            "overview": "A lawyer turned private investigator takes on a missing person case, propelling him on an unexpected and life-altering quest.",
+            "poster_path": "/eQnY9isD2u7jdSkyfy8qjdMgQnT.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                9648,
+                53,
+                80
+            ],
+            "popularity": 25.43,
+            "release_date": "2023-03-03",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 5
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/tpu9ILyknA4oE3vYUfPK7C4Aztw.jpg",
+            "id": 1081313,
+            "title": "Tonight You're Sleeping with Me",
+            "original_language": "pl",
+            "original_title": "Dzisiaj śpisz ze mną",
+            "overview": "Stuck in a passionless marriage, a journalist must choose between her distant but loving husband and a younger ex-boyfriend who has reentered her life",
+            "poster_path": "/sexnKxpAOl0wfixYC3RataZD4pI.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                10749,
+                18
+            ],
+            "popularity": 120.284,
+            "release_date": "2023-03-01",
+            "video": false,
+            "vote_average": 6.714,
+            "vote_count": 21
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/mXBth6deOA3XLU6HKwoNor9UivP.jpg",
+            "id": 758769,
+            "title": "Unwelcome",
+            "original_language": "en",
+            "original_title": "Unwelcome",
+            "overview": "Londoners Maya and Jamie escape their urban nightmare to the tranquility of rural Ireland only to discover malevolent, murderous goblins lurking in the gnarled, ancient wood at the foot of their new garden. When heavily pregnant Maya’s relationship with a local family turns sour, who – or what – will come to her rescue and what extremes will she go to to protect her unborn child?",
+            "poster_path": "/88bGObx8YKLQDOOhcrBHHzXpiAv.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                27
+            ],
+            "popularity": 22.522,
+            "release_date": "2023-01-27",
+            "video": false,
+            "vote_average": 6,
+            "vote_count": 15
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/gslT8t964rYXyqRcqrxFh77ikyb.jpg",
+            "id": 640146,
+            "title": "Ant-Man and the Wasp: Quantumania",
+            "original_language": "en",
+            "original_title": "Ant-Man and the Wasp: Quantumania",
+            "overview": "Super-Hero partners Scott Lang and Hope van Dyne, along with with Hope's parents Janet van Dyne and Hank Pym, and Scott's daughter Cassie Lang, find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that will push them beyond the limits of what they thought possible.",
+            "poster_path": "/ngl2FKBlU4fhbdsrtdom9LVLBXw.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                12,
+                878,
+                35
+            ],
+            "popularity": 1109.314,
+            "release_date": "2023-02-15",
+            "video": false,
+            "vote_average": 6.473,
+            "vote_count": 868
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/dlrWhn0G3AtxYUx2D9P2bmzcsvF.jpg",
+            "id": 536554,
+            "title": "M3GAN",
+            "original_language": "en",
+            "original_title": "M3GAN",
+            "overview": "A brilliant toy company roboticist uses artificial intelligence to develop M3GAN, a life-like doll programmed to emotionally bond with her newly orphaned niece. But when the doll's programming works too well, she becomes overprotective of her new friend with terrifying results.",
+            "poster_path": "/d9nBoowhjiiYc4FBNtQkPY7c11H.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                878,
+                27,
+                35
+            ],
+            "popularity": 1420.255,
+            "release_date": "2022-12-28",
+            "video": false,
+            "vote_average": 7.503,
+            "vote_count": 1882
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6VX3TrYBtnMOHp3v44lIWWnEp7N.jpg",
+            "id": 852096,
+            "title": "We Have a Ghost",
+            "original_language": "en",
+            "original_title": "We Have a Ghost",
+            "overview": "After Kevin finds a ghost named Ernest haunting his new home, he becomes an overnight social media sensation. But when Kevin and Ernest go rogue to investigate the mystery of the latter's past, they become targets of the CIA.",
+            "poster_path": "/xo0fgAUoEeVQ7KsKeMWypyglvnf.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                14,
+                10751,
+                35,
+                12
+            ],
+            "popularity": 680.905,
+            "release_date": "2023-02-24",
+            "video": false,
+            "vote_average": 6.668,
+            "vote_count": 193
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/ovM06PdF3M8wvKb06i4sjW3xoww.jpg",
+            "id": 76600,
+            "title": "Avatar: The Way of Water",
+            "original_language": "en",
+            "original_title": "Avatar: The Way of Water",
+            "overview": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
+            "poster_path": "/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                878,
+                12,
+                28
+            ],
+            "popularity": 1363.086,
+            "release_date": "2022-12-14",
+            "video": false,
+            "vote_average": 7.737,
+            "vote_count": 5599
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/pxJbfnMIQQxCrdeLD0zQnWr6ouL.jpg",
+            "id": 1077280,
+            "title": "Die Hart",
+            "original_language": "en",
+            "original_title": "Die Hart",
+            "overview": "Follows a fictionalized version of Kevin Hart, as he tries to become an action movie star. He attends a school run by Ron Wilcox, where he attempts to learn the ropes on how to become one of the industry's most coveted action stars.",
+            "poster_path": "/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                28,
+                35,
+                53
+            ],
+            "popularity": 707.644,
+            "release_date": "2023-02-22",
+            "video": false,
+            "vote_average": 6.672,
+            "vote_count": 90
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/tt79dbOPd9Z9ykEOpvckttgYXwH.jpg",
+            "id": 545611,
+            "title": "Everything Everywhere All at Once",
+            "original_language": "en",
+            "original_title": "Everything Everywhere All at Once",
+            "overview": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what's important to her by connecting with the lives she could have led in other universes.",
+            "poster_path": "/rKvCys0fMIIi1X9rmJBxTPLAtoU.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "popularity": 250.362,
+            "release_date": "2022-03-24",
+            "video": false,
+            "vote_average": 7.992,
+            "vote_count": 3387
+        }
+    ],
+    "total_pages": 1000,
+    "total_results": 20000
+}

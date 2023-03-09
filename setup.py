@@ -1,82 +1,62 @@
-# -*- coding: utf-8 -*-
-import os
-import sys
-from shutil import rmtree
+#!/usr/bin/env python
 
-from setuptools import Command, find_packages, setup
+from setuptools import setup, find_packages
 
-with open("README.rst", "rb") as f:
-    long_description = f.read().decode("utf-8")
+with open("README.rst") as readme_file:
+    readme = readme_file.read()
 
-here = os.path.abspath(os.path.dirname(__file__))
+requirements = [
+    "aiohttp==3.8.0",
+    "dacite==1.8.0",
+]
 
-
-class PublishCommand(Command):
-    """Support setup.py publish."""
-
-    description = "Build and publish the package."
-    user_options = []
-
-    @staticmethod
-    def status(s):
-        """Prints things in bold."""
-        print("\033[1m{0}\033[0m".format(s))
-
-    def initialize_options(self):
-        pass
-
-    def finalize_options(self):
-        pass
-
-    def run(self):
-        try:
-            self.status("Removing previous builds...")
-            rmtree(os.path.join(here, "dist"))
-        except Exception:
-            pass
-
-        self.status("Building Source and Wheel (universal) distribution...")
-        os.system("{0} setup.py sdist bdist_wheel --universal".format(sys.executable))
-
-        self.status("Uploading the package to PyPi via Twine...")
-        os.system("twine upload dist/*")
-
-        sys.exit()
-
+test_requirements = [
+    "pytest==3",
+    "pytest-asyncio==0.20.3",
+]
 
 setup(
-    name="tmdb-python",
-    version="0.0.8",
-    description="Asynchronous Python library for The Movie Database (TMDB) API v3",
-    long_description=long_description,
-    url="https://github.com/leandcesar/tmdb-python",
-    author="Leandro César",
+    name="themoviedb",
+    description="Asynchronous Python library for The Movie Database (TMDb) API v3",
+    long_description=readme,
+    author="Leandro César Cassimiro",
     author_email="ccleandroc@gmail.com",
+    url="https://github.com/leandcesar/themoviedb",
+    version="0.2.0",
     license="MIT",
-    packages=find_packages(exclude=("tests",)),
+    python_requires=">=3.7",
+    packages=find_packages(include=["gcsa_slots", "gcsa_slots.*"]),
+    include_package_data=True,
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+    ],
     keywords=[
+        "tmdb",
+        "tmdb3",
+        "themoviedb",
+        "themoviedb3",
+        "async",
+        "await",
+        "aio",
         "movie",
         "movies",
         "tv",
         "tv show",
         "tv shows",
-        "tmdb",
-        "themoviedb",
-        "moviedb",
-        "movie database",
         "api",
         "wrapper",
     ],
-    install_requires=["aiohttp"],
-    classifiers=[
-        "Development Status :: 5 - Production/Stable",
-        "Intended Audience :: Developers",
-        "Topic :: Software Development :: Libraries",
-        "Programming Language :: Python",
-        "Programming Language :: Python :: 3.9",
-    ],
-    cmdclass={
-        "publish": PublishCommand,
-    },
     zip_safe=False,
+    install_requires=requirements,
+    tests_require=test_requirements,
+    test_suite="tests",
 )
