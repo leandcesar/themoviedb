@@ -95,3 +95,49 @@ async def test_trending_person_weekly(get_data, assert_data):
 
     assert isinstance(people, schemas.People)
     assert assert_data(people, data)
+
+
+@pytest.mark.asyncio
+async def test_trending_tv_daily(get_data, assert_data):
+    data = get_data("trending/tv")
+
+    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+        mocked.return_value.__aenter__.return_value.json.return_value = data
+        tvs = await routes.Trending().tv_daily()
+        mocked.assert_called_with(
+            "GET",
+            f"https://api.themoviedb.org/3/trending/tv/day",
+            params={
+                "api_key": "TEST_TMDB_KEY",
+                "language": "en-US",
+                "region": "US",
+                "watch_region": "US",
+                "page": 1,
+            },
+        )
+
+    assert isinstance(tvs, schemas.TVs)
+    assert assert_data(tvs, data)
+
+
+@pytest.mark.asyncio
+async def test_trending_tv_weekly(get_data, assert_data):
+    data = get_data("trending/tv")
+
+    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+        mocked.return_value.__aenter__.return_value.json.return_value = data
+        tvs = await routes.Trending().tv_weekly()
+        mocked.assert_called_with(
+            "GET",
+            f"https://api.themoviedb.org/3/trending/tv/week",
+            params={
+                "api_key": "TEST_TMDB_KEY",
+                "language": "en-US",
+                "region": "US",
+                "watch_region": "US",
+                "page": 1,
+            },
+        )
+
+    assert isinstance(tvs, schemas.TVs)
+    assert assert_data(tvs, data)
