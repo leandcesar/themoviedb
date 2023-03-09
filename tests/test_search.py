@@ -14,7 +14,7 @@ async def test_search_collections(get_data, assert_data):
         collections = await routes.Search().collections("test")
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/search/collection",
+            "https://api.themoviedb.org/3/search/collection",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -38,7 +38,7 @@ async def test_search_companies(get_data, assert_data):
         companies = await routes.Search().companies("test")
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/search/company",
+            "https://api.themoviedb.org/3/search/company",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -62,7 +62,7 @@ async def test_search_keywords(get_data, assert_data):
         keywords = await routes.Search().keywords("test")
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/search/keyword",
+            "https://api.themoviedb.org/3/search/keyword",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -86,7 +86,7 @@ async def test_search_movies(get_data, assert_data):
         movies = await routes.Search().movies("test")
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/search/movie",
+            "https://api.themoviedb.org/3/search/movie",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -111,7 +111,7 @@ async def test_search_multi(get_data, assert_data):
         multis = await routes.Search().multi("test")
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/search/multi",
+            "https://api.themoviedb.org/3/search/multi",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -136,7 +136,7 @@ async def test_search_people(get_data, assert_data):
         people = await routes.Search().people("test")
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/search/person",
+            "https://api.themoviedb.org/3/search/person",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -161,7 +161,7 @@ async def test_search_tv(get_data, assert_data):
         tvs = await routes.Search().tv("test")
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/search/tv",
+            "https://api.themoviedb.org/3/search/tv",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",

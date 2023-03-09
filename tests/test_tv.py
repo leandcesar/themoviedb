@@ -106,7 +106,7 @@ async def test_tv_credits(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        credits = await routes.TV(tv_id).credits()
+        credits_ = await routes.TV(tv_id).credits()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/credits",
@@ -118,8 +118,8 @@ async def test_tv_credits(get_data, assert_data):
             },
         )
 
-    assert isinstance(credits, schemas.Credits)
-    assert assert_data(credits, data)
+    assert isinstance(credits_, schemas.Credits)
+    assert assert_data(credits_, data)
 
 
 @pytest.mark.asyncio
@@ -342,7 +342,7 @@ async def test_tvs_latest(get_data, assert_data):
         tv = await routes.TVs().latest()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/tv/latest",
+            "https://api.themoviedb.org/3/tv/latest",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -364,7 +364,7 @@ async def test_tvs_airing_today(get_data, assert_data):
         tvs = await routes.TVs().airing_today()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/tv/airing_today",
+            "https://api.themoviedb.org/3/tv/airing_today",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -387,7 +387,7 @@ async def test_tvs_on_the_air(get_data, assert_data):
         tvs = await routes.TVs().on_the_air()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/tv/on_the_air",
+            "https://api.themoviedb.org/3/tv/on_the_air",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -410,7 +410,7 @@ async def test_tvs_popular(get_data, assert_data):
         tvs = await routes.TVs().popular()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/tv/popular",
+            "https://api.themoviedb.org/3/tv/popular",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -433,7 +433,7 @@ async def test_tvs_top_rated(get_data, assert_data):
         tvs = await routes.TVs().top_rated()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/tv/top_rated",
+            "https://api.themoviedb.org/3/tv/top_rated",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",

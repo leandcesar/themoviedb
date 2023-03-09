@@ -14,7 +14,7 @@ async def test_discover_movie(get_data, assert_data):
         movies = await routes.Discover().movie()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/discover/movie",
+            "https://api.themoviedb.org/3/discover/movie",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -38,7 +38,7 @@ async def test_discover_tv(get_data, assert_data):
         tvs = await routes.Discover().tv()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/discover/tv",
+            "https://api.themoviedb.org/3/discover/tv",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",

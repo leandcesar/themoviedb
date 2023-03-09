@@ -177,7 +177,7 @@ async def test_people_latest(get_data, assert_data):
         person = await routes.People().latest()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/person/latest",
+            "https://api.themoviedb.org/3/person/latest",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -199,7 +199,7 @@ async def test_people_popular(get_data, assert_data):
         people = await routes.People().popular()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/person/popular",
+            "https://api.themoviedb.org/3/person/popular",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",

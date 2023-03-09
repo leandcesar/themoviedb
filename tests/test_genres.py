@@ -14,7 +14,7 @@ async def test_genres_movie(get_data, assert_data):
         genres = await routes.Genres().movie()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/genre/movie/list",
+            "https://api.themoviedb.org/3/genre/movie/list",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
@@ -36,7 +36,7 @@ async def test_genres_tv(get_data, assert_data):
         genres = await routes.Genres().tv()
         mocked.assert_called_with(
             "GET",
-            f"https://api.themoviedb.org/3/genre/tv/list",
+            "https://api.themoviedb.org/3/genre/tv/list",
             params={
                 "api_key": "TEST_TMDB_KEY",
                 "language": "en-US",
