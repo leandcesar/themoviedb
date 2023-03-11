@@ -76,6 +76,21 @@ class PartialMovie:
         return f"https://image.tmdb.org/t/p/{size}{self.poster_path}" if self.poster_path else None
 
 
+
+@dataclass
+class PartialNetwork:
+    id: int
+    logo_path: Optional[str] = None
+    name: Optional[str] = None
+    origin_country: Optional[str] = None
+
+    def __str__(self) -> str:
+        return self.name
+
+    def logo_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size}{self.logo_path}" if self.logo_path else None
+
+
 @dataclass
 class PartialTV:
     id: int

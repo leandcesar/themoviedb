@@ -52,6 +52,14 @@ class TV(Base):
         data = await self.request(f"tv/{self.tv_id}/external_ids")
         return utils.as_dataclass(schemas.ExternalIDs, data)
 
+    async def episode_groups(self) -> schemas.EpisodeGroups:
+        """Get all of the episode groups that have been created for a TV show.
+
+        See more: https://developers.themoviedb.org/3/tv/get-tv-episode-groups
+        """
+        data = await self.request(f"tv/{self.tv_id}/episode_groups")
+        return utils.as_dataclass(schemas.EpisodeGroups, data)
+
     async def images(self) -> schemas.Images:
         """Get the images that belong to a TV show.
 

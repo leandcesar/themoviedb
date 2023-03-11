@@ -1,4 +1,10 @@
-from themoviedb.schemas._enums import CreditType, ImageType, MediaType, SizeType
+from themoviedb.schemas._enums import (
+    CreditType,
+    EpisodeGroupType,
+    ImageType,
+    MediaType,
+    SizeType,
+)
 from themoviedb.schemas._partial import (
     PartialCollection,
     PartialCompany,
@@ -29,6 +35,7 @@ from themoviedb.schemas.credits import (
     CrewMovie,
     CrewTV,
 )
+from themoviedb.schemas.episode_groups import EpisodeGroup, EpisodeGroups
 from themoviedb.schemas.episodes import Episode
 from themoviedb.schemas.external_ids import ExternalIDs
 from themoviedb.schemas.genres import Genre, Genres
