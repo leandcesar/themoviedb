@@ -152,6 +152,8 @@ class PartialEpisode:
     still_path: Optional[str] = None
     vote_average: Optional[float] = None
     vote_count: Optional[int] = None
+    show_id: Optional[int] = None
+    order: Optional[int] = None
 
     def __str__(self) -> str:
         return self.name

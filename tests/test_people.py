@@ -75,6 +75,30 @@ async def test_person_images(get_data, assert_data):
     assert assert_data(images, data)
 
 
+@pytest.mark.skip
+@pytest.mark.asyncio
+async def test_person_combined_credits(get_data, assert_data):
+    data = get_data("people/combined_credits")
+    person_id = 123
+
+    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+        mocked.return_value.__aenter__.return_value.json.return_value = data
+        combined_credits = await routes.Person(person_id).combined_credits()
+        mocked.assert_called_with(
+            "GET",
+            f"https://api.themoviedb.org/3/person/{person_id}/combined_credits",
+            params={
+                "api_key": "TEST_TMDB_KEY",
+                "language": "en-US",
+                "region": "US",
+                "watch_region": "US",
+            },
+        )
+
+    assert isinstance(combined_credits, schemas.CreditsCombined)
+    assert assert_data(combined_credits, data)
+
+
 @pytest.mark.asyncio
 async def test_person_movie_credits(get_data, assert_data):
     data = get_data("people/movie_credits")
@@ -119,30 +143,6 @@ async def test_person_tv_credits(get_data, assert_data):
 
     assert isinstance(tv_credits, schemas.CreditsTV)
     assert assert_data(tv_credits, data)
-
-
-@pytest.mark.skip
-@pytest.mark.asyncio
-async def test_person_combined_credits(get_data, assert_data):
-    data = get_data("people/combined_credits")
-    person_id = 123
-
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
-        mocked.return_value.__aenter__.return_value.json.return_value = data
-        combined_credits = await routes.Person(person_id).combined_credits()
-        mocked.assert_called_with(
-            "GET",
-            f"https://api.themoviedb.org/3/person/{person_id}/combined_credits",
-            params={
-                "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
-            },
-        )
-
-    assert isinstance(combined_credits, schemas.CreditsCombined)
-    assert assert_data(combined_credits, data)
 
 
 @pytest.mark.asyncio

@@ -4,6 +4,7 @@ from themoviedb.routes.credit import Credit
 from themoviedb.routes.companies import Company
 from themoviedb.routes.collections import Collection
 from themoviedb.routes.discover import Discover
+from themoviedb.routes.episode_groups import EpisodeGroup
 from themoviedb.routes.episodes import Episode
 from themoviedb.routes.find import Find
 from themoviedb.routes.genres import Genres
