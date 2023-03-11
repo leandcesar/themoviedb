@@ -36,6 +36,14 @@ class TV(Base):
         data = await self.request(f"tv/{self.tv_id}/alternative_titles", country=country)
         return utils.as_dataclass(schemas.AlternativeTitles, data)
 
+    async def content_ratings(self) -> schemas.ContentRatings:
+        """Get the list of content ratings (certifications) that have been added to a TV show.
+
+        See more: https://developers.themoviedb.org/3/tv/get-tv-content-ratings
+        """
+        data = await self.request(f"tv/{self.tv_id}/content_ratings")
+        return utils.as_dataclass(schemas.ContentRatings, data)
+
     async def credits(self) -> schemas.Credits:
         """Get the credits (cast and crew) that have been added to a TV show.
 

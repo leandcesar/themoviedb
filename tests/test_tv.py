@@ -100,6 +100,29 @@ async def test_tv_alternative_titles(get_data, assert_data):
 
 
 @pytest.mark.asyncio
+async def test_tv_content_ratings(get_data, assert_data):
+    data = get_data("tv/content_ratings")
+    tv_id = 123
+
+    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+        mocked.return_value.__aenter__.return_value.json.return_value = data
+        content_ratings = await routes.TV(tv_id).content_ratings()
+        mocked.assert_called_with(
+            "GET",
+            f"https://api.themoviedb.org/3/tv/{tv_id}/content_ratings",
+            params={
+                "api_key": "TEST_TMDB_KEY",
+                "language": "en-US",
+                "region": "US",
+                "watch_region": "US",
+            },
+        )
+
+    assert isinstance(content_ratings, schemas.ContentRatings)
+    assert assert_data(content_ratings, data)
+
+
+@pytest.mark.asyncio
 async def test_tv_credits(get_data, assert_data):
     data = get_data("tv/credits")
     tv_id = 123

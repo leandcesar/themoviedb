@@ -20,6 +20,7 @@ from themoviedb.schemas.alternative_titles import AlternativeTitle, AlternativeT
 from themoviedb.schemas.changes import Change
 from themoviedb.schemas.collections import Collection, Collections
 from themoviedb.schemas.companies import Companies, Company
+from themoviedb.schemas.content_rating import ContentRating, ContentRatings
 from themoviedb.schemas.credit import Credit
 from themoviedb.schemas.credits import (
     Cast,
