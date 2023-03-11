@@ -146,8 +146,8 @@ class PartialEpisode:
 
 
 @dataclass
-class KnownFor(PartialMovie, PartialTV):
-    ...
+class PartialMedia(PartialMovie, PartialTV):
+    _id: Optional[str] = None
 
 
 @dataclass
@@ -155,7 +155,7 @@ class PartialPerson:
     id: int
     profile_path: Optional[str] = None
     adult: Optional[bool] = None
-    known_for: Optional[List[KnownFor]] = None
+    known_for: Optional[List[PartialMedia]] = None
     known_for_department: Optional[str] = None
     gender: Optional[int] = None
     name: Optional[str] = None

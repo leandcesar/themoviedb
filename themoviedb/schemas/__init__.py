@@ -1,6 +1,6 @@
-from themoviedb.schemas._enums import CreditType, MediaType, SizeType
+from themoviedb.schemas._enums import CreditType, ImageType, MediaType, SizeType
 from themoviedb.schemas._partial import (
-    KnownFor,
+    PartialMedia,
     PartialCollection,
     PartialCompany,
     PartialKeyword,
@@ -37,7 +37,7 @@ from themoviedb.schemas.credits import (
 from themoviedb.schemas.external_ids import ExternalIDs
 from themoviedb.schemas.episodes import Episode
 from themoviedb.schemas.genres import Genre, Genres
-from themoviedb.schemas.images import Image, Images
+from themoviedb.schemas.images import Image, Images, TaggedImage, TaggedImages
 from themoviedb.schemas.keywords import Keyword, Keywords
 from themoviedb.schemas.list import ItemList, ItemsList
 from themoviedb.schemas.movies import Movie, Movies

@@ -6,6 +6,14 @@ class CreditType(str, Enum):
     crew = "crew"
 
 
+class ImageType(str, Enum):
+    backdrop = "backdrop"
+    logo = "logo"
+    poster = "poster"
+    profile = "profile"
+    still = "still"
+
+
 class MediaType(str, Enum):
     movie = "movie"
     person = "person"
