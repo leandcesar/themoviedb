@@ -36,6 +36,14 @@ class TV(Base):
         data = await self.request(f"tv/{self.tv_id}/alternative_titles", country=country)
         return utils.as_dataclass(schemas.AlternativeTitles, data)
 
+    async def content_ratings(self) -> schemas.ContentRatings:
+        """Get the list of content ratings (certifications) that have been added to a TV show.
+
+        See more: https://developers.themoviedb.org/3/tv/get-tv-content-ratings
+        """
+        data = await self.request(f"tv/{self.tv_id}/content_ratings")
+        return utils.as_dataclass(schemas.ContentRatings, data)
+
     async def credits(self) -> schemas.Credits:
         """Get the credits (cast and crew) that have been added to a TV show.
 
@@ -51,6 +59,14 @@ class TV(Base):
         """
         data = await self.request(f"tv/{self.tv_id}/external_ids")
         return utils.as_dataclass(schemas.ExternalIDs, data)
+
+    async def episode_groups(self) -> schemas.EpisodeGroups:
+        """Get all of the episode groups that have been created for a TV show.
+
+        See more: https://developers.themoviedb.org/3/tv/get-tv-episode-groups
+        """
+        data = await self.request(f"tv/{self.tv_id}/episode_groups")
+        return utils.as_dataclass(schemas.EpisodeGroups, data)
 
     async def images(self) -> schemas.Images:
         """Get the images that belong to a TV show.
@@ -83,6 +99,14 @@ class TV(Base):
         """
         data = await self.request(f"tv/{self.tv_id}/reviews", page=page)
         return utils.as_dataclass(schemas.Reviews, data)
+
+    async def screened_theatrically(self, *, page: int = 1) -> schemas.Episodes:
+        """Get a list of seasons or episodes that have been screened in a film festival or theatre.
+
+        See more: https://developers.themoviedb.org/3/tv/get-screened-theatrically
+        """
+        data = await self.request(f"tv/{self.tv_id}/screened_theatrically")
+        return utils.as_dataclass(schemas.Episodes, data)
 
     async def similar(self, *, page: int = 1) -> schemas.TVs:
         """Get a list of similar TV shows. These items are assembled by looking at keywords and genres.

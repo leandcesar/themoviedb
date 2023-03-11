@@ -2,7 +2,9 @@ from dataclasses import dataclass
 from datetime import datetime
 from typing import List, Optional
 
-from themoviedb.schemas._enums import SizeType
+from themoviedb.schemas._enums import ImageType, MediaType, SizeType
+from themoviedb.schemas._partial import PartialMedia
+from themoviedb.schemas._result import ResultWithPage
 
 
 @dataclass
@@ -22,6 +24,13 @@ class Image:
 
 
 @dataclass
+class TaggedImage(Image):
+    image_type: Optional[ImageType] = None
+    media: Optional[PartialMedia] = None
+    media_type: Optional[MediaType] = None
+
+
+@dataclass
 class Images:
     id: Optional[int] = None
     backdrops: Optional[List[Image]] = None
@@ -29,3 +38,8 @@ class Images:
     posters: Optional[List[Image]] = None
     profiles: Optional[List[Image]] = None
     stills: Optional[List[Image]] = None
+
+
+@dataclass
+class TaggedImages(ResultWithPage):
+    results: Optional[List[TaggedImage]] = None

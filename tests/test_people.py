@@ -146,6 +146,29 @@ async def test_person_combined_credits(get_data, assert_data):
 
 
 @pytest.mark.asyncio
+async def test_person_tagged_images(get_data, assert_data):
+    data = get_data("people/tagged_images")
+    person_id = 123
+
+    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+        mocked.return_value.__aenter__.return_value.json.return_value = data
+        tagged_images = await routes.Person(person_id).tagged_images()
+        mocked.assert_called_with(
+            "GET",
+            f"https://api.themoviedb.org/3/person/{person_id}/tagged_images",
+            params={
+                "api_key": "TEST_TMDB_KEY",
+                "language": "en-US",
+                "region": "US",
+                "watch_region": "US",
+            },
+        )
+
+    assert isinstance(tagged_images, schemas.TaggedImages)
+    assert assert_data(tagged_images, data)
+
+
+@pytest.mark.asyncio
 async def test_person_translations(get_data, assert_data):
     data = get_data("people/translations")
     person_id = 123

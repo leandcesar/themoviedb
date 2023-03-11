@@ -56,6 +56,14 @@ class Person(Base):
         data = await self.request(f"person/{self.person_id}/tv_credits")
         return utils.as_dataclass(schemas.CreditsTV, data)
 
+    async def tagged_images(self) -> schemas.TaggedImages:
+        """Get the images that this person has been tagged in.
+
+        See more: https://developers.themoviedb.org/3/people/get-tagged-images
+        """
+        data = await self.request(f"person/{self.person_id}/tagged_images")
+        return utils.as_dataclass(schemas.TaggedImages, data)
+
     async def translations(self) -> schemas.Translations:
         """Get a list of translations that have been created for a person.
 
