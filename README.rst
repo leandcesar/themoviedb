@@ -134,9 +134,8 @@ You also can set language and region on object instantiation.
 .. code:: py
 
     # implicit env vars: TMDB_KEY="YOUR_API_KEY" TMDB_LANGUAGE="pt-BR" TMDB_REGION="BR"
-    tmdb = TMDb(key="ANOTHER_API_KEY")
-    tvs = await tmdb.tvs(language="en-US", region="US").popular()  # with en-US / US
-    tvs = await tmdb.tvs().popular()  # with pt-BR / BR
+    tmdb = TMDb(key="ANOTHER_API_KEY", language="en-US", region="US")
+    tvs = await tmdb.tvs().popular()  # with en-US / US
 
 .. |Code Quality Score| image:: https://api.codiga.io/project/36067/score/svg
    :target: https://app.codiga.io/hub/project/36067/themoviedb
