@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 from datetime import date
-from typing import List, Optional
+from typing import List, Optional, Union
 
 from themoviedb.schemas._enums import SizeType
 from themoviedb.schemas._partial import PartialTV, PartialSeason, PartialEpisode
-from themoviedb.schemas._result import ResultWithPage
+from themoviedb.schemas._result import ResultWithID, ResultWithPage
 from themoviedb.schemas.countries import Country
 from themoviedb.schemas.genres import Genre
 from themoviedb.schemas.languages import Language
@@ -52,3 +52,8 @@ class TV(PartialTV):
 @dataclass
 class TVs(ResultWithPage):
     results: Optional[List[PartialTV]] = None
+
+
+@dataclass
+class Episodes(ResultWithID):
+    results: Optional[List[PartialEpisode]] = None

@@ -84,6 +84,14 @@ class TV(Base):
         data = await self.request(f"tv/{self.tv_id}/reviews", page=page)
         return utils.as_dataclass(schemas.Reviews, data)
 
+    async def screened_theatrically(self, *, page: int = 1) -> schemas.Episodes:
+        """Get a list of seasons or episodes that have been screened in a film festival or theatre.
+
+        See more: https://developers.themoviedb.org/3/tv/get-screened-theatrically
+        """
+        data = await self.request(f"tv/{self.tv_id}/screened_theatrically")
+        return utils.as_dataclass(schemas.Episodes, data)
+
     async def similar(self, *, page: int = 1) -> schemas.TVs:
         """Get a list of similar TV shows. These items are assembled by looking at keywords and genres.
 
