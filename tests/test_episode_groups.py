@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 import pytest
 
-from themoviedb import routes, schemas
+from themoviedb import tmdb, schemas
 
 
 @pytest.mark.asyncio
@@ -12,7 +12,7 @@ async def test_episode_group_details(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        episode_groups = await routes.EpisodeGroup(episode_group_id).details()
+        episode_groups = await tmdb.TMDb().episode_group(episode_group_id).details()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/episode_group/{episode_group_id}",

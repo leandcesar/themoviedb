@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 import pytest
 
-from themoviedb import routes, schemas
+from themoviedb import tmdb, schemas
 
 
 @pytest.mark.asyncio
@@ -11,7 +11,7 @@ async def test_trending_movie_daily(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        movies = await routes.Trending().movie_daily()
+        movies = await tmdb.TMDb().trending().movie_daily()
         mocked.assert_called_with(
             "GET",
             "https://api.themoviedb.org/3/trending/movie/day",
@@ -34,7 +34,7 @@ async def test_trending_movie_weekly(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        movies = await routes.Trending().movie_weekly()
+        movies = await tmdb.TMDb().trending().movie_weekly()
         mocked.assert_called_with(
             "GET",
             "https://api.themoviedb.org/3/trending/movie/week",
@@ -57,7 +57,7 @@ async def test_trending_person_daily(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        people = await routes.Trending().person_daily()
+        people = await tmdb.TMDb().trending().person_daily()
         mocked.assert_called_with(
             "GET",
             "https://api.themoviedb.org/3/trending/person/day",
@@ -80,7 +80,7 @@ async def test_trending_person_weekly(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        people = await routes.Trending().person_weekly()
+        people = await tmdb.TMDb().trending().person_weekly()
         mocked.assert_called_with(
             "GET",
             "https://api.themoviedb.org/3/trending/person/week",
@@ -103,7 +103,7 @@ async def test_trending_tv_daily(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        tvs = await routes.Trending().tv_daily()
+        tvs = await tmdb.TMDb().trending().tv_daily()
         mocked.assert_called_with(
             "GET",
             "https://api.themoviedb.org/3/trending/tv/day",
@@ -126,7 +126,7 @@ async def test_trending_tv_weekly(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        tvs = await routes.Trending().tv_weekly()
+        tvs = await tmdb.TMDb().trending().tv_weekly()
         mocked.assert_called_with(
             "GET",
             "https://api.themoviedb.org/3/trending/tv/week",

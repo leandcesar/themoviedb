@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 import pytest
 
-from themoviedb import routes, schemas
+from themoviedb import tmdb, schemas
 
 
 @pytest.mark.asyncio
@@ -13,7 +13,7 @@ async def test_season_details(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        season = await routes.Season(tv_id, season_id).details()
+        season = await tmdb.TMDb().season(tv_id, season_id).details()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}",
@@ -38,7 +38,7 @@ async def test_season_details_full(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        season = await routes.Season(tv_id, season_id).details(append_to_response="alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers")
+        season = await tmdb.TMDb().season(tv_id, season_id).details(append_to_response="alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers")
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}",
@@ -63,7 +63,7 @@ async def test_season_aggregate_credits(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        aggregate_credits = await routes.Season(tv_id, season_id).aggregate_credits()
+        aggregate_credits = await tmdb.TMDb().season(tv_id, season_id).aggregate_credits()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/aggregate_credits",
@@ -87,7 +87,7 @@ async def test_season_credits(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        credits_ = await routes.Season(tv_id, season_id).credits()
+        credits_ = await tmdb.TMDb().season(tv_id, season_id).credits()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/credits",
@@ -111,7 +111,7 @@ async def test_season_external_ids(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        external_ids = await routes.Season(tv_id, season_id).external_ids()
+        external_ids = await tmdb.TMDb().season(tv_id, season_id).external_ids()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/external_ids",
@@ -135,7 +135,7 @@ async def test_season_images(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        images = await routes.Season(tv_id, season_id).images()
+        images = await tmdb.TMDb().season(tv_id, season_id).images()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/images",
@@ -159,7 +159,7 @@ async def test_season_translations(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        translations = await routes.Season(tv_id, season_id).translations()
+        translations = await tmdb.TMDb().season(tv_id, season_id).translations()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/translations",
@@ -183,7 +183,7 @@ async def test_season_videos(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        videos = await routes.Season(tv_id, season_id).videos()
+        videos = await tmdb.TMDb().season(tv_id, season_id).videos()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/videos",

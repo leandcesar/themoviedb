@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 import pytest
 
-from themoviedb import routes, schemas
+from themoviedb import tmdb, schemas
 
 
 @pytest.mark.asyncio
@@ -12,7 +12,7 @@ async def test_collection_details(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        collection = await routes.Collection(collection_id).details()
+        collection = await tmdb.TMDb().collection(collection_id).details()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/collection/{collection_id}",
@@ -35,7 +35,7 @@ async def test_collection_images(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        images = await routes.Collection(collection_id).images()
+        images = await tmdb.TMDb().collection(collection_id).images()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/collection/{collection_id}/images",
@@ -58,7 +58,7 @@ async def test_collection_translations(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        translations = await routes.Collection(collection_id).translations()
+        translations = await tmdb.TMDb().collection(collection_id).translations()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/collection/{collection_id}/translations",

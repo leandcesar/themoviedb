@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 import pytest
 
-from themoviedb import routes, schemas
+from themoviedb import tmdb, schemas
 
 
 @pytest.mark.asyncio
@@ -12,7 +12,7 @@ async def test_company_details(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        company = await routes.Company(company_id).details()
+        company = await tmdb.TMDb().company(company_id).details()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/company/{company_id}",
@@ -35,7 +35,7 @@ async def test_company_alternative_names(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        alternative_names = await routes.Company(company_id).alternative_names()
+        alternative_names = await tmdb.TMDb().company(company_id).alternative_names()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/company/{company_id}/alternative_names",
@@ -58,7 +58,7 @@ async def test_company_images(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        images = await routes.Company(company_id).images()
+        images = await tmdb.TMDb().company(company_id).images()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/company/{company_id}/images",

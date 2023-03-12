@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 import pytest
 
-from themoviedb import routes, schemas
+from themoviedb import tmdb, schemas
 
 
 @pytest.mark.asyncio
@@ -11,7 +11,7 @@ async def test_watch_providers_movie(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        watch_providers = await routes.WatchProviders().movie()
+        watch_providers = await tmdb.TMDb().watch_providers().movie()
         mocked.assert_called_with(
             "GET",
             "https://api.themoviedb.org/3/watch/providers/movie",
@@ -33,7 +33,7 @@ async def test_watch_providers_regions(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        regions = await routes.WatchProviders().regions()
+        regions = await tmdb.TMDb().watch_providers().regions()
         mocked.assert_called_with(
             "GET",
             "https://api.themoviedb.org/3/watch/providers/regions",
@@ -55,7 +55,7 @@ async def test_watch_providers_tv(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        watch_providers = await routes.WatchProviders().tv()
+        watch_providers = await tmdb.TMDb().watch_providers().tv()
         mocked.assert_called_with(
             "GET",
             "https://api.themoviedb.org/3/watch/providers/tv",

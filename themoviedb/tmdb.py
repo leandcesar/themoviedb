@@ -1,10 +1,12 @@
 from themoviedb.routes import (
     Base,
+    Certifications,
     Collection,
     Company,
     Credit,
     Discover,
     Episode,
+    EpisodeGroup,
     Find,
     Genres,
     Keyword,
@@ -31,6 +33,10 @@ class TMDb(Base):
     to retrieve information about a specific resource.
     """
 
+    def certifications(self) -> Certifications:
+        """Get model object for `themoviedb.Certifications` resource."""
+        return Certifications(session=self.session, language=self.language, region=self.region)
+
     def collection(self, collection_id: int) -> Collection:
         """Get model object for `themoviedb.Collection` resource."""
         return Collection(collection_id, session=self.session, language=self.language, region=self.region)
@@ -50,6 +56,10 @@ class TMDb(Base):
     def episode(self, tv_id: int, season_id: int, episode_id: int) -> Episode:
         """Get model object for `themoviedb.Episode` resource."""
         return Episode(tv_id, season_id, episode_id, session=self.session, language=self.language, region=self.region)
+
+    def episode_group(self, episode_group_id: int) -> EpisodeGroup:
+        """Get model object for `themoviedb.EpisodeGroup` resource."""
+        return EpisodeGroup(episode_group_id, session=self.session, language=self.language, region=self.region)
 
     def find(self) -> Find:
         """Get model object for `themoviedb.Find` resource."""

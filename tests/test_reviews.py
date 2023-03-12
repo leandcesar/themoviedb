@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 import pytest
 
-from themoviedb import routes, schemas
+from themoviedb import tmdb, schemas
 
 
 @pytest.mark.asyncio
@@ -12,7 +12,7 @@ async def test_review_details(get_data, assert_data):
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        review = await routes.Review(review_id).details()
+        review = await tmdb.TMDb().review(review_id).details()
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/review/{review_id}",
