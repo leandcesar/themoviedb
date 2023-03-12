@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
 import os
+from typing import Optional
 
 from aiohttp import ClientSession
 
@@ -12,8 +12,8 @@ class Base:
         self,
         *,
         session: ClientSession = None,
-        language: str = None,
-        region: str = None,
+        language: Optional[str] = None,
+        region: Optional[str] = None,
     ):
         self._session = session
         self._language = language if language is not None else os.environ.get("TMDB_LANGUAGE", "en-US")

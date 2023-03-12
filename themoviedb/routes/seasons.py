@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+from typing import Optional
+
 from themoviedb import schemas, utils
 from themoviedb.routes.base import Base
 
@@ -9,7 +10,7 @@ class Season(Base):
         self.tv_id = tv_id
         self.season_id = season_id
 
-    async def details(self, *, append_to_response: str = None) -> schemas.Season:
+    async def details(self, *, append_to_response: Optional[str] = None) -> schemas.Season:
         """Get the TV season details by id.
 
         See more: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-details

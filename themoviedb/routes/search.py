@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+from typing import Optional
+
 from themoviedb import schemas, utils
 from themoviedb.routes.base import Base
 
@@ -35,8 +36,8 @@ class Search(Base):
         *,
         page: int = 1,
         include_adult: bool = False,
-        year: int = None,
-        primary_release_year: int = None,
+        year: Optional[int] = None,
+        primary_release_year: Optional[int] = None,
     ) -> schemas.Movies:
         """Search for movies.
 
@@ -75,7 +76,7 @@ class Search(Base):
         *,
         page: int = 1,
         include_adult: bool = False,
-        first_air_date_year: int = None,
+        first_air_date_year: Optional[int] = None,
     ) -> schemas.TVs:
         """Search for a TV show.
 

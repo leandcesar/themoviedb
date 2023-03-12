@@ -1,11 +1,12 @@
-# -*- coding: utf-8 -*-
+from typing import Optional
+
 from themoviedb import schemas, utils
 from themoviedb.routes.base import Base
 
 
 class WatchProviders(Base):
 
-    async def movie(self, watch_region: str = None) -> schemas.WatchProvidersData:
+    async def movie(self, watch_region: Optional[str] = None) -> schemas.WatchProvidersData:
         """Returns a list of the watch provider (OTT/streaming) data we have available for movies.
 
         See more: https://developers.themoviedb.org/3/watch-providers/get-movie-providers
@@ -21,7 +22,7 @@ class WatchProviders(Base):
         data = await self.request("watch/providers/regions")
         return utils.as_dataclass(schemas.Regions, data)
 
-    async def tv(self, watch_region: str = None) -> schemas.WatchProvidersData:
+    async def tv(self, watch_region: Optional[str] = None) -> schemas.WatchProvidersData:
         """Returns a list of the watch provider (OTT/streaming) data we have available for TV series.
 
         See more: https://developers.themoviedb.org/3/watch-providers/get-tv-providers

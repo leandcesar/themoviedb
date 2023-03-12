@@ -37,7 +37,7 @@ class Cast:
     roles: Optional[List[Role]] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or self.original_name
 
     def profile_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.profile_path}" if self.profile_path else None
@@ -58,9 +58,10 @@ class Crew:
     job: Optional[str] = None
     total_episode_count: Optional[int] = None
     jobs: Optional[List[Job]] = None
+    order: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or self.original_name
 
     def profile_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.profile_path}" if self.profile_path else None
@@ -107,6 +108,7 @@ class CastMovie:
     backdrop_path: Optional[str] = None
     overview: Optional[str] = None
     poster_path: Optional[str] = None
+    order: Optional[int] = None
 
     def __str__(self) -> str:
         return self.title
@@ -137,6 +139,7 @@ class CrewMovie:
     adult: Optional[bool] = None
     release_date: Optional[date] = None
     credit_id: Optional[str] = None
+    order: Optional[int] = None
 
     def __str__(self) -> str:
         return self.title
@@ -169,13 +172,15 @@ class CastTV:
     popularity: Optional[float] = None
     episode_count: Optional[int] = None
     original_language: Optional[str] = None
+    adult: Optional[bool] = None
     first_air_date: Optional[date] = None
     backdrop_path: Optional[str] = None
     overview: Optional[str] = None
     origin_country: Optional[List[str]] = None
+    order: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or self.original_name
 
     def backdrop_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.backdrop_path}" if self.backdrop_path else None
@@ -199,13 +204,15 @@ class CrewTV:
     first_air_date: Optional[date] = None
     backdrop_path: Optional[str] = None
     popularity: Optional[float] = None
+    adult: Optional[bool] = None
     vote_count: Optional[int] = None
     vote_average: Optional[float] = None
     poster_path: Optional[str] = None
     credit_id: Optional[str] = None
+    order: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or self.original_name
 
     def backdrop_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.backdrop_path}" if self.backdrop_path else None

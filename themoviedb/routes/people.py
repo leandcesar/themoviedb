@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+from typing import Optional
+
 from themoviedb import schemas, utils
 from themoviedb.routes.base import Base
 
@@ -8,7 +9,7 @@ class Person(Base):
         super().__init__(**kwargs)
         self.person_id = person_id
 
-    async def details(self, *, append_to_response: str = None, image_language: str = "null") -> schemas.Person:
+    async def details(self, *, append_to_response: Optional[str] = None, image_language: str = "null") -> schemas.Person:
         """Get the primary person details by id.
 
         See more: https://developers.themoviedb.org/3/people/get-person-details

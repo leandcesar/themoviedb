@@ -10,6 +10,7 @@ class Data:
     title: Optional[str] = None
     overview: Optional[str] = None
     homepage: Optional[str] = None
+    tagline: Optional[str] = None
     biography: Optional[str] = None
 
 @dataclass

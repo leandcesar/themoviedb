@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+from typing import Optional
+
 from themoviedb import schemas, utils
 from themoviedb.routes.base import Base
 
@@ -8,7 +9,7 @@ class Movie(Base):
         super().__init__(**kwargs)
         self.movie_id = movie_id
 
-    async def details(self, *, append_to_response: str = None, image_language: str = "null") -> schemas.Movie:
+    async def details(self, *, append_to_response: Optional[str] = None, image_language: str = "null") -> schemas.Movie:
         """Get the primary information about a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-details
@@ -16,7 +17,7 @@ class Movie(Base):
         data = await self.request(f"movie/{self.movie_id}", append_to_response=append_to_response, include_image_language=image_language)
         return utils.as_dataclass(schemas.Movie, data)
 
-    async def alternative_titles(self, *, country: str = None) -> schemas.AlternativeTitles:
+    async def alternative_titles(self, *, country: Optional[str] = None) -> schemas.AlternativeTitles:
         """Get all of the alternative titles for a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-alternative-titles
@@ -48,7 +49,7 @@ class Movie(Base):
         data = await self.request(f"movie/{self.movie_id}/keywords")
         return utils.as_dataclass(schemas.Keywords, data)
 
-    async def images(self, *, include_image_language: str = None) -> schemas.Images:
+    async def images(self, *, include_image_language: Optional[str] = None) -> schemas.Images:
         """Get the images that belong to a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-images

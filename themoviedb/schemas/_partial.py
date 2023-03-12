@@ -125,7 +125,7 @@ class PartialTV:
 
 @dataclass
 class PartialSeason:
-    id: int = None
+    id: Optional[int] = None
     air_date: Optional[date] = None
     episode_count: Optional[int] = None
     name: Optional[str] = None
@@ -142,7 +142,7 @@ class PartialSeason:
 
 @dataclass
 class PartialEpisode:
-    id: int = None
+    id: Optional[int] = None
     air_date: Optional[date] = None
     episode_number: Optional[int] = None
     name: Optional[str] = None
@@ -154,6 +154,7 @@ class PartialEpisode:
     vote_count: Optional[int] = None
     show_id: Optional[int] = None
     order: Optional[int] = None
+    runtime: Optional[int] = None
 
     def __str__(self) -> str:
         return self.name

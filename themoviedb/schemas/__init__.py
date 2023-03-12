@@ -21,7 +21,7 @@ from themoviedb.schemas.certifications import Certification, Certifications
 from themoviedb.schemas.changes import Change
 from themoviedb.schemas.collections import Collection, Collections
 from themoviedb.schemas.companies import Companies, Company
-from themoviedb.schemas.content_rating import ContentRating, ContentRatings
+from themoviedb.schemas.content_ratings import ContentRating, ContentRatings
 from themoviedb.schemas.credit import Credit
 from themoviedb.schemas.credits import (
     Cast,
@@ -50,7 +50,7 @@ from themoviedb.schemas.networks import Network
 from themoviedb.schemas.people import People, Person
 from themoviedb.schemas.regions import Region, Regions
 from themoviedb.schemas.release_date import ReleaseDate, ReleaseDates
-from themoviedb.schemas.review import Review, Reviews
+from themoviedb.schemas.reviews import Review, Reviews
 from themoviedb.schemas.seasons import Season
 from themoviedb.schemas.translations import Translation, Translations
 from themoviedb.schemas.tv import TV, Episodes, TVs

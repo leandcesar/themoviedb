@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+from typing import Optional
+
 from themoviedb import schemas, utils
 from themoviedb.routes.base import Base
 
@@ -8,7 +9,7 @@ class TV(Base):
         super().__init__(**kwargs)
         self.tv_id = tv_id
 
-    async def details(self, *, append_to_response: str = None) -> schemas.TV:
+    async def details(self, *, append_to_response: Optional[str] = None) -> schemas.TV:
         """Get the primary TV show details by id.
 
         See more: https://developers.themoviedb.org/3/tv/get-tv-details
@@ -28,7 +29,7 @@ class TV(Base):
         data = await self.request(f"tv/{self.tv_id}/aggregate_credits")
         return utils.as_dataclass(schemas.Credits, data)
 
-    async def alternative_titles(self, *, country: str = None) -> schemas.AlternativeTitles:
+    async def alternative_titles(self, *, country: Optional[str] = None) -> schemas.AlternativeTitles:
         """Get all alternative titles for a TV show.
 
         See more: https://developers.themoviedb.org/3/tv/get-tv-alternative-titles
