@@ -28,15 +28,15 @@ async def test_tv_details(get_data, assert_data):
     assert assert_data(tv, data)
 
 
-@pytest.mark.skip
 @pytest.mark.asyncio
 async def test_tv_details_full(get_data, assert_data):
     data = get_data("tv/details_full")
+    data.pop("changes")  # TODO
     tv_id = 123
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        tv = await routes.TV(tv_id).details(append_to_response="alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers")
+        tv = await routes.TV(tv_id).details(append_to_response="aggregate_credits,alternative_titles,changes,content_ratings,credits,external_ids,episode_groups,images,keywords,recommendations,reviews,screened_theatrically,similar,translations,videos,watch/providers")
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}",
@@ -45,7 +45,7 @@ async def test_tv_details_full(get_data, assert_data):
                 "language": "en-US",
                 "region": "US",
                 "watch_region": "US",
-                "append_to_response": "alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers",
+                "append_to_response": "aggregate_credits,alternative_titles,changes,content_ratings,credits,external_ids,episode_groups,images,keywords,recommendations,reviews,screened_theatrically,similar,translations,videos,watch/providers",
             },
         )
 

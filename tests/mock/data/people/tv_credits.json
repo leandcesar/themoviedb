@@ -7,7 +7,7 @@
             "genre_ids": [
                 35
             ],
-            "character": "",
+            "character": null,
             "name": "Growing Pains",
             "poster_path": "/eKyeUFwjc0LhPSp129IHpXniJVR.jpg",
             "vote_count": 25,
@@ -31,7 +31,7 @@
                 10759,
                 10764
             ],
-            "character": "",
+            "character": null,
             "name": "Jackass",
             "poster_path": "/mz9PZo93dnIYHp1udcYsnBSLYTS.jpg",
             "vote_count": 35,
@@ -51,7 +51,7 @@
             "original_name": "Live with Regis and Kathie Lee",
             "id": 1900,
             "genre_ids": [],
-            "character": "",
+            "character": null,
             "name": "Live with Regis and Kathie Lee",
             "poster_path": "/nuwhsprEgH31SROiJtIk0mxF82M.jpg",
             "vote_count": 4,
@@ -75,7 +75,7 @@
                 35,
                 18
             ],
-            "character": "",
+            "character": null,
             "name": "King of the Hill",
             "poster_path": "/83LbPNL1NZ2czbRlN5vNSfi47Fj.jpg",
             "vote_count": 112,
@@ -97,7 +97,7 @@
             "genre_ids": [
                 99
             ],
-            "character": "",
+            "character": null,
             "name": "Pet Star",
             "poster_path": null,
             "vote_count": 0,
@@ -119,7 +119,7 @@
             "genre_ids": [
                 18
             ],
-            "character": "",
+            "character": null,
             "name": "Freddy's Nightmares",
             "poster_path": "/sMYfjEjK6rEF6FeiGum6g67Wor6.jpg",
             "vote_count": 7,
@@ -141,7 +141,7 @@
             "genre_ids": [
                 10767
             ],
-            "character": "",
+            "character": null,
             "name": "Late Night with Conan O'Brien",
             "poster_path": "/v4N5l6JooObhXbjXoFaKbx92wB9.jpg",
             "vote_count": 34,
@@ -163,7 +163,7 @@
             "genre_ids": [
                 99
             ],
-            "character": "",
+            "character": null,
             "name": "Intimate Portrait",
             "poster_path": "/gZnxSxEpU9Tn7FaYBnV8aOwHnXH.jpg",
             "vote_count": 1,
@@ -183,7 +183,7 @@
             "original_name": "The Academy Awards",
             "id": 27023,
             "genre_ids": [],
-            "character": "",
+            "character": null,
             "name": "The Academy Awards",
             "poster_path": "/6vTqtwtzASs4v001qMS4xxCMmUJ.jpg",
             "vote_count": 12,
@@ -227,7 +227,7 @@
                 35,
                 18
             ],
-            "character": "",
+            "character": null,
             "name": "Thirtysomething",
             "poster_path": "/tlEWRrWe2SCd0cYfk3X5LEoiOpm.jpg",
             "vote_count": 3,
@@ -251,7 +251,7 @@
                 9648,
                 10759
             ],
-            "character": "",
+            "character": null,
             "name": "21 Jump Street",
             "poster_path": "/ybvuX8vQx8OTBp4PRCkmi5w9eJC.jpg",
             "vote_count": 17,
@@ -296,7 +296,7 @@
             "genre_ids": [
                 10763
             ],
-            "character": "",
+            "character": null,
             "name": "Today",
             "poster_path": "/6gpFQwMZBHu2cCo4rzZ1EKyxhry.jpg",
             "vote_count": 2,
@@ -319,7 +319,7 @@
                 35,
                 10763
             ],
-            "character": "",
+            "character": null,
             "name": "The Daily Show with Trevor Noah",
             "poster_path": "/tZlqGXWGzEJNRl9QCCUN8ioSv2D.jpg",
             "vote_count": 99,
@@ -342,7 +342,7 @@
                 35,
                 10765
             ],
-            "character": "",
+            "character": null,
             "name": "Tales from the Crypt",
             "poster_path": "/s5AMwt5Y8FMvAR5ZDUSLcHch3GT.jpg",
             "vote_count": 70,
@@ -364,7 +364,7 @@
             "genre_ids": [
                 35
             ],
-            "character": "",
+            "character": null,
             "name": "Head of the Class",
             "poster_path": "/lTpL3zgxkRiJYFW3DQTkPigSK6P.jpg",
             "vote_count": 10,
@@ -386,7 +386,7 @@
             "genre_ids": [
                 10764
             ],
-            "character": "",
+            "character": null,
             "name": "American Idol",
             "poster_path": "/5Ez1Pdt1U2gRIQMBEunduJ6jFJU.jpg",
             "vote_count": 41,
@@ -409,7 +409,7 @@
                 99,
                 10763
             ],
-            "character": "",
+            "character": null,
             "name": "Celebrities Uncensored",
             "poster_path": null,
             "vote_count": 2,

@@ -1014,7 +1014,7 @@
             "poster_path": "/6Sj9wDu3YugthXsU0Vry5XFAZGg.jpg"
         },
         {
-            "character": "",
+            "character": null,
             "credit_id": "52fe4ef6c3a36847f82b3c95",
             "release_date": "1992-01-01",
             "vote_count": 2,
@@ -1619,7 +1619,7 @@
             "poster_path": "/6XoG37a4U7Jum8ChYoMHq6l5NQQ.jpg"
         },
         {
-            "character": "",
+            "character": null,
             "credit_id": "5967b06392514132e1005850",
             "release_date": "2019-12-31",
             "vote_count": 0,

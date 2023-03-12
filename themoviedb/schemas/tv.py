@@ -1,14 +1,27 @@
+from __future__ import annotations
+
 from dataclasses import dataclass
 from datetime import date
 from typing import List, Optional, Union
 
 from themoviedb.schemas._enums import SizeType
-from themoviedb.schemas._partial import PartialTV, PartialSeason, PartialEpisode
+from themoviedb.schemas._partial import PartialEpisode, PartialSeason, PartialTV
 from themoviedb.schemas._result import ResultWithID, ResultWithPage
+from themoviedb.schemas.alternative_titles import AlternativeTitles
+from themoviedb.schemas.content_ratings import ContentRatings
 from themoviedb.schemas.countries import Country
+from themoviedb.schemas.credits import Credits
+from themoviedb.schemas.episode_groups import EpisodeGroups
+from themoviedb.schemas.external_ids import ExternalIDs
 from themoviedb.schemas.genres import Genre
+from themoviedb.schemas.images import Images
+from themoviedb.schemas.keywords import Keywords
 from themoviedb.schemas.languages import Language
 from themoviedb.schemas.networks import Network
+from themoviedb.schemas.reviews import Reviews
+from themoviedb.schemas.translations import Translations
+from themoviedb.schemas.videos import Videos
+from themoviedb.schemas.watch_providers import WatchProviders
 
 
 @dataclass
@@ -24,6 +37,16 @@ class CreatedBy:
 
     def profile_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.profile_path}" if self.profile_path else None
+
+
+@dataclass
+class TVs(ResultWithPage):
+    results: Optional[List[PartialTV]] = None
+
+
+@dataclass
+class Episodes(ResultWithID):
+    results: Optional[List[PartialEpisode]] = None
 
 
 @dataclass
@@ -47,13 +70,30 @@ class TV(PartialTV):
     status: Optional[str] = None
     tagline: Optional[str] = None
     type: Optional[str] = None
+    aggregate_credits: Optional[Credits] = None
+    alternative_titles: Optional[AlternativeTitles] = None
+    # changes: Optional[] = None  # TODO
+    content_ratings: Optional[ContentRatings] = None
+    credits: Optional[Credits] = None
+    external_ids: Optional[ExternalIDs] = None
+    episode_groups: Optional[EpisodeGroups] = None
+    images: Optional[Images] = None
+    keywords: Optional[Keywords] = None
+    recommendations: Optional[TVs] = None
+    reviews: Optional[Reviews] = None
+    screened_theatrically: Optional[Episodes] = None
+    similar: Optional[TVs] = None
+    translations: Optional[Translations] = None
+    videos: Optional[Videos] = None
+    watch_providers: Optional[WatchProviders] = None
 
+    def episode_duration(self, fmt: str = "%H:%M") -> Optional[str]:
+        if self.episode_run_time:
+            return time(minute=self.episode_run_time).strftime(fmt)
+        return None
 
-@dataclass
-class TVs(ResultWithPage):
-    results: Optional[List[PartialTV]] = None
-
-
-@dataclass
-class Episodes(ResultWithID):
-    results: Optional[List[PartialEpisode]] = None
+    def duration(self, fmt: str = "%H:%M") -> Optional[str]:
+        if self.episode_run_time and self.number_of_episodes:
+            total_runtime = self.episode_run_time * self.number_of_episodes
+            return time(minute=total_runtime).strftime(fmt)
+        return None

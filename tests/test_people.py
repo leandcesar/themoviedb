@@ -30,6 +30,32 @@ async def test_person_details(get_data, assert_data):
 
 
 @pytest.mark.asyncio
+async def test_person_details_full(get_data, assert_data):
+    data = get_data("people/details_full")
+    data.pop("changes")  # TODO
+    person_id = 123
+
+    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+        mocked.return_value.__aenter__.return_value.json.return_value = data
+        person = await routes.Person(person_id).details(append_to_response="changes,movie_credits,tv_credits,combined_credits,external_ids,images,tagged_images,translations")
+        mocked.assert_called_with(
+            "GET",
+            f"https://api.themoviedb.org/3/person/{person_id}",
+            params={
+                "api_key": "TEST_TMDB_KEY",
+                "language": "en-US",
+                "region": "US",
+                "watch_region": "US",
+                "include_image_language": "null",
+                "append_to_response": "changes,movie_credits,tv_credits,combined_credits,external_ids,images,tagged_images,translations",
+            },
+        )
+
+    assert isinstance(person, schemas.Person)
+    assert assert_data(person, data)
+
+
+@pytest.mark.asyncio
 async def test_person_external_ids(get_data, assert_data):
     data = get_data("people/external_ids")
     person_id = 123
@@ -75,7 +101,6 @@ async def test_person_images(get_data, assert_data):
     assert assert_data(images, data)
 
 
-@pytest.mark.skip
 @pytest.mark.asyncio
 async def test_person_combined_credits(get_data, assert_data):
     data = get_data("people/combined_credits")

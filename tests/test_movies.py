@@ -29,10 +29,11 @@ async def test_movie_details(get_data, assert_data):
     assert assert_data(movie, data)
 
 
-@pytest.mark.skip
 @pytest.mark.asyncio
 async def test_movie_details_full(get_data, assert_data):
     data = get_data("movies/details_full")
+    data.pop("changes")  # TODO
+    data.pop("lists")  # TODO
     movie_id = 123
 
     with patch("themoviedb.routes.base.ClientSession.request") as mocked:

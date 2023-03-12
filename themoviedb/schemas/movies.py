@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import time
 from typing import List, Optional
 
 from themoviedb.schemas._partial import PartialMovie
@@ -15,6 +16,9 @@ from themoviedb.schemas.genres import Genre
 from themoviedb.schemas.images import Images
 from themoviedb.schemas.keywords import Keywords
 from themoviedb.schemas.languages import Language
+from themoviedb.schemas.release_date import ReleaseDates
+from themoviedb.schemas.reviews import Reviews
+from themoviedb.schemas.translations import Translations
 from themoviedb.schemas.videos import Videos
 from themoviedb.schemas.watch_providers import WatchProviders
 
@@ -34,23 +38,28 @@ class Movie(PartialMovie):
     status: Optional[str] = None
     tagline: Optional[str] = None
     alternative_titles: Optional[AlternativeTitles] = None
-    # changes = Optional[] = None  # TODO
+    # changes: Optional[] = None  # TODO
     credits: Optional[Credits] = None
     external_ids: Optional[ExternalIDs] = None
     images: Optional[Images] = None
     keywords: Optional[Keywords] = None
-    # lists = Optional[] = None  # TODO
+    # lists: Optional[] = None  # TODO
     recommendations: Optional[Movies] = None
-    # release_dates = Optional[] = None  # TODO
-    # reviews = Optional[] = None  # TODO
+    release_dates: Optional[ReleaseDates] = None
+    reviews: Optional[Reviews] = None
     similar: Optional[Movies] = None
-    # translations = Optional[] = None  # TODO
+    translations: Optional[Translations] = None
     videos: Optional[Videos] = None
     watch_providers: Optional[WatchProviders] = None
 
     @property
-    def imdb(self) -> Optional[str]:
+    def imdb_url(self) -> Optional[str]:
         return f"https://www.imdb.com/title/{self.imdb_id}" if self.imdb_id else None
+
+    def duration(self, fmt: str = "%H:%M") -> Optional[str]:
+        if self.runtime:
+            return time(minute=self.runtime).strftime(fmt)
+        return None
 
 
 @dataclass
