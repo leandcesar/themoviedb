@@ -9,7 +9,7 @@ from themoviedb import tmdb, schemas
 async def test_genres_movie(get_data, assert_data):
     data = get_data("genres/movie_list")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         genres = await tmdb.TMDb().genres().movie()
         mocked.assert_called_with(
@@ -31,7 +31,7 @@ async def test_genres_movie(get_data, assert_data):
 async def test_genres_tv(get_data, assert_data):
     data = get_data("genres/tv_list")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         genres = await tmdb.TMDb().genres().tv()
         mocked.assert_called_with(

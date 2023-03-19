@@ -10,7 +10,7 @@ async def test_episode_group_details(get_data, assert_data):
     data = get_data("tv_episode_groups/details")
     episode_group_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         episode_groups = await tmdb.TMDb().episode_group(episode_group_id).details()
         mocked.assert_called_with(

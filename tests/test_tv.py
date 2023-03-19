@@ -10,7 +10,7 @@ async def test_tv_details(get_data, assert_data):
     data = get_data("tv/details")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         tv = await tmdb.TMDb().tv(tv_id).details()
         mocked.assert_called_with(
@@ -34,7 +34,7 @@ async def test_tv_details_full(get_data, assert_data):
     data.pop("changes")  # TODO
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         tv = await tmdb.TMDb().tv(tv_id).details(append_to_response="aggregate_credits,alternative_titles,changes,content_ratings,credits,external_ids,episode_groups,images,keywords,recommendations,reviews,screened_theatrically,similar,translations,videos,watch/providers")
         mocked.assert_called_with(
@@ -58,7 +58,7 @@ async def test_tv_aggregate_credits(get_data, assert_data):
     data = get_data("tv/aggregate_credits")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         aggregate_credits = await tmdb.TMDb().tv(tv_id).aggregate_credits()
         mocked.assert_called_with(
@@ -81,7 +81,7 @@ async def test_tv_alternative_titles(get_data, assert_data):
     data = get_data("tv/alternative_titles")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         alternative_titles = await tmdb.TMDb().tv(tv_id).alternative_titles()
         mocked.assert_called_with(
@@ -104,7 +104,7 @@ async def test_tv_content_ratings(get_data, assert_data):
     data = get_data("tv/content_ratings")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         content_ratings = await tmdb.TMDb().tv(tv_id).content_ratings()
         mocked.assert_called_with(
@@ -127,7 +127,7 @@ async def test_tv_credits(get_data, assert_data):
     data = get_data("tv/credits")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         credits_ = await tmdb.TMDb().tv(tv_id).credits()
         mocked.assert_called_with(
@@ -150,7 +150,7 @@ async def test_tv_episode_groups(get_data, assert_data):
     data = get_data("tv/episode_groups")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         episode_groups = await tmdb.TMDb().tv(tv_id).episode_groups()
         mocked.assert_called_with(
@@ -173,7 +173,7 @@ async def test_tv_external_ids(get_data, assert_data):
     data = get_data("tv/external_ids")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         external_ids = await tmdb.TMDb().tv(tv_id).external_ids()
         mocked.assert_called_with(
@@ -196,7 +196,7 @@ async def test_tv_images(get_data, assert_data):
     data = get_data("tv/images")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         images = await tmdb.TMDb().tv(tv_id).images()
         mocked.assert_called_with(
@@ -219,7 +219,7 @@ async def test_tv_keywords(get_data, assert_data):
     data = get_data("tv/keywords")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         keywords = await tmdb.TMDb().tv(tv_id).keywords()
         mocked.assert_called_with(
@@ -242,7 +242,7 @@ async def test_tv_recommendations(get_data, assert_data):
     data = get_data("tv/recommendations")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         recommendations = await tmdb.TMDb().tv(tv_id).recommendations()
         mocked.assert_called_with(
@@ -266,7 +266,7 @@ async def test_tv_reviews(get_data, assert_data):
     data = get_data("tv/reviews")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         reviews = await tmdb.TMDb().tv(tv_id).reviews()
         mocked.assert_called_with(
@@ -290,7 +290,7 @@ async def test_tv_screened_theatrically(get_data, assert_data):
     data = get_data("tv/screened_theatrically")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         screened_theatrically = await tmdb.TMDb().tv(tv_id).screened_theatrically()
         mocked.assert_called_with(
@@ -313,7 +313,7 @@ async def test_tv_similar(get_data, assert_data):
     data = get_data("tv/similar")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         similar = await tmdb.TMDb().tv(tv_id).similar()
         mocked.assert_called_with(
@@ -337,7 +337,7 @@ async def test_tv_translations(get_data, assert_data):
     data = get_data("tv/translations")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         translations = await tmdb.TMDb().tv(tv_id).translations()
         mocked.assert_called_with(
@@ -360,7 +360,7 @@ async def test_tv_videos(get_data, assert_data):
     data = get_data("tv/videos")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         videos = await tmdb.TMDb().tv(tv_id).videos()
         mocked.assert_called_with(
@@ -384,7 +384,7 @@ async def test_tv_watch_providers(get_data, assert_data):
     data = get_data("tv/watch_providers")
     tv_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         watch_providers = await tmdb.TMDb().tv(tv_id).watch_providers()
         mocked.assert_called_with(
@@ -406,7 +406,7 @@ async def test_tv_watch_providers(get_data, assert_data):
 async def test_tvs_latest(get_data, assert_data):
     data = get_data("tv/latest")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         tv = await tmdb.TMDb().tvs().latest()
         mocked.assert_called_with(
@@ -428,7 +428,7 @@ async def test_tvs_latest(get_data, assert_data):
 async def test_tvs_airing_today(get_data, assert_data):
     data = get_data("tv/airing_today")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         tvs = await tmdb.TMDb().tvs().airing_today()
         mocked.assert_called_with(
@@ -451,7 +451,7 @@ async def test_tvs_airing_today(get_data, assert_data):
 async def test_tvs_on_the_air(get_data, assert_data):
     data = get_data("tv/on_the_air")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         tvs = await tmdb.TMDb().tvs().on_the_air()
         mocked.assert_called_with(
@@ -474,7 +474,7 @@ async def test_tvs_on_the_air(get_data, assert_data):
 async def test_tvs_popular(get_data, assert_data):
     data = get_data("tv/popular")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         tvs = await tmdb.TMDb().tvs().popular()
         mocked.assert_called_with(
@@ -497,7 +497,7 @@ async def test_tvs_popular(get_data, assert_data):
 async def test_tvs_top_rated(get_data, assert_data):
     data = get_data("tv/top_rated")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         tvs = await tmdb.TMDb().tvs().top_rated()
         mocked.assert_called_with(

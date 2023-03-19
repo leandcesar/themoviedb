@@ -10,7 +10,7 @@ async def test_network_details(get_data, assert_data):
     data = get_data("networks/details")
     network_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         network = await tmdb.TMDb().network(network_id).details()
         mocked.assert_called_with(
@@ -33,7 +33,7 @@ async def test_network_alternative_names(get_data, assert_data):
     data = get_data("networks/alternative_names")
     network_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         alternative_names = await tmdb.TMDb().network(network_id).alternative_names()
         mocked.assert_called_with(
@@ -56,7 +56,7 @@ async def test_network_images(get_data, assert_data):
     data = get_data("networks/images")
     network_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         images = await tmdb.TMDb().network(network_id).images()
         mocked.assert_called_with(

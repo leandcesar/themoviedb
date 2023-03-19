@@ -70,6 +70,7 @@ class Base:
 
     async def request(self, path: str, method: str = "GET", **kwargs) -> dict:
         url = f"{self._host}/{self._version}/{path}"
+        json = kwargs.pop("json", None)
         params = {
             k.replace("__", "."): "true" if v is True else "false" if v is False else v
             for k, v in kwargs.items()
@@ -78,12 +79,20 @@ class Base:
         params = {**self._params, **params}
 
         if self._session:
-            response = await self.session.request(method, url, params=params)
+            if json is None:
+                response = await self.session.request(method, url, params=params)
+            else:
+                response = await self.session.request(method, url, params=params, json=json)
             data = await response.json()
         else:
             async with ClientSession(raise_for_status=True) as session:
-                async with session.request(method, url, params=params) as response:
-                    data = await response.json()
+                if json is None:
+                    async with session.request(method, url, params=params) as response:
+                        data = await response.json()
+                else:
+                    async with session.request(method, url, params=params, json=json) as response:
+                        data = await response.json()
+                
 
         if "watch/providers" in data:
             data["watch_providers"] = data.pop("watch/providers")

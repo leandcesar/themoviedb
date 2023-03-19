@@ -1,4 +1,5 @@
-from themoviedb.routes.base import Base
+from themoviedb.routes._base import Base
+from themoviedb.routes.authentication import Authentication
 from themoviedb.routes.certifications import Certifications
 from themoviedb.routes.credit import Credit
 from themoviedb.routes.companies import Company

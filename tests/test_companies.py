@@ -10,7 +10,7 @@ async def test_company_details(get_data, assert_data):
     data = get_data("companies/details")
     company_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         company = await tmdb.TMDb().company(company_id).details()
         mocked.assert_called_with(
@@ -33,7 +33,7 @@ async def test_company_alternative_names(get_data, assert_data):
     data = get_data("companies/alternative_names")
     company_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         alternative_names = await tmdb.TMDb().company(company_id).alternative_names()
         mocked.assert_called_with(
@@ -56,7 +56,7 @@ async def test_company_images(get_data, assert_data):
     data = get_data("companies/images")
     company_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         images = await tmdb.TMDb().company(company_id).images()
         mocked.assert_called_with(

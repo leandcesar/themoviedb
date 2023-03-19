@@ -1,5 +1,5 @@
 from themoviedb import schemas, utils
-from themoviedb.routes.base import Base
+from themoviedb.routes._base import Base
 
 
 class Find(Base):

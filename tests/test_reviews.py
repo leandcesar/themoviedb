@@ -10,7 +10,7 @@ async def test_review_details(get_data, assert_data):
     data = get_data("reviews/details")
     review_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         review = await tmdb.TMDb().review(review_id).details()
         mocked.assert_called_with(

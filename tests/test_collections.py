@@ -10,7 +10,7 @@ async def test_collection_details(get_data, assert_data):
     data = get_data("collections/details")
     collection_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         collection = await tmdb.TMDb().collection(collection_id).details()
         mocked.assert_called_with(
@@ -33,7 +33,7 @@ async def test_collection_images(get_data, assert_data):
     data = get_data("collections/images")
     collection_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         images = await tmdb.TMDb().collection(collection_id).images()
         mocked.assert_called_with(
@@ -56,7 +56,7 @@ async def test_collection_translations(get_data, assert_data):
     data = get_data("collections/translations")
     collection_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         translations = await tmdb.TMDb().collection(collection_id).translations()
         mocked.assert_called_with(

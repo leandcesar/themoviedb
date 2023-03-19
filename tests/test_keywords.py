@@ -10,7 +10,7 @@ async def test_keyword_details(get_data, assert_data):
     data = get_data("keywords/details")
     keyword_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         keyword = await tmdb.TMDb().keyword(keyword_id).details()
         mocked.assert_called_with(
@@ -33,7 +33,7 @@ async def test_keyword_movies(get_data, assert_data):
     data = get_data("keywords/movies")
     keyword_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         movies = await tmdb.TMDb().keyword(keyword_id).movies()
         mocked.assert_called_with(

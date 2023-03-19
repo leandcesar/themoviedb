@@ -10,7 +10,7 @@ async def test_person_details(get_data, assert_data):
     data = get_data("people/details")
     person_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         person = await tmdb.TMDb().person(person_id).details()
         mocked.assert_called_with(
@@ -35,7 +35,7 @@ async def test_person_details_full(get_data, assert_data):
     data.pop("changes")  # TODO
     person_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         person = await tmdb.TMDb().person(person_id).details(append_to_response="changes,movie_credits,tv_credits,combined_credits,external_ids,images,tagged_images,translations")
         mocked.assert_called_with(
@@ -60,7 +60,7 @@ async def test_person_external_ids(get_data, assert_data):
     data = get_data("people/external_ids")
     person_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         external_ids = await tmdb.TMDb().person(person_id).external_ids()
         mocked.assert_called_with(
@@ -83,7 +83,7 @@ async def test_person_images(get_data, assert_data):
     data = get_data("people/images")
     person_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         images = await tmdb.TMDb().person(person_id).images()
         mocked.assert_called_with(
@@ -106,7 +106,7 @@ async def test_person_combined_credits(get_data, assert_data):
     data = get_data("people/combined_credits")
     person_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         combined_credits = await tmdb.TMDb().person(person_id).combined_credits()
         mocked.assert_called_with(
@@ -129,7 +129,7 @@ async def test_person_movie_credits(get_data, assert_data):
     data = get_data("people/movie_credits")
     person_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         movie_credits = await tmdb.TMDb().person(person_id).movie_credits()
         mocked.assert_called_with(
@@ -152,7 +152,7 @@ async def test_person_tv_credits(get_data, assert_data):
     data = get_data("people/tv_credits")
     person_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         tv_credits = await tmdb.TMDb().person(person_id).tv_credits()
         mocked.assert_called_with(
@@ -175,7 +175,7 @@ async def test_person_tagged_images(get_data, assert_data):
     data = get_data("people/tagged_images")
     person_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         tagged_images = await tmdb.TMDb().person(person_id).tagged_images()
         mocked.assert_called_with(
@@ -198,7 +198,7 @@ async def test_person_translations(get_data, assert_data):
     data = get_data("people/translations")
     person_id = 123
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         translations = await tmdb.TMDb().person(person_id).translations()
         mocked.assert_called_with(
@@ -220,7 +220,7 @@ async def test_person_translations(get_data, assert_data):
 async def test_people_latest(get_data, assert_data):
     data = get_data("people/latest")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         person = await tmdb.TMDb().people().latest()
         mocked.assert_called_with(
@@ -242,7 +242,7 @@ async def test_people_latest(get_data, assert_data):
 async def test_people_popular(get_data, assert_data):
     data = get_data("people/popular")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         people = await tmdb.TMDb().people().popular()
         mocked.assert_called_with(

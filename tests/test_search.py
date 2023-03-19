@@ -9,7 +9,7 @@ from themoviedb import tmdb, schemas
 async def test_search_collections(get_data, assert_data):
     data = get_data("search/collection")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         collections = await tmdb.TMDb().search().collections("test")
         mocked.assert_called_with(
@@ -33,7 +33,7 @@ async def test_search_collections(get_data, assert_data):
 async def test_search_companies(get_data, assert_data):
     data = get_data("search/company")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         companies = await tmdb.TMDb().search().companies("test")
         mocked.assert_called_with(
@@ -57,7 +57,7 @@ async def test_search_companies(get_data, assert_data):
 async def test_search_keywords(get_data, assert_data):
     data = get_data("search/keyword")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         keywords = await tmdb.TMDb().search().keywords("test")
         mocked.assert_called_with(
@@ -81,7 +81,7 @@ async def test_search_keywords(get_data, assert_data):
 async def test_search_movies(get_data, assert_data):
     data = get_data("search/movie")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         movies = await tmdb.TMDb().search().movies("test")
         mocked.assert_called_with(
@@ -106,7 +106,7 @@ async def test_search_movies(get_data, assert_data):
 async def test_search_multi(get_data, assert_data):
     data = get_data("search/multi")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         multis = await tmdb.TMDb().search().multi("test")
         mocked.assert_called_with(
@@ -131,7 +131,7 @@ async def test_search_multi(get_data, assert_data):
 async def test_search_people(get_data, assert_data):
     data = get_data("search/person")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         people = await tmdb.TMDb().search().people("test")
         mocked.assert_called_with(
@@ -156,7 +156,7 @@ async def test_search_people(get_data, assert_data):
 async def test_search_tv(get_data, assert_data):
     data = get_data("search/tv")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         tvs = await tmdb.TMDb().search().tv("test")
         mocked.assert_called_with(

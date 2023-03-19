@@ -10,7 +10,7 @@ async def test_find_by_imdb(get_data, assert_data):
     data = get_data("find/find")
     imdb_id = "test"
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         results = await tmdb.TMDb().find().by_imdb(imdb_id)
         mocked.assert_called_with(
@@ -34,7 +34,7 @@ async def test_find_by_tvdb(get_data, assert_data):
     data = get_data("find/find")
     tvdb_id = "test"
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         results = await tmdb.TMDb().find().by_tvdb(tvdb_id)
         mocked.assert_called_with(
@@ -58,7 +58,7 @@ async def test_find_by_freebase_mid(get_data, assert_data):
     data = get_data("find/find")
     freebase_mid = "test"
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         results = await tmdb.TMDb().find().by_freebase_mid(freebase_mid)
         mocked.assert_called_with(
@@ -82,7 +82,7 @@ async def test_find_by_freebase(get_data, assert_data):
     data = get_data("find/find")
     freebase_id = "test"
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         results = await tmdb.TMDb().find().by_freebase(freebase_id)
         mocked.assert_called_with(
@@ -106,7 +106,7 @@ async def test_find_by_tvrage(get_data, assert_data):
     data = get_data("find/find")
     tvrage_id = "test"
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         results = await tmdb.TMDb().find().by_tvrage(tvrage_id)
         mocked.assert_called_with(
@@ -130,7 +130,7 @@ async def test_find_by_facebook(get_data, assert_data):
     data = get_data("find/find")
     facebook_id = "test"
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         results = await tmdb.TMDb().find().by_facebook(facebook_id)
         mocked.assert_called_with(
@@ -154,7 +154,7 @@ async def test_find_by_instagram(get_data, assert_data):
     data = get_data("find/find")
     instagram_id = "test"
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         results = await tmdb.TMDb().find().by_instagram(instagram_id)
         mocked.assert_called_with(
@@ -178,7 +178,7 @@ async def test_find_by_twitter(get_data, assert_data):
     data = get_data("find/find")
     twitter_id = "test"
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         results = await tmdb.TMDb().find().by_twitter(twitter_id)
         mocked.assert_called_with(

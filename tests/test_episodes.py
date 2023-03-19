@@ -12,7 +12,7 @@ async def test_episode_details(get_data, assert_data):
     season_id = 456
     episode_id = 789
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         episode = await tmdb.TMDb().episode(tv_id, season_id, episode_id).details()
         mocked.assert_called_with(
@@ -38,7 +38,7 @@ async def test_episode_details_full(get_data, assert_data):
     season_id = 456
     episode_id = 789
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         episode = await tmdb.TMDb().episode(tv_id, season_id, episode_id).details(append_to_response="alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers")
         mocked.assert_called_with(
@@ -64,7 +64,7 @@ async def test_episode_credits(get_data, assert_data):
     season_id = 456
     episode_id = 789
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         credits_ = await tmdb.TMDb().episode(tv_id, season_id, episode_id).credits()
         mocked.assert_called_with(
@@ -89,7 +89,7 @@ async def test_episode_external_ids(get_data, assert_data):
     season_id = 456
     episode_id = 789
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         external_ids = await tmdb.TMDb().episode(tv_id, season_id, episode_id).external_ids()
         mocked.assert_called_with(
@@ -114,7 +114,7 @@ async def test_episode_images(get_data, assert_data):
     season_id = 456
     episode_id = 789
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         images = await tmdb.TMDb().episode(tv_id, season_id, episode_id).images()
         mocked.assert_called_with(
@@ -139,7 +139,7 @@ async def test_episode_translations(get_data, assert_data):
     season_id = 456
     episode_id = 789
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         translations = await tmdb.TMDb().episode(tv_id, season_id, episode_id).translations()
         mocked.assert_called_with(
@@ -164,7 +164,7 @@ async def test_episode_videos(get_data, assert_data):
     season_id = 456
     episode_id = 789
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         videos = await tmdb.TMDb().episode(tv_id, season_id, episode_id).videos()
         mocked.assert_called_with(

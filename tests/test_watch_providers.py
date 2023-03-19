@@ -9,7 +9,7 @@ from themoviedb import tmdb, schemas
 async def test_watch_providers_movie(get_data, assert_data):
     data = get_data("watch_providers/movie")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         watch_providers = await tmdb.TMDb().watch_providers().movie()
         mocked.assert_called_with(
@@ -31,7 +31,7 @@ async def test_watch_providers_movie(get_data, assert_data):
 async def test_watch_providers_regions(get_data, assert_data):
     data = get_data("watch_providers/regions")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         regions = await tmdb.TMDb().watch_providers().regions()
         mocked.assert_called_with(
@@ -53,7 +53,7 @@ async def test_watch_providers_regions(get_data, assert_data):
 async def test_watch_providers_tv(get_data, assert_data):
     data = get_data("watch_providers/tv")
 
-    with patch("themoviedb.routes.base.ClientSession.request") as mocked:
+    with patch("themoviedb.routes._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
         watch_providers = await tmdb.TMDb().watch_providers().tv()
         mocked.assert_called_with(

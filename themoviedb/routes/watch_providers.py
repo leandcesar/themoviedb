@@ -1,7 +1,7 @@
 from typing import Optional
 
 from themoviedb import schemas, utils
-from themoviedb.routes.base import Base
+from themoviedb.routes._base import Base
 
 
 class WatchProviders(Base):

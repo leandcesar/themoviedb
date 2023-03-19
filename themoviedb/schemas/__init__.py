@@ -17,6 +17,13 @@ from themoviedb.schemas._partial import (
 from themoviedb.schemas._result import Dates, Result, ResultWithID, ResultWithPage
 from themoviedb.schemas.alternative_names import AlternativeName, AlternativeNames
 from themoviedb.schemas.alternative_titles import AlternativeTitle, AlternativeTitles
+from themoviedb.schemas.authentication import (
+    Authentication,
+    GuestAuthentication,
+    Response,
+    Session,
+    TokenAuthentication,
+)
 from themoviedb.schemas.certifications import Certification, Certifications
 from themoviedb.schemas.changes import Change
 from themoviedb.schemas.collections import Collection, Collections
