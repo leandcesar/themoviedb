@@ -1,5 +1,6 @@
 from themoviedb.routes import (
     Base,
+    Authentication,
     Certifications,
     Collection,
     Company,
@@ -32,6 +33,10 @@ class TMDb(Base):
     Each method returns an instance of a corresponding model class, which can be used
     to retrieve information about a specific resource.
     """
+
+    def authentication(self) -> Authentication:
+        """Get model object for `themoviedb.Authentication` resource."""
+        return Authentication(session=self.session, language=self.language, region=self.region)
 
     def certifications(self) -> Certifications:
         """Get model object for `themoviedb.Certifications` resource."""
