@@ -3,19 +3,14 @@
 themoviedb
 ==========
 
-A modern and easy to use API wrapper for The Movie Database (TMDb) API v3 written in Python.
-
--  `Overview <#overview>`__
--  `Getting started <#getting-started>`__
--  `Configuration <#configuration>`__
-
---------------
+A modern and easy to use API wrapper for The Movie Database (TMDb) API v3
+written in Python. Supports sync and async requests!
 
 Overview
 ========
 
-The **themoviedb** is an asynchronous wrapper, written in Python, for The
-Movie Database (TMDb) API v3.
+The **themoviedb** is a synchronous and asynchronous wrapper, written in Python,
+for The Movie Database (TMDb) API v3.
 
 `The Movie Database (TMDb) <https://www.themoviedb.org>`__ is a
 community built movie and TV database.
@@ -62,80 +57,106 @@ obtain a key, follow these steps:
 Usage
 -----
 
-The first step is to initialize a TMDb object and set your API Key.
-
-.. code:: py
-
-    import asyncio
-    from themoviedb import TMDb
-
-    async def main():
-        tmdb = TMDb(key="YOUR_API_KEY")
-        movies = await tmdb.search().movies("fight club")
-        for movie in movies:
-            print(movie)
-
-    asyncio.run(main())
-
-Alternatively, you can export your API key as an environment variable.
-
-.. code:: bash
-
-    $ export TMDB_KEY="YOUR_API_KEY"
-
-And then you will no longer need to set your API key.
-
-.. code:: py
-
-    import asyncio
-    from themoviedb import TMDb
-
-    async def main():
-        # implicit env var: TMDB_KEY="YOUR_API_KEY"
-        tmdb = TMDb()
-        movies = await tmdb.movies().now_playing()
-        for movie in movies:
-            print(movie)
-
-    asyncio.run(main())
-
 Configuration
-=============
+~~~~~~~~~~~~~
 
 Initialize a TMDb object and set your API Key, language and region.
 
-.. code:: py
+.. code:: python
+
+    tmdb = TMDb(key="YOUR_API_KEY", language="pt-BR", region="BR")
+
+Alternatively, set after initialize.
+
+.. code:: python
 
     tmdb = TMDb()
     tmdb.key = "YOUR_API_KEY"
-    tmdb.language = "pt-BR"
-    tmdb.region = "BR"
-    tvs = await tmdb.tvs().on_the_air()
+    tmdb.language = "pt-BR"     # default: en-US
+    tmdb.region = "BR"          # default: US
 
-Alternatively, you can export your API key, language and region
+Alternatively too, you can export your API key, language and region
 logger as an environment variable.
 
 .. code:: bash
 
     $ export TMDB_KEY="YOUR_API_KEY"
     $ export TMDB_LANGUAGE="pt-BR"  # ISO 639-1
-    $ export TMDB_REGION="BR"  # ISO-3166-1
+    $ export TMDB_REGION="BR"       # ISO-3166-1
 
 And then you will no longer need to set your API key, language and region.
 
+.. code:: python
+
+    tmdb = TMDb()   # implicit env var: TMDB_KEY="YOUR_API_KEY"
+                    #                   TMDB_LANGUAGE="pt-BR"
+                    #                   TMDB_REGION="BR"
+
+Examples
+~~~~~~~~
+
+Get the list of top rated movies (sync mode).
+
 .. code:: py
 
-    # implicit env vars: TMDB_KEY="YOUR_API_KEY" TMDB_LANGUAGE="pt-BR" TMDB_REGION="BR"
+    from themoviedb import TMDb
+
     tmdb = TMDb()
-    people = await tmdb.people().popular()
+    movies = tmdb.movies().top_rated()
+    for movie in movies:
+        print(movie)
 
-You also can set language and region on object instantiation.
+Get the list of popular TV shows (async mode).
 
 .. code:: py
 
-    # implicit env vars: TMDB_KEY="YOUR_API_KEY" TMDB_LANGUAGE="pt-BR" TMDB_REGION="BR"
-    tmdb = TMDb(key="ANOTHER_API_KEY", language="en-US", region="US")
-    tvs = await tmdb.tvs().popular()  # with en-US / US
+    import asyncio
+    from themoviedb import aioTMDb
+
+    async def main():
+        tmdb = aioTMDb()
+        movies = await tmdb.tvs().popular()
+        for movie in movies:
+            print(movie)
+
+    asyncio.run(main())
+
+Discover movies by different types of data.
+
+.. code:: py
+
+    from themoviedb import TMDb
+
+    tmdb = TMDb()
+    movies = tmdb.discover().movie(
+        sort_by="vote_average.desc",
+        primary_release_date__gte="1997-08-15",
+        vote_count__gte=10000,
+        vote_average__gte=6.0,
+    )
+    for movie in movies:
+        print(movie)
+
+Get the details of movie for a search.
+
+.. code:: py
+
+    import asyncio
+    from themoviedb import aioTMDb
+
+    async def main():
+        tmdb = aioTMDb()
+        movies = await tmdb.search().movies("fight club")
+        movie_id = movies[0].id  # get first result
+        movie = await tmdb.movie(movie_id).details(append_to_response="credits,external_ids,images,videos")
+        print(movie.title, movie.year)
+        print(movie.tagline)
+        print(movie.poster_url)
+        print(movie.external_ids.imdb_url)
+        for person in movie.credits.cast:
+            print(person.name, person.character)
+
+    asyncio.run(main())
 
 .. |Code Quality Score| image:: https://api.codiga.io/project/36067/score/svg
    :target: https://app.codiga.io/hub/project/36067/themoviedb
