@@ -55,6 +55,14 @@ from themoviedb.schemas.movies import Movie, Movies
 from themoviedb.schemas.multi import Multi, MultiResults, Multis
 from themoviedb.schemas.networks import Network
 from themoviedb.schemas.people import People, Person
+from themoviedb.schemas.rated import (
+    RatedEpisode,
+    RatedEpisodes,
+    RatedMovie,
+    RatedMovies,
+    RatedTV,
+    RatedTVs,
+)
 from themoviedb.schemas.regions import Region, Regions
 from themoviedb.schemas.release_date import ReleaseDate, ReleaseDates
 from themoviedb.schemas.reviews import Review, Reviews

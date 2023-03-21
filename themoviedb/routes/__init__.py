@@ -13,6 +13,7 @@ from themoviedb.routes.keywords import Keyword
 from themoviedb.routes.movies import Movie, Movies
 from themoviedb.routes.people import People, Person
 from themoviedb.routes.network import Network
+from themoviedb.routes.guest import Guest
 from themoviedb.routes.reviews import Review
 from themoviedb.routes.search import Search
 from themoviedb.routes.seasons import Season

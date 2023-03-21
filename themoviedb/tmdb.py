@@ -10,6 +10,7 @@ from themoviedb.routes import (
     EpisodeGroup,
     Find,
     Genres,
+    Guest,
     Keyword,
     Movie,
     Movies,
@@ -73,6 +74,10 @@ class TMDb(Base):
     def genres(self) -> Genres:
         """Get model object for `themoviedb.Genres` resource."""
         return Genres(session=self.session, language=self.language, region=self.region)
+
+    def guest(self, guest_session_id: str) -> Guest:
+        """Get model object for `themoviedb.Guest` resource."""
+        return Guest(guest_session_id, session=self.session, language=self.language, region=self.region)
 
     def keyword(self, keyword_id: int) -> Keyword:
         """Get model object for `themoviedb.Keyword` resource."""
