@@ -11,10 +11,12 @@ class Base:
     def __init__(
         self,
         *,
+        key: Optional[str] = None,
         session: Session = None,
         language: Optional[str] = None,
         region: Optional[str] = None,
     ):
+        self._key = key if key is not None else os.environ.get("TMDB_KEY")
         self._session = session
         self._language = language if language is not None else os.environ.get("TMDB_LANGUAGE", "en-US")
         self._region = region if region is not None else os.environ.get("TMDB_REGION", "US")
@@ -29,11 +31,11 @@ class Base:
 
     @property
     def key(self) -> str:
-        return os.environ.get("TMDB_KEY")
+        return self._key
 
     @key.setter
     def key(self, key: str) -> None:
-        os.environ["TMDB_KEY"] = key
+        self._key = key
 
     @property
     def language(self) -> str:

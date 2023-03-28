@@ -42,8 +42,11 @@ setup(
     keywords=[
         "tmdb",
         "tmdb3",
+        "aiotmdb",
+        "aiotmdb3",
         "themoviedb",
         "themoviedb3",
+        "sync",
         "async",
         "await",
         "aio",
