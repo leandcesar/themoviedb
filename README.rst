@@ -55,22 +55,38 @@ obtain a key, follow these steps:
    instructions.
 
 Usage
------
+=====
+
+Sync mode
+---------
+
+.. code:: python
+
+    from themoviedb import TMDb
+
+Async mode
+----------
+
+.. code:: python
+
+    from themoviedb import aioTMDb
 
 Configuration
-~~~~~~~~~~~~~
+-------------
 
 Initialize a TMDb object and set your API Key, language and region.
 
 .. code:: python
 
     tmdb = TMDb(key="YOUR_API_KEY", language="pt-BR", region="BR")
+    # or: tmdb = aioTMDb(key="YOUR_API_KEY", language="pt-BR", region="BR")
 
 Alternatively, set after initialize.
 
 .. code:: python
 
     tmdb = TMDb()
+    # or: tmdb = aioTMDb()
     tmdb.key = "YOUR_API_KEY"
     tmdb.language = "pt-BR"     # default: en-US
     tmdb.region = "BR"          # default: US
@@ -88,12 +104,11 @@ And then you will no longer need to set your API key, language and region.
 
 .. code:: python
 
-    tmdb = TMDb()   # implicit env var: TMDB_KEY="YOUR_API_KEY"
-                    #                   TMDB_LANGUAGE="pt-BR"
-                    #                   TMDB_REGION="BR"
+    tmdb = TMDb()   # from env: TMDB_KEY="YOUR_API_KEY", TMDB_LANGUAGE="pt-BR", TMDB_REGION="BR"
+    # or: tmdb = aioTMDb()
 
 Examples
-~~~~~~~~
+--------
 
 Get the list of top rated movies (sync mode).
 

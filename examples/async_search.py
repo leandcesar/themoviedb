@@ -1,11 +1,10 @@
 import asyncio
 
-from themoviedb import TMDb
+from themoviedb import aioTMDb
 
 
 async def main():
-    tmdb = TMDb(language="pt-BR", region="BR")
-    tmdb.key(self, key)
+    tmdb = aioTMDb(key="YOUR_API_KEY")
     results = await tmdb.search().multi("jack")
     for result in results:
         if result.is_movie():
