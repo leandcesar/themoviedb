@@ -8,6 +8,7 @@ with open("README.rst", "r", encoding="utf-8") as readme_file:
 requirements = [
     "aiohttp==3.8.0",
     "dacite==1.8.0",
+    "requests==2.28.2",
 ]
 
 test_requirements = [
@@ -22,7 +23,7 @@ setup(
     author="Leandro César",
     author_email="ccleandroc@gmail.com",
     url="https://github.com/leandcesar/themoviedb",
-    version="0.2.2",
+    version="0.3.2",
     license="MIT",
     python_requires=">=3.7",
     packages=find_packages(include=["themoviedb", "themoviedb.*"]),

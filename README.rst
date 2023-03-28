@@ -3,6 +3,15 @@
 themoviedb
 ==========
 
+.. raw:: html
+
+   <h1 align="center">
+     <a href="https://github.com/leandcesar/themoviedb">
+       <img src="https://github.com/leandcesar/themoviedb/blob/master/docs/assets/themoviedb.gif?raw=true" alt="themoviedb"/>
+     </a>
+   </h1>
+
+
 A modern and easy to use API wrapper for The Movie Database (TMDb) API v3
 written in Python. Supports sync and async requests!
 
