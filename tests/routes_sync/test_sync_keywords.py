@@ -17,9 +17,9 @@ def test_keyword_details(get_data, assert_data):
             f"https://api.themoviedb.org/3/keyword/{keyword_id}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -39,9 +39,9 @@ def test_keyword_movies(get_data, assert_data):
             f"https://api.themoviedb.org/3/keyword/{keyword_id}/movies",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
                 "page": 1,
                 "include_adult": False,
             },

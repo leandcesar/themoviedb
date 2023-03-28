@@ -17,9 +17,9 @@ async def test_genres_movie(get_data, assert_data):
             "https://api.themoviedb.org/3/genre/movie/list",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -39,9 +39,9 @@ async def test_genres_tv(get_data, assert_data):
             "https://api.themoviedb.org/3/genre/tv/list",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 

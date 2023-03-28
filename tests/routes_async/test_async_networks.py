@@ -18,9 +18,9 @@ async def test_network_details(get_data, assert_data):
             f"https://api.themoviedb.org/3/network/{network_id}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -41,9 +41,9 @@ async def test_network_alternative_names(get_data, assert_data):
             f"https://api.themoviedb.org/3/network/{network_id}/alternative_names",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -64,9 +64,9 @@ async def test_network_images(get_data, assert_data):
             f"https://api.themoviedb.org/3/network/{network_id}/images",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 

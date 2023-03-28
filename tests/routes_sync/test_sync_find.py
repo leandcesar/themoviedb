@@ -17,9 +17,9 @@ def test_find_by_imdb(get_data, assert_data):
             f"https://api.themoviedb.org/3/find/{imdb_id}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
                 "external_source": "imdb_id",
             },
         )
@@ -40,9 +40,9 @@ def test_find_by_tvdb(get_data, assert_data):
             f"https://api.themoviedb.org/3/find/{tvdb_id}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
                 "external_source": "tvdb_id",
             },
         )
@@ -63,9 +63,9 @@ def test_find_by_freebase_mid(get_data, assert_data):
             f"https://api.themoviedb.org/3/find/{freebase_mid}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
                 "external_source": "freebase_mid",
             },
         )
@@ -86,9 +86,9 @@ def test_find_by_freebase(get_data, assert_data):
             f"https://api.themoviedb.org/3/find/{freebase_id}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
                 "external_source": "freebase_id",
             },
         )
@@ -109,9 +109,9 @@ def test_find_by_tvrage(get_data, assert_data):
             f"https://api.themoviedb.org/3/find/{tvrage_id}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
                 "external_source": "tvrage_id",
             },
         )
@@ -132,9 +132,9 @@ def test_find_by_facebook(get_data, assert_data):
             f"https://api.themoviedb.org/3/find/{facebook_id}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
                 "external_source": "facebook_id",
             },
         )
@@ -155,9 +155,9 @@ def test_find_by_instagram(get_data, assert_data):
             f"https://api.themoviedb.org/3/find/{instagram_id}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
                 "external_source": "instagram_id",
             },
         )
@@ -178,9 +178,9 @@ def test_find_by_twitter(get_data, assert_data):
             f"https://api.themoviedb.org/3/find/{twitter_id}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
                 "external_source": "twitter_id",
             },
         )

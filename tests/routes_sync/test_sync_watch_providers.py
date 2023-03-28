@@ -16,9 +16,9 @@ def test_watch_providers_movie(get_data, assert_data):
             "https://api.themoviedb.org/3/watch/providers/movie",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             }
         )
 
@@ -37,9 +37,9 @@ def test_watch_providers_regions(get_data, assert_data):
             "https://api.themoviedb.org/3/watch/providers/regions",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             }
         )
 
@@ -58,9 +58,9 @@ def test_watch_providers_tv(get_data, assert_data):
             "https://api.themoviedb.org/3/watch/providers/tv",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             }
         )
     assert isinstance(watch_providers, schemas.WatchProvidersData)

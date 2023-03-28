@@ -17,9 +17,9 @@ async def test_create_guest_session(get_data, assert_data):
             "https://api.themoviedb.org/3/authentication/guest_session/new",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             }
         )
 
@@ -39,9 +39,9 @@ async def test_create_token(get_data, assert_data):
             "https://api.themoviedb.org/3/authentication/token/new",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             }
         )
 
@@ -62,9 +62,9 @@ async def test_create_session(get_data, assert_data):
             "https://api.themoviedb.org/3/authentication/session/new",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
             json={"request_token": request_token},
         )
@@ -92,9 +92,9 @@ async def test_create_session_with_login(get_data, assert_data):
             "https://api.themoviedb.org/3/authentication/token/validate_with_login",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
             json={
                 "username": username,
@@ -120,9 +120,9 @@ async def test_delete_session(get_data, assert_data):
             "https://api.themoviedb.org/3/authentication/session",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
             json={"session_id": session_id},
         )

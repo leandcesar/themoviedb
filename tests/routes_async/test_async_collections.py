@@ -18,9 +18,9 @@ async def test_collection_details(get_data, assert_data):
             f"https://api.themoviedb.org/3/collection/{collection_id}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -41,9 +41,9 @@ async def test_collection_images(get_data, assert_data):
             f"https://api.themoviedb.org/3/collection/{collection_id}/images",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -64,9 +64,9 @@ async def test_collection_translations(get_data, assert_data):
             f"https://api.themoviedb.org/3/collection/{collection_id}/translations",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 

@@ -18,9 +18,9 @@ async def test_guest_rated_movies(get_data, assert_data):
             f"https://api.themoviedb.org/3/guest_session/{guest_session_id}/rated/movies",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -41,9 +41,9 @@ async def test_guest_rated_tvs(get_data, assert_data):
             f"https://api.themoviedb.org/3/guest_session/{guest_session_id}/rated/tv",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -64,9 +64,9 @@ async def test_guest_rated_episodes(get_data, assert_data):
             f"https://api.themoviedb.org/3/guest_session/{guest_session_id}/rated/episodes",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 

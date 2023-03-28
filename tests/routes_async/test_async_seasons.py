@@ -19,9 +19,9 @@ async def test_season_details(get_data, assert_data):
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -44,9 +44,9 @@ async def test_season_details_full(get_data, assert_data):
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
                 "append_to_response": "alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers",
             },
         )
@@ -69,9 +69,9 @@ async def test_season_aggregate_credits(get_data, assert_data):
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/aggregate_credits",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -93,9 +93,9 @@ async def test_season_credits(get_data, assert_data):
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/credits",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -117,9 +117,9 @@ async def test_season_external_ids(get_data, assert_data):
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/external_ids",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -141,9 +141,9 @@ async def test_season_images(get_data, assert_data):
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/images",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -165,9 +165,9 @@ async def test_season_translations(get_data, assert_data):
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/translations",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
@@ -189,9 +189,9 @@ async def test_season_videos(get_data, assert_data):
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/videos",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "en-US",
-                "region": "US",
-                "watch_region": "US",
+                "language": "TEST_TMDB_LANGUAGE",
+                "region": "TEST_TMDB_REGION",
+                "watch_region": "TEST_TMDB_REGION",
             },
         )
 
