@@ -5,7 +5,8 @@ on: [pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: reviewdog
     steps:
+      - uses: actions/checkout@v3
       - uses: reviewdog/action-setup@v1
-      - run: reviewdog -version
+      - name: Run reviewdog
+        run: reviewdog -version

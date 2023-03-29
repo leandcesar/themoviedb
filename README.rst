@@ -37,7 +37,7 @@ Getting started
 Requirements
 ------------
 
--  ``python`` (Python >=3.7)
+-  ``python`` (Python >=3.8)
 -  ``pip`` (Python package manager)
 
 Install

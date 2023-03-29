@@ -23,7 +23,7 @@ setup(
     author="Leandro César",
     author_email="ccleandroc@gmail.com",
     url="https://github.com/leandcesar/themoviedb",
-    version="0.3.2",
+    version="0.3.3",
     license="MIT",
     python_requires=">=3.7",
     packages=find_packages(include=["themoviedb", "themoviedb.*"]),
