@@ -8,7 +8,7 @@ with open("README.rst", "r", encoding="utf-8") as readme_file:
 requirements = [
     "aiohttp==3.8.0",
     "dacite==1.8.0",
-    "requests==2.28.2",
+    "requests==2.31.0",
 ]
 
 test_requirements = [
