@@ -59,7 +59,7 @@ class TV(PartialTV):
     languages: Optional[List[str]] = None
     last_air_date: Optional[date] = None
     last_episode_to_air: Optional[PartialEpisode] = None
-    next_episode_to_air: Optional[None] = None
+    next_episode_to_air: Optional[PartialEpisode] = None
     networks: Optional[List[Network]] = None
     number_of_episodes: Optional[int] = None
     number_of_seasons: Optional[int] = None
