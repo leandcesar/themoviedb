@@ -11,3 +11,4 @@ pytest-randomly==3.12.0
 pytest-sugar==0.9.6
 twine==4.0.2
 typing-extensions==4.5.0
+wheel==0.40.0

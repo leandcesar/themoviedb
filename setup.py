@@ -6,14 +6,24 @@ with open("README.rst", "r", encoding="utf-8") as readme_file:
     readme = readme_file.read()
 
 requirements = [
-    "aiohttp==3.8.0",
-    "dacite==1.8.0",
-    "requests==2.28.2",
+    "aiohttp==3.8.4",
+    "aiosignal==1.3.1",
+    "async-timeout==4.0.2",
+    "attrs==23.1.0",
+    "certifi==2023.5.7",
+    "charset-normalizer==3.1.0",
+    "dacite==1.8.1",
+    "frozenlist==1.3.3",
+    "idna==3.4",
+    "multidict==6.0.4",
+    "requests==2.31.0",
+    "urllib3==2.0.3",
+    "yarl==1.9.2",
 ]
 
 test_requirements = [
-    "pytest==3",
-    "pytest-asyncio==0.20.3",
+    "pytest",
+    "pytest-asyncio",
 ]
 
 setup(
@@ -23,7 +33,7 @@ setup(
     author="Leandro César",
     author_email="ccleandroc@gmail.com",
     url="https://github.com/leandcesar/themoviedb",
-    version="0.3.3",
+    version="0.4.0",
     license="MIT",
     python_requires=">=3.7",
     packages=find_packages(include=["themoviedb", "themoviedb.*"]),
