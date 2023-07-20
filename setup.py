@@ -6,7 +6,7 @@ with open("README.rst", "r", encoding="utf-8") as readme_file:
     readme = readme_file.read()
 
 requirements = [
-    "aiohttp==3.8.4",
+    "aiohttp==3.8.5",
     "aiosignal==1.3.1",
     "async-timeout==4.0.2",
     "attrs==23.1.0",
