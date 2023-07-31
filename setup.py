@@ -35,7 +35,7 @@ setup(
     url="https://github.com/leandcesar/themoviedb",
     version="0.4.0",
     license="MIT",
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     packages=find_packages(include=["themoviedb", "themoviedb.*"]),
     include_package_data=True,
     classifiers=[
@@ -43,12 +43,10 @@ setup(
         "Natural Language :: English",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
     ],
     keywords=[
         "tmdb",
