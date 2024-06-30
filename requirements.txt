@@ -1,3 +1,3 @@
-aiohttp==3.8.4
-dacite==1.8.0
-requests==2.31.0
+aiohttp==3.9.5
+dacite==1.8.1
+requests==2.32.3

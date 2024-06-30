@@ -6,19 +6,19 @@ with open("README.rst", "r", encoding="utf-8") as readme_file:
     readme = readme_file.read()
 
 requirements = [
-    "aiohttp==3.8.4",
+    "aiohttp==3.9.5",
     "aiosignal==1.3.1",
     "async-timeout==4.0.2",
-    "attrs==23.1.0",
-    "certifi==2023.5.7",
-    "charset-normalizer==3.1.0",
+    "attrs==23.2.0",
+    "certifi==2024.6.2",
+    "charset-normalizer==3.3.2",
     "dacite==1.8.1",
-    "frozenlist==1.3.3",
-    "idna==3.4",
-    "multidict==6.0.4",
-    "requests==2.31.0",
-    "urllib3==2.0.3",
-    "yarl==1.9.2",
+    "frozenlist==1.4.1",
+    "idna==3.7",
+    "multidict==6.0.5",
+    "requests==2.32.3",
+    "urllib3==2.2.2",
+    "yarl==1.9.4",
 ]
 
 test_requirements = [
