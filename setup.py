@@ -5,26 +5,14 @@ from setuptools import setup, find_packages
 with open("README.rst", "r", encoding="utf-8") as readme_file:
     readme = readme_file.read()
 
-requirements = [
-    "aiohttp==3.8.4",
-    "aiosignal==1.3.1",
-    "async-timeout==4.0.2",
-    "attrs==23.1.0",
-    "certifi==2023.5.7",
-    "charset-normalizer==3.1.0",
-    "dacite==1.8.1",
-    "frozenlist==1.3.3",
-    "idna==3.4",
-    "multidict==6.0.4",
-    "requests==2.31.0",
-    "urllib3==2.0.3",
-    "yarl==1.9.2",
-]
+with open("requirements.txt") as f:
+    requirements = f.read().splitlines()
+    requirements.remove("aiohttp==3.8.4")
+    requirements.remove("requests==2.31.0")
 
-test_requirements = [
-    "pytest",
-    "pytest-asyncio",
-]
+with open("requirements-test.txt") as f:
+    test_requirements = f.read().splitlines()
+    test_requirements.remove("-r requirements.txt")
 
 setup(
     name="themoviedb",
@@ -47,6 +35,7 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
     ],
     keywords=[
         "tmdb",
@@ -55,20 +44,19 @@ setup(
         "aiotmdb3",
         "themoviedb",
         "themoviedb3",
-        "sync",
-        "async",
-        "await",
-        "aio",
         "movie",
         "movies",
         "tv",
         "tv show",
         "tv shows",
-        "api",
-        "wrapper",
     ],
     zip_safe=False,
     install_requires=requirements,
+    extras_require={
+        "async": ["aiohttp==3.8.4"],
+        "sync": ["requests==2.31.0"],
+        "full": ["aiohttp==3.8.4", "requests==2.31.0"],
+    },
     tests_require=test_requirements,
     test_suite="tests",
 )
