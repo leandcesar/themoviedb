@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from typing import List, Optional
 
@@ -6,11 +7,11 @@ from themoviedb.schemas._result import Result
 
 @dataclass
 class Genre:
-    id: int
+    id: Optional[int] = None
     name: Optional[str] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
 
 @dataclass

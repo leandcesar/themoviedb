@@ -1,8 +1,9 @@
+# -*- coding: utf-8 -*-
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import date
-from typing import List, Optional, Union
+from datetime import date, time
+from typing import List, Optional
 
 from themoviedb.schemas._enums import SizeType
 from themoviedb.schemas._partial import PartialEpisode, PartialSeason, PartialTV
@@ -33,7 +34,7 @@ class CreatedBy:
     profile_path: Optional[str] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
     def profile_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.profile_path}" if self.profile_path else None
@@ -87,13 +88,20 @@ class TV(PartialTV):
     videos: Optional[Videos] = None
     watch_providers: Optional[WatchProviders] = None
 
+    @property
+    def run_time(self) -> Optional[int]:
+        if self.episode_run_time and self.number_of_episodes:
+            run_time = self.episode_run_time[0] * self.number_of_episodes
+            return run_time
+        return None
+
     def episode_duration(self, fmt: str = "%H:%M") -> Optional[str]:
-        if self.episode_run_time:
-            return time(minute=self.episode_run_time).strftime(fmt)
+        if self.run_time and self.number_of_episodes:
+            run_time_average = self.run_time // self.number_of_episodes
+            return time(minute=run_time_average).strftime(fmt)
         return None
 
     def duration(self, fmt: str = "%H:%M") -> Optional[str]:
-        if self.episode_run_time and self.number_of_episodes:
-            total_runtime = self.episode_run_time * self.number_of_episodes
-            return time(minute=total_runtime).strftime(fmt)
+        if self.run_time:
+            return time(minute=self.run_time).strftime(fmt)
         return None

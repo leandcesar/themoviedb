@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from typing import List, Optional
 
@@ -7,7 +8,7 @@ from themoviedb.schemas._result import ResultWithPage
 
 @dataclass
 class ItemList:
-    id: int
+    id: Optional[int] = None
     description: Optional[str] = None
     favorite_count: Optional[int] = None
     item_count: Optional[int] = None
@@ -17,7 +18,7 @@ class ItemList:
     poster_path: Optional[str] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
     def poster_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.poster_path}" if self.poster_path else None

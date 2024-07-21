@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from typing import List, Optional
 
@@ -14,14 +15,13 @@ from themoviedb.schemas._result import ResultWithPage
 
 @dataclass
 class Multi(PartialMovie, PartialPerson, PartialTV):
-
     def __str__(self) -> str:
-        return self.name or self.title or self.original_name or self.original_title
+        return self.name or self.title or self.original_name or self.original_title or ""
 
-    def is_movie(self) -> str:
+    def is_movie(self) -> bool:
         return self.media_type == MediaType.movie
 
-    def is_person(self) -> str:
+    def is_person(self) -> bool:
         return self.media_type == MediaType.person
 
     def is_tv(self) -> bool:

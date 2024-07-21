@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from datetime import datetime
 from typing import List, Optional
@@ -7,7 +8,7 @@ from themoviedb.schemas._result import ResultWithID
 
 @dataclass
 class Video:
-    id: str
+    id: Optional[str] = None
     iso_639_1: Optional[str] = None
     iso_3166_1: Optional[str] = None
     name: Optional[str] = None
@@ -19,7 +20,7 @@ class Video:
     published_at: Optional[datetime] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
 
 @dataclass

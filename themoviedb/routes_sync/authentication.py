@@ -1,9 +1,9 @@
+# -*- coding: utf-8 -*-
 from themoviedb import schemas, utils
 from themoviedb.routes_sync._base import Base
 
 
 class Authentication(Base):
-
     def create_guest_session(self) -> schemas.GuestAuthentication:
         """This method will let you create a new guest session.
         Guest sessions are a type of session that will let a user rate movies
@@ -21,7 +21,7 @@ class Authentication(Base):
         """
         data = self.request("authentication/token/new")
         return utils.as_dataclass(schemas.TokenAuthentication, data)
-    
+
     def create_session(self, request_token: str) -> schemas.Session:
         """You can use this method to create a fully valid session ID once a user has
         validated the request token.
@@ -34,8 +34,10 @@ class Authentication(Base):
             json={"request_token": request_token},
         )
         return utils.as_dataclass(schemas.Session, data)
-    
-    def create_session_with_login(self, username: str, password: str, request_token: str) -> schemas.Session:
+
+    def create_session_with_login(
+        self, username: str, password: str, request_token: str
+    ) -> schemas.TokenAuthentication:
         """This method allows an application to validate a request token by entering
         a username and password.
 
@@ -47,7 +49,7 @@ class Authentication(Base):
             json={"request_token": request_token, "username": username, "password": password},
         )
         return utils.as_dataclass(schemas.TokenAuthentication, data)
-    
+
     def delete_session(self, session_id: str) -> schemas.Response:
         """If you would like to delete (or "logout") from a session,
         call this method with a valid session ID.

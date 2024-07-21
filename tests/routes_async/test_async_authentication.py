@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from unittest.mock import patch
 
 import pytest
@@ -20,7 +21,7 @@ async def test_create_guest_session(get_data, assert_data):
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
-            }
+            },
         )
 
     assert isinstance(session, schemas.GuestAuthentication)
@@ -42,7 +43,7 @@ async def test_create_token(get_data, assert_data):
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
-            }
+            },
         )
 
     assert isinstance(token, schemas.TokenAuthentication)
@@ -52,7 +53,7 @@ async def test_create_token(get_data, assert_data):
 @pytest.mark.asyncio
 async def test_create_session(get_data, assert_data):
     data = get_data("authentication/create_session")
-    request_token = "TOKEN"
+    request_token = "TOKEN"  # nosec
 
     with patch("themoviedb.routes_async._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
@@ -77,15 +78,19 @@ async def test_create_session(get_data, assert_data):
 async def test_create_session_with_login(get_data, assert_data):
     data = get_data("authentication/create_session_with_login")
     username = "USERNAME"
-    password = "PASSWORD"
-    request_token = "TOKEN"
+    password = "PASSWORD"  # nosec
+    request_token = "TOKEN"  # nosec
 
     with patch("themoviedb.routes_async._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        session = await aiotmdb.aioTMDb().authentication().create_session_with_login(
-            username,
-            password,
-            request_token,
+        session = (
+            await aiotmdb.aioTMDb()
+            .authentication()
+            .create_session_with_login(
+                username,
+                password,
+                request_token,
+            )
         )
         mocked.assert_called_with(
             "POST",

@@ -1,16 +1,11 @@
 [tool.mypy]
-python_version = "3.7"
+python_version = "3.8"
 exclude = [
-    "tests",
     "venv",
 ]
 ignore_missing_imports = true
 
 [tool.ruff]
-select = ["E", "F"]
-ignore = []
-fixable = ["ALL"]
-unfixable = []
 exclude = [
     ".bzr",
     ".direnv",
@@ -35,11 +30,10 @@ exclude = [
     "venv",
 ]
 line-length = 117
-target-version = "py37"
+target-version = "py38"
 fix = true
 
 [tool.ruff.per-file-ignores]
-"tests/*" = ["SLF001"]
 ".github/*" = ["INP001"]
 
 [tool.ruff.mccabe]
@@ -47,7 +41,7 @@ max-complexity = 10
 
 [tool.black]
 line-length = 117
-target-version = ["py37"]
+target-version = ["py38"]
 
 [tool.black.include]
 paths = [
@@ -78,14 +72,4 @@ addopts = [
     "--maxfail=1",
     "--cov=themoviedb",
     "--cov-fail-under=80",
-]
-
-[tool.coverage.report]
-exclude_also = [
-    "def __repr__",
-    "if __name__ == .__main__.:",
-    "if TYPE_CHECKING:",
-    "class .*\\bProtocol\\):",
-    "@(abc\\.)?abstractmethod",
-    "@(typing\\.)?overload"
 ]

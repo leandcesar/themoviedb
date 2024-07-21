@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from typing import Optional
 
@@ -9,4 +10,4 @@ class Language:
     name: Optional[str] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""

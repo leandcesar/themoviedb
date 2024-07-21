@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from typing import Optional
 
 from themoviedb import schemas, utils
@@ -143,7 +144,6 @@ class TV(Base):
 
 
 class TVs(Base):
-
     def latest(self) -> schemas.TV:
         """Get the most newly created TV show.
 

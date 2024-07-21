@@ -1,6 +1,7 @@
-from datetime import datetime
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
-from typing import Dict, List, Optional, Union
+from datetime import datetime
+from typing import Optional
 
 
 @dataclass
@@ -14,9 +15,11 @@ class Authentication(Response):
 
     @property
     def valid_until(self) -> Optional[datetime]:
+        if self.expires_at is None:
+            return None
         try:
             return datetime.strptime(self.expires_at, "%Y-%m-%d %H:%M:%S UTC")
-        except Exception as e:
+        except Exception:
             return None
 
 

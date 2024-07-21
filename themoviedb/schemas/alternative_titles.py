@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from typing import List, Optional
 
@@ -11,7 +12,7 @@ class AlternativeTitle:
     type: Optional[str] = None
 
     def __str__(self) -> str:
-        return self.title
+        return self.title or ""
 
 
 @dataclass

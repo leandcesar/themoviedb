@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from typing import Optional
 
 from themoviedb import schemas, utils
@@ -16,7 +17,10 @@ class Episode(Base):
 
         See more: https://developers.themoviedb.org/3/tv-seasons/get-tv-season-details
         """
-        data = self.request(f"tv/{self.tv_id}/season/{self.season_id}/episode/{self.episode_id}", append_to_response=append_to_response)
+        data = self.request(
+            f"tv/{self.tv_id}/season/{self.season_id}/episode/{self.episode_id}",
+            append_to_response=append_to_response,
+        )
         return utils.as_dataclass(schemas.Episode, data)
 
     def credits(self) -> schemas.Credits:

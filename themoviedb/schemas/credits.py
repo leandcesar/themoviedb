@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from datetime import date
 from typing import List, Optional
@@ -21,7 +22,7 @@ class Job:
 
 @dataclass
 class Cast:
-    id: int
+    id: Optional[int] = None
     adult: Optional[bool] = None
     gender: Optional[int] = None
     known_for_department: Optional[str] = None
@@ -37,7 +38,7 @@ class Cast:
     roles: Optional[List[Role]] = None
 
     def __str__(self) -> str:
-        return self.name or self.original_name
+        return self.name or self.original_name or ""
 
     def profile_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.profile_path}" if self.profile_path else None
@@ -45,7 +46,7 @@ class Cast:
 
 @dataclass
 class Crew:
-    id: int
+    id: Optional[int] = None
     adult: Optional[bool] = None
     gender: Optional[int] = None
     known_for_department: Optional[str] = None
@@ -61,7 +62,7 @@ class Crew:
     order: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.name or self.original_name
+        return self.name or self.original_name or ""
 
     def profile_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.profile_path}" if self.profile_path else None
@@ -111,7 +112,7 @@ class CastMovie:
     order: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.title
+        return self.title or ""
 
     def backdrop_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.backdrop_path}" if self.backdrop_path else None
@@ -142,7 +143,7 @@ class CrewMovie:
     order: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.title
+        return self.title or ""
 
     def backdrop_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.backdrop_path}" if self.backdrop_path else None
@@ -180,7 +181,7 @@ class CastTV:
     order: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.name or self.original_name
+        return self.name or self.original_name or ""
 
     def backdrop_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.backdrop_path}" if self.backdrop_path else None
@@ -212,7 +213,7 @@ class CrewTV:
     order: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.name or self.original_name
+        return self.name or self.original_name or ""
 
     def backdrop_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.backdrop_path}" if self.backdrop_path else None

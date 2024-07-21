@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from typing import Dict, List, Optional
 
@@ -13,15 +14,15 @@ class WatchProviderData:
     provider_id: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.provider_name
+        return self.provider_name or ""
 
     def logo_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.logo_path}" if self.logo_path else None
 
 
 @dataclass
-class WatchProvidersData(Result):
-    results: Optional[List[WatchProviderData]] = None
+class WatchProvidersData(Result[WatchProviderData]):
+    results: Optional[List[WatchProviderData]] = None  # type: ignore
 
 
 @dataclass
@@ -45,8 +46,12 @@ class WatchProviders(ResultWithID):
         return bool(self.results)
 
     def __getitem__(self, region: str) -> WatchProvider:
+        if self.results is None:
+            raise KeyError(f"Region {region} not found")
         return self.results[region]
 
     @property
     def regions(self) -> List[str]:
+        if self.results is None:
+            return []
         return list(self.results.keys())

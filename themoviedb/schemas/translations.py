@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from typing import List, Optional
 
@@ -13,6 +14,7 @@ class Data:
     tagline: Optional[str] = None
     biography: Optional[str] = None
 
+
 @dataclass
 class Translation:
     iso_3166_1: Optional[str] = None
@@ -22,7 +24,7 @@ class Translation:
     data: Optional[Data] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
 
 @dataclass

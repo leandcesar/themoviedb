@@ -1,9 +1,9 @@
+# -*- coding: utf-8 -*-
 from themoviedb import schemas, utils
 from themoviedb.routes_sync._base import Base
 
 
 class Genres(Base):
-
     def movie(self) -> schemas.Genres:
         """Get the list of official genres for movies.
 

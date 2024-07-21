@@ -1,8 +1,7 @@
+# -*- coding: utf-8 -*-
 from unittest.mock import patch
 
-import pytest
-
-from themoviedb import tmdb, schemas
+from themoviedb import schemas, tmdb
 
 
 def test_movie_details(get_data, assert_data):
@@ -36,7 +35,13 @@ def test_movie_details_full(get_data, assert_data):
 
     with patch("themoviedb.routes_sync._base.Session.request") as mocked:
         mocked.return_value.__enter__.return_value.json.return_value = data
-        movie = tmdb.TMDb().movie(movie_id).details(append_to_response="alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers")
+        movie = (
+            tmdb.TMDb()
+            .movie(movie_id)
+            .details(
+                append_to_response="alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers"
+            )
+        )
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/movie/{movie_id}",
@@ -46,7 +51,7 @@ def test_movie_details_full(get_data, assert_data):
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
                 "include_image_language": "null",
-                "append_to_response": "alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers",
+                "append_to_response": "alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers",  # noqa: E501
             },
         )
 

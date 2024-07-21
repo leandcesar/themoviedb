@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from themoviedb import schemas, utils
 from themoviedb.routes_sync._base import Base
 

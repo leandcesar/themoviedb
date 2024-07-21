@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from unittest.mock import patch
 
 import pytest
@@ -37,7 +38,13 @@ async def test_person_details_full(get_data, assert_data):
 
     with patch("themoviedb.routes_async._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        person = await aiotmdb.aioTMDb().person(person_id).details(append_to_response="changes,movie_credits,tv_credits,combined_credits,external_ids,images,tagged_images,translations")
+        person = (
+            await aiotmdb.aioTMDb()
+            .person(person_id)
+            .details(
+                append_to_response="changes,movie_credits,tv_credits,combined_credits,external_ids,images,tagged_images,translations"
+            )
+        )
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/person/{person_id}",
@@ -47,7 +54,7 @@ async def test_person_details_full(get_data, assert_data):
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
                 "include_image_language": "null",
-                "append_to_response": "changes,movie_credits,tv_credits,combined_credits,external_ids,images,tagged_images,translations",
+                "append_to_response": "changes,movie_credits,tv_credits,combined_credits,external_ids,images,tagged_images,translations",  # noqa: E501
             },
         )
 

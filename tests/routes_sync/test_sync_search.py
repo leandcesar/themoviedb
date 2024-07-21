@@ -1,8 +1,7 @@
+# -*- coding: utf-8 -*-
 from unittest.mock import patch
 
-import pytest
-
-from themoviedb import tmdb, schemas
+from themoviedb import schemas, tmdb
 
 
 def test_search_collections(get_data, assert_data):

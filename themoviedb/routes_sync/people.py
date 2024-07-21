@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from typing import Optional
 
 from themoviedb import schemas, utils
@@ -14,7 +15,9 @@ class Person(Base):
 
         See more: https://developers.themoviedb.org/3/people/get-person-details
         """
-        data = self.request(f"person/{self.person_id}", append_to_response=append_to_response, include_image_language=image_language)
+        data = self.request(
+            f"person/{self.person_id}", append_to_response=append_to_response, include_image_language=image_language
+        )
         return utils.as_dataclass(schemas.Person, data)
 
     def external_ids(self) -> schemas.ExternalIDs:
@@ -75,7 +78,6 @@ class Person(Base):
 
 
 class People(Base):
-
     def latest(self) -> schemas.Person:
         """Get the most newly created person.
 

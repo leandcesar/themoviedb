@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from typing import Optional
 
 from themoviedb import schemas, utils
@@ -14,7 +15,9 @@ class Movie(Base):
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-details
         """
-        data = self.request(f"movie/{self.movie_id}", append_to_response=append_to_response, include_image_language=image_language)
+        data = self.request(
+            f"movie/{self.movie_id}", append_to_response=append_to_response, include_image_language=image_language
+        )
         return utils.as_dataclass(schemas.Movie, data)
 
     def alternative_titles(self, *, country: Optional[str] = None) -> schemas.AlternativeTitles:
@@ -123,7 +126,6 @@ class Movie(Base):
 
 
 class Movies(Base):
-
     def latest(self) -> schemas.Movie:
         """Get the most newly created movie.
 

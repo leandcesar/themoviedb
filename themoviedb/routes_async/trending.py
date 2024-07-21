@@ -1,9 +1,9 @@
+# -*- coding: utf-8 -*-
 from themoviedb import schemas, utils
 from themoviedb.routes_async._base import Base
 
 
 class Trending(Base):
-
     async def movie_daily(self, *, page: int = 1) -> schemas.Movies:
         """Get the daily trending movies.
 

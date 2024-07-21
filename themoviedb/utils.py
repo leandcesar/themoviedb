@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 from dataclasses import asdict
-from datetime import datetime, date
+from datetime import date, datetime
 from enum import Enum
-from typing import Type, TypeVar
+from typing import Any, Dict, List, Type, TypeVar
 
 from dacite import Config, from_dict
 
@@ -16,24 +17,23 @@ config = Config(
     },
 )
 
-dict_factory = lambda data: dict(
-    (
-        k,
-        v.value
-        if isinstance(v, Enum)
-        else f"{v.strftime(DATETIME_FORMAT)[:-3]}Z"
-        if isinstance(v, datetime)
-        else v.isoformat()
-        if isinstance(v, date)
-        else v,
-    )
-    for k, v in data
-)
+
+def dict_factory(data: List[Any]) -> Dict[str, Any]:
+    def convert_value(value: Any) -> Any:
+        if isinstance(value, Enum):
+            return value.value
+        if isinstance(value, datetime):
+            return f"{value.strftime(DATETIME_FORMAT)[:-3]}Z"
+        if isinstance(value, date):
+            return value.isoformat()
+        return value
+
+    return {k: convert_value(v) for k, v in data}
 
 
-def as_dataclass(data_class: Type[T], data: dict) -> T:
+def as_dataclass(data_class: Type[T], data: Dict[str, Any]) -> T:
     return from_dict(data_class, data, config=config)
 
 
-def as_dict(obj):
+def as_dict(obj: Any) -> Dict[str, Any]:
     return asdict(obj, dict_factory=dict_factory)

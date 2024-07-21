@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from datetime import datetime
 from typing import List, Optional
@@ -14,7 +15,7 @@ class AuthorDetails:
     rating: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
     def avatar_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.avatar_path}" if self.avatar_path else None
@@ -22,7 +23,7 @@ class AuthorDetails:
 
 @dataclass
 class Review:
-    id: str
+    id: Optional[str] = None
     author: Optional[str] = None
     author_details: Optional[AuthorDetails] = None
     content: Optional[str] = None

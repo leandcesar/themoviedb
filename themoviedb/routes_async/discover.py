@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from typing import Optional
 
 from themoviedb import schemas, utils
@@ -5,7 +6,6 @@ from themoviedb.routes_async._base import Base
 
 
 class Discover(Base):
-
     async def movie(
         self,
         *,

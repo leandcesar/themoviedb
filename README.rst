@@ -1,4 +1,4 @@
-|Code Quality Score| |Code Grade| |Code Coverage| |PyPI Version| |Code style: black| |PyPI License|
+|Code Coverage| |PyPI Version| |Code style: black| |PyPI License|
 
 themoviedb
 ==========
@@ -194,11 +194,7 @@ Get the details of movie for a search.
 
     asyncio.run(main())
 
-.. |Code Quality Score| image:: https://api.codiga.io/project/36067/score/svg
-   :target: https://app.codiga.io/hub/project/36067/themoviedb
-.. |Code Grade| image:: https://api.codiga.io/project/36067/status/svg
-   :target: https://app.codiga.io/hub/project/36067/themoviedb
-.. |Code Coverage| image:: https://codecov.io/gh/leandcesar/themoviedb/branch/master/graph/badge.svg?token=OOILIE0RTS 
+.. |Code Coverage| image:: https://codecov.io/gh/leandcesar/themoviedb/branch/master/graph/badge.svg?token=OOILIE0RTS
    :target: https://codecov.io/gh/leandcesar/themoviedb
 .. |Code style: black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/psf/black

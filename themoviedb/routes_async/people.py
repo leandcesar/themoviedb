@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from typing import Optional
 
 from themoviedb import schemas, utils
@@ -9,12 +10,16 @@ class Person(Base):
         super().__init__(**kwargs)
         self.person_id = person_id
 
-    async def details(self, *, append_to_response: Optional[str] = None, image_language: str = "null") -> schemas.Person:
+    async def details(
+        self, *, append_to_response: Optional[str] = None, image_language: str = "null"
+    ) -> schemas.Person:
         """Get the primary person details by id.
 
         See more: https://developers.themoviedb.org/3/people/get-person-details
         """
-        data = await self.request(f"person/{self.person_id}", append_to_response=append_to_response, include_image_language=image_language)
+        data = await self.request(
+            f"person/{self.person_id}", append_to_response=append_to_response, include_image_language=image_language
+        )
         return utils.as_dataclass(schemas.Person, data)
 
     async def external_ids(self) -> schemas.ExternalIDs:
@@ -75,7 +80,6 @@ class Person(Base):
 
 
 class People(Base):
-
     async def latest(self) -> schemas.Person:
         """Get the most newly created person.
 

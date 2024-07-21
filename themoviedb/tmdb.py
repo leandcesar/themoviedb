@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-
+from typing import Type, TypeVar
+
 from themoviedb.routes_sync import (
-    Base,
+    TV,
     Authentication,
+    Base,
     Certifications,
     Collection,
     Company,
@@ -21,10 +25,11 @@ from themoviedb.routes_sync import (
     Search,
     Season,
     Trending,
-    TV,
     TVs,
     WatchProviders,
 )
+
+T = TypeVar("T", bound=Base)
 
 
 class TMDb(Base):
@@ -35,98 +40,101 @@ class TMDb(Base):
     to retrieve information about a specific resource.
     """
 
+    def _get_instance(self, cls: Type[T], *args, **kwargs) -> T:
+        return cls(*args, key=self.key, session=self.session, language=self.language, region=self.region, **kwargs)
+
     def authentication(self) -> Authentication:
         """Get model object for `themoviedb.Authentication` resource."""
-        return Authentication(key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Authentication)
 
     def certifications(self) -> Certifications:
         """Get model object for `themoviedb.Certifications` resource."""
-        return Certifications(key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Certifications)
 
     def collection(self, collection_id: int) -> Collection:
         """Get model object for `themoviedb.Collection` resource."""
-        return Collection(collection_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Collection, collection_id)
 
     def company(self, company_id: int) -> Company:
         """Get model object for `themoviedb.Company` resource."""
-        return Company(company_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Company, company_id)
 
     def credit(self, credit_id: int) -> Credit:
         """Get model object for `themoviedb.Credit` resource."""
-        return Credit(credit_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Credit, credit_id)
 
     def discover(self) -> Discover:
         """Get model object for `themoviedb.Discover` resource."""
-        return Discover(key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Discover)
 
     def episode(self, tv_id: int, season_id: int, episode_id: int) -> Episode:
         """Get model object for `themoviedb.Episode` resource."""
-        return Episode(tv_id, season_id, episode_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Episode, tv_id, season_id, episode_id)
 
     def episode_group(self, episode_group_id: int) -> EpisodeGroup:
         """Get model object for `themoviedb.EpisodeGroup` resource."""
-        return EpisodeGroup(episode_group_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(EpisodeGroup, episode_group_id)
 
     def find(self) -> Find:
         """Get model object for `themoviedb.Find` resource."""
-        return Find(key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Find)
 
     def genres(self) -> Genres:
         """Get model object for `themoviedb.Genres` resource."""
-        return Genres(key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Genres)
 
     def guest(self, guest_session_id: str) -> Guest:
         """Get model object for `themoviedb.Guest` resource."""
-        return Guest(guest_session_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Guest, guest_session_id)
 
     def keyword(self, keyword_id: int) -> Keyword:
         """Get model object for `themoviedb.Keyword` resource."""
-        return Keyword(keyword_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Keyword, keyword_id)
 
     def movie(self, movie_id: int) -> Movie:
         """Get model object for `themoviedb.Movie` resource."""
-        return Movie(movie_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Movie, movie_id)
 
     def movies(self) -> Movies:
         """Get model object for `themoviedb.Movies` resource."""
-        return Movies(key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Movies)
 
     def network(self, network_id: int) -> Network:
         """Get model object for `themoviedb.Network` resource."""
-        return Network(network_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Network, network_id)
 
     def people(self) -> People:
         """Get model object for `themoviedb.People` resource."""
-        return People(key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(People)
 
     def person(self, person_id: int) -> Person:
         """Get model object for `themoviedb.Person` resource."""
-        return Person(person_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Person, person_id)
 
     def review(self, review_id: int) -> Review:
         """Get model object for `themoviedb.Review` resource."""
-        return Review(review_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Review, review_id)
 
     def search(self) -> Search:
         """Get model object for `themoviedb.Search` resource."""
-        return Search(key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Search)
 
     def season(self, tv_id: int, season_id: int) -> Season:
         """Get model object for `themoviedb.Season` resource."""
-        return Season(tv_id, season_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Season, tv_id, season_id)
 
     def trending(self) -> Trending:
         """Get model object for `themoviedb.Trending` resource."""
-        return Trending(key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(Trending)
 
     def tv(self, tv_id: int) -> TV:
         """Get model object for `themoviedb.TV` resource."""
-        return TV(tv_id, key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(TV, tv_id)
 
     def tvs(self) -> TVs:
         """Get model object for `themoviedb.TVs` resource."""
-        return TVs(key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(TVs)
 
     def watch_providers(self) -> WatchProviders:
         """Get model object for `themoviedb.WatchProviders` resource."""
-        return WatchProviders(key=self.key, session=self.session, language=self.language, region=self.region)
+        return self._get_instance(WatchProviders)

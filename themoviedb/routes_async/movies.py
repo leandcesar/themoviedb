@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from typing import Optional
 
 from themoviedb import schemas, utils
@@ -9,12 +10,16 @@ class Movie(Base):
         super().__init__(**kwargs)
         self.movie_id = movie_id
 
-    async def details(self, *, append_to_response: Optional[str] = None, image_language: str = "null") -> schemas.Movie:
+    async def details(
+        self, *, append_to_response: Optional[str] = None, image_language: str = "null"
+    ) -> schemas.Movie:
         """Get the primary information about a movie.
 
         See more: https://developers.themoviedb.org/3/movies/get-movie-details
         """
-        data = await self.request(f"movie/{self.movie_id}", append_to_response=append_to_response, include_image_language=image_language)
+        data = await self.request(
+            f"movie/{self.movie_id}", append_to_response=append_to_response, include_image_language=image_language
+        )
         return utils.as_dataclass(schemas.Movie, data)
 
     async def alternative_titles(self, *, country: Optional[str] = None) -> schemas.AlternativeTitles:
@@ -123,7 +128,6 @@ class Movie(Base):
 
 
 class Movies(Base):
-
     async def latest(self) -> schemas.Movie:
         """Get the most newly created movie.
 

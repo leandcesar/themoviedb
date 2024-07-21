@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from typing import Optional
 
 from themoviedb import schemas, utils
@@ -5,7 +6,6 @@ from themoviedb.routes_async._base import Base
 
 
 class WatchProviders(Base):
-
     async def movie(self, watch_region: Optional[str] = None) -> schemas.WatchProvidersData:
         """Returns a list of the watch provider (OTT/streaming) data we have available for movies.
 

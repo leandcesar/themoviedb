@@ -1,5 +1,5 @@
-import os
-import pytest
+# -*- coding: utf-8 -*-
+
 
 from themoviedb import aioTMDb
 

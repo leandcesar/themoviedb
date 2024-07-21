@@ -1,18 +1,24 @@
+# -*- coding: utf-8 -*-
 import os
-from typing import Optional
+import sys
+from typing import Any, Dict, Optional
 
-from requests import Session
+try:
+    from requests import Session
+except ImportError:
+    print("The 'requests' package is required for sync support. Install it using 'pip install themoviedb[sync]'.")
+    sys.exit(1)
 
 
 class Base:
-    _TMDB_URL = "https://api.themoviedb.org"
-    _TMDB_VERSION = "3"
+    TMDB_URL = "https://api.themoviedb.org"
+    TMDB_VERSION = "3"
 
     def __init__(
         self,
         *,
         key: Optional[str] = None,
-        session: Session = None,
+        session: Optional[Session] = None,
         language: Optional[str] = None,
         region: Optional[str] = None,
     ):
@@ -22,7 +28,7 @@ class Base:
         self._region = region if region is not None else os.environ.get("TMDB_REGION", "US")
 
     @property
-    def session(self) -> Session:
+    def session(self) -> Optional[Session]:
         return self._session
 
     @session.setter
@@ -30,7 +36,7 @@ class Base:
         self._session = session
 
     @property
-    def key(self) -> str:
+    def key(self) -> Optional[str]:
         return self._key
 
     @key.setter
@@ -55,14 +61,14 @@ class Base:
 
     @property
     def _host(self) -> str:
-        return self._TMDB_URL
+        return self.TMDB_URL
 
     @property
     def _version(self) -> str:
-        return self._TMDB_VERSION
+        return self.TMDB_VERSION
 
     @property
-    def _params(self) -> dict:
+    def _params(self) -> Dict[str, Any]:
         return {
             "api_key": self.key,
             "language": self.language,
@@ -70,17 +76,13 @@ class Base:
             "watch_region": self.region,
         }
 
-    def request(self, path: str, method: str = "GET", **kwargs) -> dict:
+    def request(self, path: str, method: str = "GET", **kwargs) -> Dict[str, Any]:
         url = f"{self._host}/{self._version}/{path}"
         json = kwargs.pop("json", None)
-        params = {
-            k.replace("__", "."): v
-            for k, v in kwargs.items()
-            if v is not None
-        }
+        params = {k.replace("__", "."): v for k, v in kwargs.items() if v is not None}
         params = {**self._params, **params}
 
-        if self._session:
+        if self.session is not None:
             if json is None:
                 response = self.session.request(method, url, params=params)
             else:

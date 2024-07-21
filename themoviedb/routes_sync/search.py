@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from typing import Optional
 
 from themoviedb import schemas, utils
@@ -5,7 +6,6 @@ from themoviedb.routes_sync._base import Base
 
 
 class Search(Base):
-
     def companies(self, query: str, *, page: int = 1) -> schemas.Companies:
         """Search for companies.
 

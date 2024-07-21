@@ -1,8 +1,9 @@
+# -*- coding: utf-8 -*-
 from unittest.mock import patch
 
 import pytest
 
-from themoviedb import tmdb, schemas
+from themoviedb import schemas, tmdb
 
 
 def test_season_details(get_data, assert_data):
@@ -36,7 +37,13 @@ def test_season_details_full(get_data, assert_data):
 
     with patch("themoviedb.routes_sync._base.Session.request") as mocked:
         mocked.return_value.__enter__.return_value.json.return_value = data
-        season = tmdb.TMDb().season(tv_id, season_id).details(append_to_response="alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers")
+        season = (
+            tmdb.TMDb()
+            .season(tv_id, season_id)
+            .details(
+                append_to_response="alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers"
+            )
+        )
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}",
@@ -45,7 +52,7 @@ def test_season_details_full(get_data, assert_data):
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
-                "append_to_response": "alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers",
+                "append_to_response": "alternative_titles,changes,credits,external_ids,images,keywords,lists,recommendations,release_dates,reviews,similar,translations,videos,watch/providers",  # noqa: E501
             },
         )
 

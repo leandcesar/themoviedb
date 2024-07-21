@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from datetime import date
 from typing import List, Optional
@@ -7,12 +8,12 @@ from themoviedb.schemas._enums import MediaType, SizeType
 
 @dataclass
 class PartialCompany:
-    id: int
+    id: Optional[int] = None
     logo_path: Optional[str] = None
     name: Optional[str] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
     def logo_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.logo_path}" if self.logo_path else None
@@ -20,13 +21,13 @@ class PartialCompany:
 
 @dataclass
 class PartialCollection:
-    id: int
+    id: Optional[int] = None
     backdrop_path: Optional[str] = None
     name: Optional[str] = None
     poster_path: Optional[str] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
     def backdrop_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.backdrop_path}" if self.backdrop_path else None
@@ -37,16 +38,16 @@ class PartialCollection:
 
 @dataclass
 class PartialKeyword:
-    id: int
+    id: Optional[int] = None
     name: Optional[str] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
 
 @dataclass
 class PartialMovie:
-    id: int
+    id: Optional[int] = None
     poster_path: Optional[str] = None
     adult: Optional[bool] = None
     overview: Optional[str] = None
@@ -63,7 +64,7 @@ class PartialMovie:
     media_type: Optional[MediaType] = MediaType.movie
 
     def __str__(self) -> str:
-        return self.title or self.original_title
+        return self.title or self.original_title or ""
 
     @property
     def year(self) -> Optional[int]:
@@ -76,16 +77,15 @@ class PartialMovie:
         return f"https://image.tmdb.org/t/p/{size}{self.poster_path}" if self.poster_path else None
 
 
-
 @dataclass
 class PartialNetwork:
-    id: int
+    id: Optional[int] = None
     logo_path: Optional[str] = None
     name: Optional[str] = None
     origin_country: Optional[str] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
     def logo_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.logo_path}" if self.logo_path else None
@@ -93,7 +93,7 @@ class PartialNetwork:
 
 @dataclass
 class PartialTV:
-    id: int
+    id: Optional[int] = None
     poster_path: Optional[str] = None
     adult: Optional[bool] = None
     popularity: Optional[float] = None
@@ -110,7 +110,7 @@ class PartialTV:
     media_type: Optional[MediaType] = MediaType.tv
 
     def __str__(self) -> str:
-        return self.name or self.original_name
+        return self.name or self.original_name or ""
 
     @property
     def year(self) -> Optional[int]:
@@ -134,7 +134,7 @@ class PartialSeason:
     season_number: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
     def poster_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.poster_path}" if self.poster_path else None
@@ -157,7 +157,7 @@ class PartialEpisode:
     runtime: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
     def still_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.still_path}" if self.still_path else None
@@ -170,7 +170,7 @@ class PartialMedia(PartialMovie, PartialTV):
 
 @dataclass
 class PartialPerson:
-    id: int
+    id: Optional[int] = None
     profile_path: Optional[str] = None
     adult: Optional[bool] = None
     known_for: Optional[List[PartialMedia]] = None
@@ -182,7 +182,7 @@ class PartialPerson:
     media_type: Optional[MediaType] = MediaType.person
 
     def __str__(self) -> str:
-        return self.name or self.original_name
+        return self.name or self.original_name or ""
 
     def profile_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.profile_path}" if self.profile_path else None

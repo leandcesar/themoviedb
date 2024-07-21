@@ -1,5 +1,6 @@
-.PHONY: help install uninstall reinstall version test testall clean
+.PHONY: help install uninstall reinstall test lint format security clear release
 .DEFAULT_GOAL := help
+
 VENV = venv
 PYTHON = $(VENV)/bin/python3
 PIP = $(VENV)/bin/pip
@@ -33,27 +34,26 @@ reinstall: uninstall install
 
 test: $(VENV)/bin/activate
 	@$(VENV)/bin/pytest --cov-report html
-	@$(VENV)/bin/coverage-badge -o docs/badges/coverage.svg -f
 
 testall: $(VENV)/bin/activate
 	@$(VENV)/bin/nox
 
 lint: $(VENV)/bin/activate
-	@$(VENV)/bin/pre-commit run mypy
-	@$(VENV)/bin/pre-commit run ruff
+	@$(VENV)/bin/pre-commit run mypy --all-files
+	@$(VENV)/bin/pre-commit run ruff --all-files
 
 format: $(VENV)/bin/activate
-	@$(VENV)/bin/pre-commit run black
-	@$(VENV)/bin/pre-commit run isort
-	@$(VENV)/bin/pre-commit run check-docstring-first
-	@$(VENV)/bin/pre-commit run end-of-file-fixer
-	@$(VENV)/bin/pre-commit run fix-encoding-pragma
-	@$(VENV)/bin/pre-commit run trailing-whitespace
+	@$(VENV)/bin/pre-commit run black --all-files
+	@$(VENV)/bin/pre-commit run isort --all-files
+	@$(VENV)/bin/pre-commit run check-docstring-first --all-files
+	@$(VENV)/bin/pre-commit run end-of-file-fixer --all-files
+	@$(VENV)/bin/pre-commit run fix-encoding-pragma --all-files
+	@$(VENV)/bin/pre-commit run trailing-whitespace --all-files
 
 security: $(VENV)/bin/activate
-	@$(VENV)/bin/pre-commit run bandit
-	@$(VENV)/bin/pre-commit run detect-private-key
-	@$(VENV)/bin/pre-commit run debug-statements
+	@$(VENV)/bin/pre-commit run bandit --all-files
+	@$(VENV)/bin/pre-commit run detect-private-key --all-files
+	@$(VENV)/bin/pre-commit run debug-statements --all-files
 
 clear:
 	@rm -fr build/

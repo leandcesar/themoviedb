@@ -1,6 +1,7 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 with open("README.rst", "r", encoding="utf-8") as readme_file:
     readme = readme_file.read()

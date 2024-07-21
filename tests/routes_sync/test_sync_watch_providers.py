@@ -1,8 +1,7 @@
+# -*- coding: utf-8 -*-
 from unittest.mock import patch
 
-import pytest
-
-from themoviedb import tmdb, schemas
+from themoviedb import schemas, tmdb
 
 
 def test_watch_providers_movie(get_data, assert_data):
@@ -19,7 +18,7 @@ def test_watch_providers_movie(get_data, assert_data):
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
-            }
+            },
         )
 
     assert isinstance(watch_providers, schemas.WatchProvidersData)
@@ -40,7 +39,7 @@ def test_watch_providers_regions(get_data, assert_data):
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
-            }
+            },
         )
 
     assert isinstance(regions, schemas.Regions)
@@ -61,7 +60,7 @@ def test_watch_providers_tv(get_data, assert_data):
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
-            }
+            },
         )
     assert isinstance(watch_providers, schemas.WatchProvidersData)
     assert assert_data(watch_providers, data)

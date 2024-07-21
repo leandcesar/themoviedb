@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from typing import List, Optional
 
@@ -11,7 +12,7 @@ class Region:
     native_name: Optional[str] = None
 
     def __str__(self) -> str:
-        return self.native_name
+        return self.native_name or ""
 
 
 @dataclass

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from datetime import date
 from typing import List, Optional
@@ -19,7 +20,7 @@ class Season:
     season_number: Optional[int] = None
 
     def __str__(self) -> str:
-        return self.name
+        return self.name or ""
 
     def poster_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
         return f"https://image.tmdb.org/t/p/{size}{self.poster_path}" if self.poster_path else None

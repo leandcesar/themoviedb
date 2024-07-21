@@ -1,8 +1,7 @@
+# -*- coding: utf-8 -*-
 from unittest.mock import patch
 
-import pytest
-
-from themoviedb import tmdb, schemas
+from themoviedb import schemas, tmdb
 
 
 def test_certifications_movie(get_data, assert_data):
@@ -19,7 +18,7 @@ def test_certifications_movie(get_data, assert_data):
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
-            }
+            },
         )
 
     assert isinstance(certifications, schemas.Certifications)
@@ -40,7 +39,7 @@ def test_certifications_tv(get_data, assert_data):
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
-            }
+            },
         )
     assert isinstance(certifications, schemas.Certifications)
     assert assert_data(certifications, data)

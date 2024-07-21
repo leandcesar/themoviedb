@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from unittest.mock import patch
 
 import pytest
@@ -36,7 +37,13 @@ async def test_tv_details_full(get_data, assert_data):
 
     with patch("themoviedb.routes_async._base.ClientSession.request") as mocked:
         mocked.return_value.__aenter__.return_value.json.return_value = data
-        tv = await aiotmdb.aioTMDb().tv(tv_id).details(append_to_response="aggregate_credits,alternative_titles,changes,content_ratings,credits,external_ids,episode_groups,images,keywords,recommendations,reviews,screened_theatrically,similar,translations,videos,watch/providers")
+        tv = (
+            await aiotmdb.aioTMDb()
+            .tv(tv_id)
+            .details(
+                append_to_response="aggregate_credits,alternative_titles,changes,content_ratings,credits,external_ids,episode_groups,images,keywords,recommendations,reviews,screened_theatrically,similar,translations,videos,watch/providers"
+            )
+        )
         mocked.assert_called_with(
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}",
@@ -45,7 +52,7 @@ async def test_tv_details_full(get_data, assert_data):
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
-                "append_to_response": "aggregate_credits,alternative_titles,changes,content_ratings,credits,external_ids,episode_groups,images,keywords,recommendations,reviews,screened_theatrically,similar,translations,videos,watch/providers",
+                "append_to_response": "aggregate_credits,alternative_titles,changes,content_ratings,credits,external_ids,episode_groups,images,keywords,recommendations,reviews,screened_theatrically,similar,translations,videos,watch/providers",  # noqa: E501
             },
         )
 

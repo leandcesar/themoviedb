@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from typing import List, Optional
 
-from themoviedb.schemas._partial import PartialMovie, PartialTV, PartialEpisode
+from themoviedb.schemas._partial import PartialEpisode, PartialMovie, PartialTV
 from themoviedb.schemas._result import ResultWithPage
 
 

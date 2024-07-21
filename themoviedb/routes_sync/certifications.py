@@ -1,9 +1,9 @@
+# -*- coding: utf-8 -*-
 from themoviedb import schemas, utils
 from themoviedb.routes_sync._base import Base
 
 
 class Certifications(Base):
-
     def movie(self) -> schemas.Certifications:
         """Get an up to date list of the officially supported movie certifications on TMDB.
 
