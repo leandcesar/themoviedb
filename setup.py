@@ -22,7 +22,7 @@ setup(
     author="Leandro César",
     author_email="ccleandroc@gmail.com",
     url="https://github.com/leandcesar/themoviedb",
-    version="0.4.0",
+    version="{{VERSION_PLACEHOLDER}}",
     license="MIT",
     python_requires=">=3.8",
     packages=find_packages(include=["themoviedb", "themoviedb.*"]),
@@ -36,7 +36,6 @@ setup(
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
-        "Programming Language :: Python :: 3.12",
     ],
     keywords=[
         "tmdb",

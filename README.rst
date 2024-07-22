@@ -3,17 +3,12 @@
 themoviedb
 ==========
 
-.. raw:: html
-
-   <h1 align="center">
-     <a href="https://github.com/leandcesar/themoviedb">
-       <img src="https://github.com/leandcesar/themoviedb/blob/master/docs/assets/themoviedb.gif?raw=true" alt="themoviedb"/>
-     </a>
-   </h1>
-
-
 A modern and easy to use API wrapper for The Movie Database (TMDb) API v3
 written in Python. Supports sync and async requests!
+
+.. image:: https://github.com/leandcesar/themoviedb/blob/master/docs/assets/themoviedb.gif?raw=true
+   :target: https://github.com/leandcesar/themoviedb
+   :alt: themoviedb
 
 Overview
 ========
@@ -45,19 +40,19 @@ Install
 
 The easiest way to install **themoviedb** is via ``pip``.
 
-::
+.. code-block:: shell
 
     pip install themoviedb[full]
 
 Or only the sync version (with ``requests``).
 
-::
+.. code-block:: shell
 
     pip install themoviedb[sync]
 
 Or only the async version (with ``aiohttp``).
 
-::
+.. code-block:: shell
 
     pip install themoviedb[async]
 
@@ -133,7 +128,7 @@ Examples
 
 Get the list of top rated movies (sync mode).
 
-.. code:: py
+.. code:: python
 
     from themoviedb import TMDb
 
@@ -144,7 +139,7 @@ Get the list of top rated movies (sync mode).
 
 Get the list of popular TV shows (async mode).
 
-.. code:: py
+.. code:: python
 
     import asyncio
     from themoviedb import aioTMDb
@@ -159,7 +154,7 @@ Get the list of popular TV shows (async mode).
 
 Discover movies by different types of data.
 
-.. code:: py
+.. code:: python
 
     from themoviedb import TMDb
 
@@ -175,7 +170,7 @@ Discover movies by different types of data.
 
 Get the details of movie for a search.
 
-.. code:: py
+.. code:: python
 
     import asyncio
     from themoviedb import aioTMDb

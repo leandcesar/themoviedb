@@ -1,4 +1,4 @@
-.PHONY: help install uninstall reinstall test lint format security clear release
+.PHONY: help install uninstall reinstall test lint format security clear
 .DEFAULT_GOAL := help
 
 VENV = venv
@@ -72,9 +72,3 @@ clear:
 	@rm -fr .pytest_cache
 	@rm -fr .mypy_cache
 	@rm -fr .ruff_cache
-
-release: clear
-	@python setup.py sdist
-	@python setup.py bdist_wheel
-	@ls -l dist
-	@twine upload dist/* --verbose
