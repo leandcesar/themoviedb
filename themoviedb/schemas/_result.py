@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from datetime import date
-from typing import Generic, Iterator, Optional, TypeVar
+from typing import Generic, Optional, TypeVar
 
 T = TypeVar("T")
 
@@ -19,26 +19,20 @@ class Result(Generic[T]):
     def __bool__(self) -> bool:
         return bool(self.results)
 
-    def __iter__(self) -> Iterator:
+    def __iter__(self):
         if self.results is None:
             return iter([])
-        if isinstance(self.results, list):
-            return iter(self.results)
-        raise TypeError("Result is not iterable")
+        return iter(self.results)
 
     def __getitem__(self, index):
         if self.results is None:
             raise IndexError("Result is empty")
-        if isinstance(self.results, list):
-            return self.results[index]
-        raise TypeError("Result is not indexable")
+        return self.results[index]
 
     def __len__(self) -> int:
         if self.results is None:
             return 0
-        if isinstance(self.results, list):
-            return len(self.results)
-        raise TypeError("Result does not have length")
+        return len(self.results)  # type: ignore
 
 
 @dataclass

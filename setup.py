@@ -8,8 +8,6 @@ with open("README.rst", "r", encoding="utf-8") as readme_file:
 
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
-    requirements.remove("aiohttp==3.8.4")
-    requirements.remove("requests==2.31.0")
 
 with open("requirements-test.txt") as f:
     test_requirements = f.read().splitlines()
@@ -52,11 +50,6 @@ setup(
     ],
     zip_safe=False,
     install_requires=requirements,
-    extras_require={
-        "async": ["aiohttp==3.8.4"],
-        "sync": ["requests==2.31.0"],
-        "full": ["aiohttp==3.8.4", "requests==2.31.0"],
-    },
     tests_require=test_requirements,
     test_suite="tests",
 )

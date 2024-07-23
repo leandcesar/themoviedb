@@ -1,13 +1,8 @@
 # -*- coding: utf-8 -*-
 import os
-import sys
 from typing import Any, Dict, Optional
 
-try:
-    from requests import Session
-except ImportError:
-    print("The 'requests' package is required for sync support. Install it using 'pip install themoviedb[sync]'.")
-    sys.exit(1)
+from requests import Session
 
 
 class Base:

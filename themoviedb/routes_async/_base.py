@@ -1,13 +1,8 @@
 # -*- coding: utf-8 -*-
 import os
-import sys
 from typing import Any, Dict, Optional
 
-try:
-    from aiohttp import ClientSession
-except ImportError:
-    print("The 'aiohttp' package is required for async support. Install it using 'pip install themoviedb[async]'.")
-    sys.exit(1)
+from aiohttp import ClientSession
 
 
 class Base:
