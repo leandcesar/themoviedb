@@ -129,8 +129,6 @@ async def test_episode_images(get_data, assert_data):
             f"https://api.themoviedb.org/3/tv/{tv_id}/season/{season_id}/episode/{episode_id}/images",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "TEST_TMDB_LANGUAGE",
-                "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
             },
         )

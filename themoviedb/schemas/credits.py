@@ -40,8 +40,8 @@ class Cast:
     def __str__(self) -> str:
         return self.name or self.original_name or ""
 
-    def profile_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.profile_path}" if self.profile_path else None
+    def profile_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.profile_path}" if self.profile_path else None
 
 
 @dataclass
@@ -64,8 +64,8 @@ class Crew:
     def __str__(self) -> str:
         return self.name or self.original_name or ""
 
-    def profile_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.profile_path}" if self.profile_path else None
+    def profile_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.profile_path}" if self.profile_path else None
 
 
 @dataclass
@@ -114,11 +114,11 @@ class CastMovie:
     def __str__(self) -> str:
         return self.title or ""
 
-    def backdrop_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.backdrop_path}" if self.backdrop_path else None
+    def backdrop_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.backdrop_path}" if self.backdrop_path else None
 
-    def poster_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.poster_path}" if self.poster_path else None
+    def poster_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.poster_path}" if self.poster_path else None
 
 
 @dataclass
@@ -145,11 +145,11 @@ class CrewMovie:
     def __str__(self) -> str:
         return self.title or ""
 
-    def backdrop_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.backdrop_path}" if self.backdrop_path else None
+    def backdrop_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.backdrop_path}" if self.backdrop_path else None
 
-    def poster_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.poster_path}" if self.poster_path else None
+    def poster_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.poster_path}" if self.poster_path else None
 
 
 @dataclass
@@ -183,11 +183,11 @@ class CastTV:
     def __str__(self) -> str:
         return self.name or self.original_name or ""
 
-    def backdrop_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.backdrop_path}" if self.backdrop_path else None
+    def backdrop_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.backdrop_path}" if self.backdrop_path else None
 
-    def poster_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.poster_path}" if self.poster_path else None
+    def poster_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.poster_path}" if self.poster_path else None
 
 
 @dataclass
@@ -215,11 +215,11 @@ class CrewTV:
     def __str__(self) -> str:
         return self.name or self.original_name or ""
 
-    def backdrop_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.backdrop_path}" if self.backdrop_path else None
+    def backdrop_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.backdrop_path}" if self.backdrop_path else None
 
-    def poster_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.poster_path}" if self.poster_path else None
+    def poster_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.poster_path}" if self.poster_path else None
 
 
 @dataclass

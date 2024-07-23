@@ -16,8 +16,8 @@ class WatchProviderData:
     def __str__(self) -> str:
         return self.provider_name or ""
 
-    def logo_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.logo_path}" if self.logo_path else None
+    def logo_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.logo_path}" if self.logo_path else None
 
 
 @dataclass

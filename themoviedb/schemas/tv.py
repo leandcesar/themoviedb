@@ -36,8 +36,8 @@ class CreatedBy:
     def __str__(self) -> str:
         return self.name or ""
 
-    def profile_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.profile_path}" if self.profile_path else None
+    def profile_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.profile_path}" if self.profile_path else None
 
 
 @dataclass

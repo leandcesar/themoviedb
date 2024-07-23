@@ -17,8 +17,8 @@ class AuthorDetails:
     def __str__(self) -> str:
         return self.name or ""
 
-    def avatar_url(self, size: Optional[SizeType] = SizeType.original) -> Optional[str]:
-        return f"https://image.tmdb.org/t/p/{size}{self.avatar_path}" if self.avatar_path else None
+    def avatar_url(self, size: SizeType = SizeType.original) -> Optional[str]:
+        return f"https://image.tmdb.org/t/p/{size.value}{self.avatar_path}" if self.avatar_path else None
 
 
 @dataclass

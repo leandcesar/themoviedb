@@ -80,6 +80,9 @@ class Base:
             if v is not None
         }
         params = {**self._params, **params}
+        if path.endswith("/images"):
+            params.pop("region")
+            params.pop("language")
 
         if self.session is not None:
             if json is None:

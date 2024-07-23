@@ -98,8 +98,6 @@ async def test_person_images(get_data, assert_data):
             f"https://api.themoviedb.org/3/person/{person_id}/images",
             params={
                 "api_key": "TEST_TMDB_KEY",
-                "language": "TEST_TMDB_LANGUAGE",
-                "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
             },
         )

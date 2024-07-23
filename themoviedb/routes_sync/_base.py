@@ -76,6 +76,9 @@ class Base:
         json = kwargs.pop("json", None)
         params = {k.replace("__", "."): v for k, v in kwargs.items() if v is not None}
         params = {**self._params, **params}
+        if path.endswith("/images"):
+            params.pop("region")
+            params.pop("language")
 
         if self.session is not None:
             if json is None:
