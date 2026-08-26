@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from typing import Optional, Union
 
@@ -11,13 +10,11 @@ from themoviedb.schemas.tv import TV
 
 
 @dataclass
-class FullTV(CastTV, TV, Season):
-    ...
+class FullTV(CastTV, TV, Season): ...
 
 
 @dataclass
-class FullMovie(CastMovie, Movie):
-    ...
+class FullMovie(CastMovie, Movie): ...
 
 
 @dataclass

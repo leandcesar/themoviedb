@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from typing import Type, TypeVar
 
 from themoviedb.routes_sync import (

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 
 os.environ["TMDB_KEY"] = "TEST_TMDB_KEY"

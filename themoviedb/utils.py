@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from dataclasses import asdict
 from datetime import date, datetime
 from enum import Enum

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from dataclasses import dataclass
 from typing import List, Optional
 
@@ -7,8 +6,7 @@ from themoviedb.schemas._result import ResultWithPage
 
 
 @dataclass
-class Keyword(PartialKeyword):
-    ...
+class Keyword(PartialKeyword): ...
 
 
 @dataclass

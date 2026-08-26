@@ -1,37 +1,38 @@
-# -*- coding: utf-8 -*-
+import os
+from pathlib import Path
+
 from setuptools import find_packages, setup
 
-with open("README.rst", "r", encoding="utf-8") as readme_file:
-    readme = readme_file.read()
+PROJECT_ROOT = Path(__file__).resolve().parent
 
-with open("requirements.txt") as f:
-    requirements = f.read().splitlines()
-
-with open("requirements-test.txt") as f:
-    test_requirements = f.read().splitlines()
-    test_requirements.remove("-r requirements.txt")
+readme = (PROJECT_ROOT / "README.rst").read_text(encoding="utf-8")
+requirements = (PROJECT_ROOT / "requirements.txt").read_text(encoding="utf-8").splitlines()
 
 setup(
     name="themoviedb",
     description="A modern and easy to use API wrapper for The Movie Database (TMDb) API v3 written in Python",
     long_description=readme,
+    long_description_content_type="text/x-rst",
     author="Leandro César",
     author_email="ccleandroc@gmail.com",
     url="https://github.com/leandcesar/themoviedb",
-    version="{{VERSION_PLACEHOLDER}}",
+    version=os.environ.get("THEMOVIEDB_VERSION", "0.0.0.dev0"),
     license="MIT",
-    python_requires=">=3.8",
+    python_requires=">=3.8,<3.15",
     packages=find_packages(include=["themoviedb", "themoviedb.*"]),
     include_package_data=True,
     classifiers=[
-        "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
     ],
     keywords=[
         "tmdb",
@@ -48,6 +49,4 @@ setup(
     ],
     zip_safe=False,
     install_requires=requirements,
-    tests_require=test_requirements,
-    test_suite="tests",
 )

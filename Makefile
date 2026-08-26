@@ -1,74 +1,53 @@
-.PHONY: help install uninstall reinstall test lint format security clear
 .DEFAULT_GOAL := help
 
-VENV = venv
-PYTHON = $(VENV)/bin/python3
-PIP = $(VENV)/bin/pip
+PYTHON ?= python3
+VENV ?= .venv
+VENV_BIN := $(VENV)/bin
+VENV_PYTHON := $(VENV_BIN)/python
+VENV_STAMP := $(VENV)/.installed
+PIP := $(VENV_PYTHON) -m pip
+CHECK_PATHS := examples themoviedb tests
+REQUIREMENTS := requirements.txt requirements-test.txt requirements-dev.txt
 
-define PRINT_HELP_PYSCRIPT
-import re, sys
-for line in sys.stdin:
-	match = re.match(r'^([a-zA-Z_-]+):.*?$$', line)
-	if match:
-		target = match.groups()
-		print("%s" % (target))
-endef
-export PRINT_HELP_PYSCRIPT
+.PHONY: help install hooks-install test testall lint format format-check security hooks check
 
-help:
-	@python3 -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
+help: ## List available targets.
+	@awk 'BEGIN {FS = ":.*##"} /^[a-zA-Z_-]+:.*##/ {printf "%-14s %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
-$(VENV)/bin/activate: requirements-dev.txt requirements-test.txt requirements.txt
-	@python3 -m venv $(VENV)
-	@$(PIP) install -U pip
-	@$(PIP) install -r requirements-dev.txt
-	@$(VENV)/bin/pre-commit install
-	@$(VENV)/bin/pre-commit install --hook-type commit-msg
+$(VENV_STAMP): $(REQUIREMENTS)
+	$(PYTHON) -m venv $(VENV)
+	$(PIP) install --upgrade pip
+	$(PIP) install --upgrade -r requirements-dev.txt
+	touch $(VENV_STAMP)
 
-install: $(VENV)/bin/activate
+install: $(VENV_STAMP) ## Create or update the development environment.
 
-uninstall:
-	@rm -rf $(VENV)
+hooks-install: install ## Install the repository Git hooks.
+	$(VENV_BIN)/pre-commit install --install-hooks
 
-reinstall: uninstall install
+test: install ## Run the full test suite.
+	$(VENV_PYTHON) -m pytest
 
-test: $(VENV)/bin/activate
-	@$(VENV)/bin/pytest --cov-report html
+testall: install ## Run tests with every configured Nox interpreter.
+	$(VENV_PYTHON) -m nox
 
-testall: $(VENV)/bin/activate
-	@$(VENV)/bin/nox
+lint: install ## Run static analysis.
+	$(VENV_BIN)/ruff check .
+	$(VENV_BIN)/mypy themoviedb
 
-lint: $(VENV)/bin/activate
-	@$(VENV)/bin/pre-commit run mypy --all-files
-	@$(VENV)/bin/pre-commit run ruff --all-files
+format: install ## Apply Black and isort formatting.
+	$(VENV_BIN)/black $(CHECK_PATHS)
+	$(VENV_BIN)/isort $(CHECK_PATHS)
 
-format: $(VENV)/bin/activate
-	@$(VENV)/bin/pre-commit run black --all-files
-	@$(VENV)/bin/pre-commit run isort --all-files
-	@$(VENV)/bin/pre-commit run check-docstring-first --all-files
-	@$(VENV)/bin/pre-commit run end-of-file-fixer --all-files
-	@$(VENV)/bin/pre-commit run fix-encoding-pragma --all-files
-	@$(VENV)/bin/pre-commit run trailing-whitespace --all-files
+format-check: install ## Verify formatting without changing files.
+	$(VENV_BIN)/black --check $(CHECK_PATHS)
+	$(VENV_BIN)/isort --check-only $(CHECK_PATHS)
 
-security: $(VENV)/bin/activate
-	@$(VENV)/bin/pre-commit run bandit --all-files
-	@$(VENV)/bin/pre-commit run detect-private-key --all-files
-	@$(VENV)/bin/pre-commit run debug-statements --all-files
+security: install ## Run security-oriented checks.
+	$(VENV_BIN)/pre-commit run bandit --all-files
+	$(VENV_BIN)/pre-commit run detect-private-key --all-files
 
-clear:
-	@rm -fr build/
-	@rm -fr dist/
-	@rm -fr .eggs/
-	@find . -name '*.egg-info' -exec rm -fr {} +
-	@find . -name '*.egg' -exec rm -f {} +
-	@find . -name '*.pyc' -exec rm -f {} +
-	@find . -name '*.pyo' -exec rm -f {} +
-	@find . -name '*~' -exec rm -f {} +
-	@find . -name '__pycache__' -exec rm -fr {} +
-	@rm -fr .tox/
-	@rm -fr .nox/
-	@rm -f .coverage
-	@rm -fr htmlcov/
-	@rm -fr .pytest_cache
-	@rm -fr .mypy_cache
-	@rm -fr .ruff_cache
+hooks: install ## Run every pre-commit hook on the repository.
+	$(VENV_BIN)/pre-commit run --all-files
+
+check: lint format-check security test ## Run the local quality gate.

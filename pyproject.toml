@@ -1,75 +1,50 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [tool.mypy]
 python_version = "3.8"
 exclude = [
-    "venv",
+    "(?:^|/)venv(?:/|$)",
+    "(?:^|/)\\.venv(?:/|$)",
 ]
 ignore_missing_imports = true
 
 [tool.ruff]
-exclude = [
-    ".bzr",
-    ".direnv",
-    ".eggs",
-    ".git",
-    ".git-rewrite",
-    ".hg",
-    ".mypy_cache",
-    ".nox",
-    ".pants.d",
-    ".pytype",
-    ".ruff_cache",
-    ".svn",
-    ".tox",
-    ".venv",
-    "__pypackages__",
-    "_build",
-    "buck-out",
-    "build",
-    "dist",
-    "node_modules",
-    "venv",
-]
 line-length = 117
 target-version = "py38"
-fix = true
 
-[tool.ruff.per-file-ignores]
-".github/*" = ["INP001"]
-
-[tool.ruff.mccabe]
-max-complexity = 10
+[tool.ruff.lint]
+# Keep the existing baseline while the wrapper is incrementally modernized.
+select = ["E4", "E7", "E9", "F"]
 
 [tool.black]
 line-length = 117
 target-version = ["py38"]
 
-[tool.black.include]
-paths = [
-    "examples",
-    "themoviedb",
-    "tests",
-]
-
 [tool.isort]
 profile = "black"
 
 [tool.bandit]
-exclude_dirs = ["venv",]
+exclude_dirs = [".venv", "venv"]
 skips = ["B101",]
 
 [tool.pytest.ini_options]
-minversion = 7.0
+minversion = "8.3"
 testpaths = [
     "tests",
 ]
 required_plugins = [
-    "pytest-cov>=4.1.0",
-    "pytest-randomly>=3.12.0",
-    "pytest-sugar>=0.9.7",
+    "pytest-asyncio>=0.24.0",
+    "pytest-cov>=5.0.0",
+    "pytest-randomly>=3.15.0",
 ]
+asyncio_mode = "strict"
 addopts = [
     "-vvv",
     "--maxfail=1",
+    "--strict-config",
+    "--strict-markers",
     "--cov=themoviedb",
     "--cov-fail-under=80",
 ]

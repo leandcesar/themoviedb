@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from themoviedb.routes_sync._base import Base  # noqa: F401
 from themoviedb.routes_sync.authentication import Authentication  # noqa: F401
 from themoviedb.routes_sync.certifications import Certifications  # noqa: F401

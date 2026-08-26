@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from themoviedb.schemas._enums import (  # noqa: F401
     CreditType,
     EpisodeGroupType,
