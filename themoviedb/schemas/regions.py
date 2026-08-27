@@ -15,5 +15,5 @@ class Region:
 
 
 @dataclass
-class Regions(Result):
+class Regions(Result[List[Region]]):
     results: Optional[List[Region]] = None

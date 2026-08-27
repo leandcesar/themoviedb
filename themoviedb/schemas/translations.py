@@ -27,7 +27,7 @@ class Translation:
 
 
 @dataclass
-class Translations(ResultWithID):
+class Translations(ResultWithID[List[Translation]]):
     translations: Optional[List[Translation]] = None
 
     def __post_init__(self) -> None:

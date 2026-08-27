@@ -11,7 +11,7 @@ class RatedMovie(PartialMovie):
 
 
 @dataclass
-class RatedMovies(ResultWithPage):
+class RatedMovies(ResultWithPage[List[RatedMovie]]):
     results: Optional[List[RatedMovie]] = None
 
 
@@ -21,7 +21,7 @@ class RatedTV(PartialTV):
 
 
 @dataclass
-class RatedTVs(ResultWithPage):
+class RatedTVs(ResultWithPage[List[RatedTV]]):
     results: Optional[List[RatedTV]] = None
 
 
@@ -31,5 +31,5 @@ class RatedEpisode(PartialEpisode):
 
 
 @dataclass
-class RatedEpisodes(ResultWithPage):
+class RatedEpisodes(ResultWithPage[List[RatedEpisode]]):
     results: Optional[List[RatedEpisode]] = None

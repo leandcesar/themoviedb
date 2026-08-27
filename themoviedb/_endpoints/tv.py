@@ -1,0 +1,25 @@
+from themoviedb import schemas
+from themoviedb._endpoints._endpoint import Endpoint
+
+TV_DETAILS = Endpoint("tv/{tv_id}", schemas.TV)
+TV_AGGREGATE_CREDITS = Endpoint("tv/{tv_id}/aggregate_credits", schemas.Credits)
+TV_ALTERNATIVE_TITLES = Endpoint("tv/{tv_id}/alternative_titles", schemas.AlternativeTitles)
+TV_CONTENT_RATINGS = Endpoint("tv/{tv_id}/content_ratings", schemas.ContentRatings)
+TV_CREDITS = Endpoint("tv/{tv_id}/credits", schemas.Credits)
+TV_EXTERNAL_IDS = Endpoint("tv/{tv_id}/external_ids", schemas.ExternalIDs)
+TV_EPISODE_GROUPS = Endpoint("tv/{tv_id}/episode_groups", schemas.EpisodeGroups)
+TV_IMAGES = Endpoint("tv/{tv_id}/images", schemas.Images)
+TV_KEYWORDS = Endpoint("tv/{tv_id}/keywords", schemas.Keywords)
+TV_RECOMMENDATIONS = Endpoint("tv/{tv_id}/recommendations", schemas.TVs)
+TV_REVIEWS = Endpoint("tv/{tv_id}/reviews", schemas.Reviews)
+TV_SCREENED_THEATRICALLY = Endpoint("tv/{tv_id}/screened_theatrically", schemas.Episodes)
+TV_SIMILAR = Endpoint("tv/{tv_id}/similar", schemas.TVs)
+TV_TRANSLATIONS = Endpoint("tv/{tv_id}/translations", schemas.Translations)
+TV_VIDEOS = Endpoint("tv/{tv_id}/videos", schemas.Videos)
+TV_WATCH_PROVIDERS = Endpoint("tv/{tv_id}/watch/providers", schemas.WatchProviders)
+
+TVS_LATEST = Endpoint("tv/latest", schemas.TV)
+TVS_AIRING_TODAY = Endpoint("tv/airing_today", schemas.TVs)
+TVS_ON_THE_AIR = Endpoint("tv/on_the_air", schemas.TVs)
+TVS_POPULAR = Endpoint("tv/popular", schemas.TVs)
+TVS_TOP_RATED = Endpoint("tv/top_rated", schemas.TVs)

@@ -38,23 +38,9 @@ Requirements
 Install
 -------
 
-The easiest way to install **themoviedb** is via ``pip``.
-
 .. code-block:: shell
 
-    pip install themoviedb[full]
-
-Or only the sync version (with ``requests``).
-
-.. code-block:: shell
-
-    pip install themoviedb[sync]
-
-Or only the async version (with ``aiohttp``).
-
-.. code-block:: shell
-
-    pip install themoviedb[async]
+    pip install themoviedb
 
 API Key
 -------

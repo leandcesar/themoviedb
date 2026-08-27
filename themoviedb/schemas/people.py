@@ -33,5 +33,5 @@ class Person(PartialPerson):
 
 
 @dataclass
-class People(ResultWithPage):
+class People(ResultWithPage[List[Person]]):
     results: Optional[List[Person]] = None

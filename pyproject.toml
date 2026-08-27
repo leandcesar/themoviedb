@@ -1,6 +1,57 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "themoviedb"
+description = "A modern and easy to use API wrapper for The Movie Database (TMDb) API v3 written in Python"
+readme = { file = "README.rst", content-type = "text/x-rst" }
+requires-python = ">=3.8,<3.15"
+license = "MIT"
+authors = [
+    { name = "Leandro César", email = "ccleandroc@gmail.com" },
+]
+classifiers = [
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+keywords = [
+    "tmdb",
+    "tmdb3",
+    "aiotmdb",
+    "aiotmdb3",
+    "themoviedb",
+    "themoviedb3",
+    "movie",
+    "movies",
+    "tv",
+    "tv show",
+    "tv shows",
+]
+dynamic = ["dependencies", "version"]
+
+[project.urls]
+Homepage = "https://github.com/leandcesar/themoviedb"
+
+[tool.setuptools]
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.packages.find]
+include = ["themoviedb", "themoviedb.*"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+version = { attr = "themoviedb._version.__version__" }
 
 [tool.mypy]
 python_version = "3.8"

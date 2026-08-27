@@ -11,5 +11,5 @@ class ContentRating:
 
 
 @dataclass
-class ContentRatings(ResultWithID):
+class ContentRatings(ResultWithID[List[ContentRating]]):
     results: Optional[List[ContentRating]] = None

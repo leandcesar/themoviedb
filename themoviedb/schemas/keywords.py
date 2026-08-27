@@ -10,7 +10,7 @@ class Keyword(PartialKeyword): ...
 
 
 @dataclass
-class Keywords(ResultWithPage):
+class Keywords(ResultWithPage[List[Keyword]]):
     keywords: Optional[List[Keyword]] = None
     results: Optional[List[Keyword]] = None
 

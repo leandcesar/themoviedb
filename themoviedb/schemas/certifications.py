@@ -12,7 +12,7 @@ class Certification:
 
 
 @dataclass
-class Certifications(Result[Optional[Dict[str, List[Certification]]]]):
+class Certifications(Result[Dict[str, List[Certification]]]):
     certifications: Optional[Dict[str, List[Certification]]] = field(default=None)
 
     def __post_init__(self) -> None:

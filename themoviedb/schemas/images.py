@@ -40,5 +40,5 @@ class Images:
 
 
 @dataclass
-class TaggedImages(ResultWithPage):
+class TaggedImages(ResultWithPage[List[TaggedImage]]):
     results: Optional[List[TaggedImage]] = None

@@ -14,5 +14,5 @@ class AlternativeName:
 
 
 @dataclass
-class AlternativeNames(ResultWithID):
+class AlternativeNames(ResultWithID[List[AlternativeName]]):
     results: Optional[List[AlternativeName]] = None

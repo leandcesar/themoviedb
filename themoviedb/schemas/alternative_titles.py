@@ -15,7 +15,7 @@ class AlternativeTitle:
 
 
 @dataclass
-class AlternativeTitles(ResultWithID):
+class AlternativeTitles(ResultWithID[List[AlternativeTitle]]):
     results: Optional[List[AlternativeTitle]] = None
     titles: Optional[List[AlternativeTitle]] = None
 

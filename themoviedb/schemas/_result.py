@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from datetime import date
-from typing import Generic, Optional, TypeVar
+from typing import Any, Generic, Iterable, Iterator, Optional, Sized, TypeVar, cast
 
 T = TypeVar("T")
 
@@ -18,29 +18,29 @@ class Result(Generic[T]):
     def __bool__(self) -> bool:
         return bool(self.results)
 
-    def __iter__(self):
+    def __iter__(self) -> Iterator[Any]:
         if self.results is None:
-            return iter([])
-        return iter(self.results)
+            return iter(())
+        return iter(cast(Iterable[Any], self.results))
 
-    def __getitem__(self, index):
+    def __getitem__(self, index: Any) -> Any:
         if self.results is None:
             raise IndexError("Result is empty")
-        return self.results[index]
+        return cast(Any, self.results)[index]
 
     def __len__(self) -> int:
         if self.results is None:
             return 0
-        return len(self.results)  # type: ignore
+        return len(cast(Sized, self.results))
 
 
 @dataclass
-class ResultWithID(Result):
+class ResultWithID(Result[T], Generic[T]):
     id: Optional[int] = None
 
 
 @dataclass
-class ResultWithPage(ResultWithID):
+class ResultWithPage(ResultWithID[T], Generic[T]):
     page: Optional[int] = None
     dates: Optional[Dates] = None
     total_pages: Optional[int] = None

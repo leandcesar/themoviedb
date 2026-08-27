@@ -17,5 +17,5 @@ class Company(PartialCompany):
 
 
 @dataclass
-class Companies(ResultWithPage):
+class Companies(ResultWithPage[List[Company]]):
     results: Optional[List[Company]] = None

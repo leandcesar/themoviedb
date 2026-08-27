@@ -24,5 +24,5 @@ class ItemList:
 
 
 @dataclass
-class ItemsList(ResultWithPage):
+class ItemsList(ResultWithPage[List[ItemList]]):
     results: Optional[List[ItemList]] = None

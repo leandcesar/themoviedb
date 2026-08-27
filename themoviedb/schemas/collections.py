@@ -12,5 +12,5 @@ class Collection(PartialCollection):
 
 
 @dataclass
-class Collections(ResultWithPage):
+class Collections(ResultWithPage[List[Collection]]):
     results: Optional[List[Collection]] = None

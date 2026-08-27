@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import date, time
+from datetime import date
 from typing import List, Optional
 
 from themoviedb.schemas._enums import SizeType
@@ -22,6 +22,7 @@ from themoviedb.schemas.reviews import Reviews
 from themoviedb.schemas.translations import Translations
 from themoviedb.schemas.videos import Videos
 from themoviedb.schemas.watch_providers import WatchProviders
+from themoviedb.utils import format_duration
 
 
 @dataclass
@@ -40,12 +41,12 @@ class CreatedBy:
 
 
 @dataclass
-class TVs(ResultWithPage):
+class TVs(ResultWithPage[List[PartialTV]]):
     results: Optional[List[PartialTV]] = None
 
 
 @dataclass
-class Episodes(ResultWithID):
+class Episodes(ResultWithID[List[PartialEpisode]]):
     results: Optional[List[PartialEpisode]] = None
 
 
@@ -97,10 +98,10 @@ class TV(PartialTV):
     def episode_duration(self, fmt: str = "%H:%M") -> Optional[str]:
         if self.run_time and self.number_of_episodes:
             run_time_average = self.run_time // self.number_of_episodes
-            return time(minute=run_time_average).strftime(fmt)
+            return format_duration(run_time_average, fmt)
         return None
 
     def duration(self, fmt: str = "%H:%M") -> Optional[str]:
         if self.run_time:
-            return time(minute=self.run_time).strftime(fmt)
+            return format_duration(self.run_time, fmt)
         return None

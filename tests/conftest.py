@@ -8,7 +8,7 @@ from themoviedb import utils
 @pytest.fixture(scope="session", autouse=True)
 def get_data():
     def _get_data(filename: str):
-        with open(f"tests/mock/data/{filename}.json", "r", encoding="utf-8") as f:
+        with open(f"tests/fixtures/responses/{filename}.json", "r", encoding="utf-8") as f:
             raw_data = f.read()
             data = json.loads(raw_data)
             return data

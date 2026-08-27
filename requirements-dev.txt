@@ -6,3 +6,4 @@ nox>=2025.11.12,<2027
 pre-commit>=3.5.0,<5
 ruff>=0.16.4,<1
 types-requests>=2.32.0.20241016,<3
+virtualenv>=20.39.1,<21

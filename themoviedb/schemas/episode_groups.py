@@ -28,5 +28,5 @@ class EpisodeGroup:
 
 
 @dataclass
-class EpisodeGroups(ResultWithID):
+class EpisodeGroups(ResultWithID[List[EpisodeGroup]]):
     results: Optional[List[EpisodeGroup]] = None

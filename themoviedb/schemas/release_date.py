@@ -22,5 +22,5 @@ class ReleaseDate:
 
 
 @dataclass
-class ReleaseDates(ResultWithID):
+class ReleaseDates(ResultWithID[List[ReleaseDate]]):
     results: Optional[List[ReleaseDate]] = None

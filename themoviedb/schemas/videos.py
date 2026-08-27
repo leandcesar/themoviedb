@@ -23,5 +23,5 @@ class Video:
 
 
 @dataclass
-class Videos(ResultWithID):
+class Videos(ResultWithID[List[Video]]):
     results: Optional[List[Video]] = None

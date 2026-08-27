@@ -28,7 +28,7 @@ class Multi(PartialMovie, PartialPerson, PartialTV):
 
 
 @dataclass
-class Multis(ResultWithPage):
+class Multis(ResultWithPage[List[Multi]]):
     results: Optional[List[Multi]] = None
 
 

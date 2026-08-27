@@ -14,7 +14,7 @@ class Genre:
 
 
 @dataclass
-class Genres(Result):
+class Genres(Result[List[Genre]]):
     genres: Optional[List[Genre]] = None
 
     def __post_init__(self) -> None:

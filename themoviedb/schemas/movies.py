@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import time
 from typing import List, Optional
 
 from themoviedb.schemas._partial import PartialMovie
@@ -21,6 +20,7 @@ from themoviedb.schemas.reviews import Reviews
 from themoviedb.schemas.translations import Translations
 from themoviedb.schemas.videos import Videos
 from themoviedb.schemas.watch_providers import WatchProviders
+from themoviedb.utils import format_duration
 
 
 @dataclass
@@ -58,10 +58,10 @@ class Movie(PartialMovie):
 
     def duration(self, fmt: str = "%H:%M") -> Optional[str]:
         if self.runtime:
-            return time(minute=self.runtime).strftime(fmt)
+            return format_duration(self.runtime, fmt)
         return None
 
 
 @dataclass
-class Movies(ResultWithPage):
+class Movies(ResultWithPage[List[PartialMovie]]):
     results: Optional[List[PartialMovie]] = None

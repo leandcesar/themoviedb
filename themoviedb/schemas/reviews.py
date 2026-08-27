@@ -36,5 +36,5 @@ class Review:
 
 
 @dataclass
-class Reviews(ResultWithPage):
+class Reviews(ResultWithPage[List[Review]]):
     results: Optional[List[Review]] = None

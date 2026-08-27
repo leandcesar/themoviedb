@@ -1,6 +1,5 @@
-from typing import Type, TypeVar
-
-from themoviedb.routes_async import (
+from themoviedb._core._factory import _ClientFactory
+from themoviedb._routes.async_ import (
     TV,
     Authentication,
     Base,
@@ -28,19 +27,14 @@ from themoviedb.routes_async import (
     WatchProviders,
 )
 
-T = TypeVar("T", bound=Base)
 
-
-class aioTMDb(Base):
+class aioTMDb(_ClientFactory, Base):
     """aioTMDb class.
 
     This class provides methods for accessing various async endpoints of the TMDb API.
     Each method returns an instance of a corresponding model class, which can be used
     to retrieve information about a specific resource.
     """
-
-    def _get_instance(self, cls: Type[T], *args, **kwargs) -> T:
-        return cls(*args, key=self.key, session=self.session, language=self.language, region=self.region, **kwargs)
 
     def authentication(self) -> Authentication:
         """Get model object for `themoviedb.Authentication` resource."""
@@ -137,3 +131,7 @@ class aioTMDb(Base):
     def watch_providers(self) -> WatchProviders:
         """Get model object for `themoviedb.WatchProviders` resource."""
         return self._get_instance(WatchProviders)
+
+
+# Canonical name for new code. ``aioTMDb`` remains fully supported for compatibility.
+AsyncTMDbClient = aioTMDb

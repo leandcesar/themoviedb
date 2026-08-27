@@ -20,8 +20,8 @@ class WatchProviderData:
 
 
 @dataclass
-class WatchProvidersData(Result[WatchProviderData]):
-    results: Optional[List[WatchProviderData]] = None  # type: ignore
+class WatchProvidersData(Result[List[WatchProviderData]]):
+    results: Optional[List[WatchProviderData]] = None
 
 
 @dataclass
@@ -38,7 +38,7 @@ class WatchProvider:
 
 
 @dataclass
-class WatchProviders(ResultWithID):
+class WatchProviders(ResultWithID[Dict[str, WatchProvider]]):
     results: Optional[Dict[str, WatchProvider]] = None
 
     def __bool__(self) -> bool:
