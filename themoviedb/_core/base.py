@@ -13,23 +13,23 @@ class BaseRoute:
     def __init__(
         self,
         *,
-        key: Optional[str] = None,
+        api_key: Optional[str] = None,
         language: Optional[str] = None,
         region: Optional[str] = None,
         timeout: Optional[float] = None,
         _config: Optional[ClientConfig] = None,
     ) -> None:
         self._config = _config or ClientConfig.from_values(
-            key=key, language=language, region=region, timeout=timeout
+            api_key=api_key, language=language, region=region, timeout=timeout
         )
 
     @property
-    def key(self) -> Optional[str]:
-        return self._config.key
+    def api_key(self) -> Optional[str]:
+        return self._config.api_key
 
-    @key.setter
-    def key(self, key: str) -> None:
-        self._config.key = key
+    @api_key.setter
+    def api_key(self, api_key: str) -> None:
+        self._config.api_key = api_key
 
     @property
     def language(self) -> str:

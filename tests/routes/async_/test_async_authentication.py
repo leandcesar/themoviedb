@@ -16,7 +16,7 @@ async def test_create_guest_session(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/authentication/guest_session/new",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -38,7 +38,7 @@ async def test_create_token(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/authentication/token/new",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -61,7 +61,7 @@ async def test_create_session(get_data, assert_data):
             "POST",
             "https://api.themoviedb.org/3/authentication/session/new",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -95,7 +95,7 @@ async def test_create_session_with_login(get_data, assert_data):
             "POST",
             "https://api.themoviedb.org/3/authentication/token/validate_with_login",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -123,7 +123,7 @@ async def test_delete_session(get_data, assert_data):
             "DELETE",
             "https://api.themoviedb.org/3/authentication/session",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",

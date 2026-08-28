@@ -18,7 +18,7 @@ class Base(BaseRoute):
     def __init__(
         self,
         *,
-        key: Optional[str] = None,
+        api_key: Optional[str] = None,
         session: Optional[ClientSession] = None,
         language: Optional[str] = None,
         region: Optional[str] = None,
@@ -26,7 +26,7 @@ class Base(BaseRoute):
         _config: Optional[ClientConfig] = None,
         _transport: Optional[AsyncTransport] = None,
     ) -> None:
-        super().__init__(key=key, language=language, region=region, timeout=timeout, _config=_config)
+        super().__init__(api_key=api_key, language=language, region=region, timeout=timeout, _config=_config)
         self._transport = _transport or AsyncTransport(session)
 
     @property

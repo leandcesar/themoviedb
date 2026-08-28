@@ -2,7 +2,7 @@ from themoviedb import TMDb
 
 
 def main():
-    tmdb = TMDb(key="YOUR_API_KEY")
+    tmdb = TMDb(api_key="YOUR_API_KEY")
     results = tmdb.search().multi("jack")
     for result in results:
         if result.is_movie():

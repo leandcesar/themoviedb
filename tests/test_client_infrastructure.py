@@ -9,7 +9,7 @@ from themoviedb._core.request import build_request
 
 
 def test_request_builder_normalizes_shared_parameters() -> None:
-    config = ClientConfig(key="key", language="pt-BR", region="BR", timeout=5.0)
+    config = ClientConfig(api_key="key", language="pt-BR", region="BR", timeout=5.0)
 
     request = build_request(
         config,
@@ -31,7 +31,7 @@ def test_timeout_is_shared_with_sync_resources() -> None:
     session = MagicMock()
     response = session.request.return_value.__enter__.return_value
     response.json.return_value = {}
-    client = TMDb(key="key", session=session, language="pt-BR", region="BR", timeout=3.5)
+    client = TMDb(api_key="key", session=session, language="pt-BR", region="BR", timeout=3.5)
 
     client.movies().latest()
 
@@ -45,7 +45,7 @@ def test_timeout_is_shared_with_sync_resources() -> None:
 
 @pytest.mark.parametrize("client_class", (TMDb, aioTMDb))
 def test_client_resources_share_configuration_and_transport(client_class: Type[Any]) -> None:
-    client = client_class(key="key", session=MagicMock())
+    client = client_class(api_key="key", session=MagicMock())
     resource = client.movie(123)
 
     assert resource._config is client._config
@@ -59,7 +59,7 @@ async def test_timeout_is_shared_with_async_resources() -> None:
     response.json = AsyncMock(return_value={})
     session.request.return_value.__aenter__ = AsyncMock(return_value=response)
     session.request.return_value.__aexit__ = AsyncMock(return_value=False)
-    client = aioTMDb(key="key", session=session, language="pt-BR", region="BR", timeout=3.5)
+    client = aioTMDb(api_key="key", session=session, language="pt-BR", region="BR", timeout=3.5)
 
     await client.movies().latest()
 
@@ -77,7 +77,7 @@ def test_sync_client_context_reuses_and_closes_its_session() -> None:
         response = session.request.return_value.__enter__.return_value
         response.json.return_value = {}
 
-        with TMDb(key="key") as client:
+        with TMDb(api_key="key") as client:
             client.movies().latest()
             client.movies().popular()
 
@@ -89,7 +89,7 @@ def test_sync_client_context_reuses_and_closes_its_session() -> None:
 def test_sync_client_does_not_close_an_injected_session() -> None:
     session = MagicMock()
 
-    with TMDb(key="key", session=session):
+    with TMDb(api_key="key", session=session):
         pass
 
     session.close.assert_not_called()
@@ -105,7 +105,7 @@ async def test_async_client_context_reuses_and_closes_its_session() -> None:
         session.request.return_value.__aexit__ = AsyncMock(return_value=False)
         session.close = AsyncMock()
 
-        async with aioTMDb(key="key") as client:
+        async with aioTMDb(api_key="key") as client:
             await client.movies().latest()
             await client.movies().popular()
 
@@ -119,7 +119,7 @@ async def test_async_client_does_not_close_an_injected_session() -> None:
     session = MagicMock()
     session.close = AsyncMock()
 
-    async with aioTMDb(key="key", session=session):
+    async with aioTMDb(api_key="key", session=session):
         pass
 
     session.close.assert_not_awaited()

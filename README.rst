@@ -80,8 +80,8 @@ Initialize a TMDb object and set your API Key, language and region.
 
 .. code:: python
 
-    tmdb = TMDb(key="YOUR_API_KEY", language="pt-BR", region="BR")
-    # or: tmdb = aioTMDb(key="YOUR_API_KEY", language="pt-BR", region="BR")
+    tmdb = TMDb(api_key="YOUR_API_KEY", language="pt-BR", region="BR")
+    # or: tmdb = aioTMDb(api_key="YOUR_API_KEY", language="pt-BR", region="BR")
 
 Alternatively, set after initialize.
 
@@ -89,7 +89,7 @@ Alternatively, set after initialize.
 
     tmdb = TMDb()
     # or: tmdb = aioTMDb()
-    tmdb.key = "YOUR_API_KEY"
+    tmdb.api_key = "YOUR_API_KEY"
     tmdb.language = "pt-BR"     # default: en-US
     tmdb.region = "BR"          # default: US
 
@@ -98,7 +98,7 @@ logger as an environment variable.
 
 .. code:: bash
 
-    $ export TMDB_KEY="YOUR_API_KEY"
+    $ export TMDB_API_KEY="YOUR_API_KEY"
     $ export TMDB_LANGUAGE="pt-BR"  # ISO 639-1
     $ export TMDB_REGION="BR"       # ISO-3166-1
 
@@ -106,7 +106,7 @@ And then you will no longer need to set your API key, language and region.
 
 .. code:: python
 
-    tmdb = TMDb()   # from env: TMDB_KEY="YOUR_API_KEY", TMDB_LANGUAGE="pt-BR", TMDB_REGION="BR"
+    tmdb = TMDb()   # from env: TMDB_API_KEY="YOUR_API_KEY", TMDB_LANGUAGE="pt-BR", TMDB_REGION="BR"
     # or: tmdb = aioTMDb()
 
 Examples
@@ -175,11 +175,11 @@ Get the details of movie for a search.
 
     asyncio.run(main())
 
-.. |Code Coverage| image:: https://codecov.io/gh/leandcesar/themoviedb/branch/master/graph/badge.svg?token=OOILIE0RTS
+.. |Code Coverage| image:: https://img.shields.io/codecov/c/github/leandcesar/themoviedb?style=for-the-badge&color=F01F7A
    :target: https://codecov.io/gh/leandcesar/themoviedb
-.. |Code style: black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+.. |Code style: black| image:: https://img.shields.io/badge/code%20style-black-000000.svg?style=for-the-badge
    :target: https://github.com/psf/black
-.. |PyPI Version| image:: https://img.shields.io/pypi/v/themoviedb?color=blue
+.. |PyPI Version| image:: https://img.shields.io/pypi/v/themoviedb?color=blue&style=for-the-badge
    :target: https://pypi.org/project/themoviedb/
-.. |PyPI License| image:: https://img.shields.io/pypi/l/themoviedb.svg
+.. |PyPI License| image:: https://img.shields.io/pypi/l/themoviedb.svg?style=for-the-badge
    :target: https://img.shields.io/pypi/l/themoviedb.svg

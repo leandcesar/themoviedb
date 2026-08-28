@@ -13,7 +13,7 @@ def test_trending_movie_daily(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/trending/movie/day",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -35,7 +35,7 @@ def test_trending_movie_weekly(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/trending/movie/week",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -57,7 +57,7 @@ def test_trending_person_daily(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/trending/person/day",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -79,7 +79,7 @@ def test_trending_person_weekly(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/trending/person/week",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -101,7 +101,7 @@ def test_trending_tv_daily(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/trending/tv/day",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -123,7 +123,7 @@ def test_trending_tv_weekly(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/trending/tv/week",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",

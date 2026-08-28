@@ -14,7 +14,7 @@ def test_tv_details(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -43,7 +43,7 @@ def test_tv_details_full(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -66,7 +66,7 @@ def test_tv_aggregate_credits(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/aggregate_credits",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -88,7 +88,7 @@ def test_tv_alternative_titles(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/alternative_titles",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -110,7 +110,7 @@ def test_tv_content_ratings(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/content_ratings",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -132,7 +132,7 @@ def test_tv_credits(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/credits",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -154,7 +154,7 @@ def test_tv_episode_groups(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/episode_groups",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -176,7 +176,7 @@ def test_tv_external_ids(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/external_ids",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -198,7 +198,7 @@ def test_tv_images(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/images",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "watch_region": "TEST_TMDB_REGION",
             },
         )
@@ -218,7 +218,7 @@ def test_tv_keywords(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/keywords",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -240,7 +240,7 @@ def test_tv_recommendations(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/recommendations",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -263,7 +263,7 @@ def test_tv_reviews(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/reviews",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -286,7 +286,7 @@ def test_tv_screened_theatrically(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/screened_theatrically",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -309,7 +309,7 @@ def test_tv_similar(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/similar",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -332,7 +332,7 @@ def test_tv_translations(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/translations",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -354,7 +354,7 @@ def test_tv_videos(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/videos",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -377,7 +377,7 @@ def test_tv_watch_providers(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/tv/{tv_id}/watch/providers",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -398,7 +398,7 @@ def test_tvs_latest(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/tv/latest",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -419,7 +419,7 @@ def test_tvs_airing_today(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/tv/airing_today",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -441,7 +441,7 @@ def test_tvs_on_the_air(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/tv/on_the_air",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -463,7 +463,7 @@ def test_tvs_popular(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/tv/popular",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -485,7 +485,7 @@ def test_tvs_top_rated(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/tv/top_rated",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",

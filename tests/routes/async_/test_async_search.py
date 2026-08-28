@@ -16,7 +16,7 @@ async def test_search_collections(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/search/collection",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -40,7 +40,7 @@ async def test_search_companies(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/search/company",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -64,7 +64,7 @@ async def test_search_keywords(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/search/keyword",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -88,7 +88,7 @@ async def test_search_movies(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/search/movie",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -113,7 +113,7 @@ async def test_search_multi(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/search/multi",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -138,7 +138,7 @@ async def test_search_people(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/search/person",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -163,7 +163,7 @@ async def test_search_tv(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/search/tv",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",

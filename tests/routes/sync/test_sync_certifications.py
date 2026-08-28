@@ -13,7 +13,7 @@ def test_certifications_movie(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/certification/movie/list",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -34,7 +34,7 @@ def test_certifications_tv(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/certification/tv/list",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",

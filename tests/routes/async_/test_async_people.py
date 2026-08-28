@@ -17,7 +17,7 @@ async def test_person_details(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/person/{person_id}",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -48,7 +48,7 @@ async def test_person_details_full(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/person/{person_id}",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -73,7 +73,7 @@ async def test_person_external_ids(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/person/{person_id}/external_ids",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -96,7 +96,7 @@ async def test_person_images(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/person/{person_id}/images",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "watch_region": "TEST_TMDB_REGION",
             },
         )
@@ -117,7 +117,7 @@ async def test_person_combined_credits(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/person/{person_id}/combined_credits",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -140,7 +140,7 @@ async def test_person_movie_credits(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/person/{person_id}/movie_credits",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -163,7 +163,7 @@ async def test_person_tv_credits(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/person/{person_id}/tv_credits",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -186,7 +186,7 @@ async def test_person_tagged_images(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/person/{person_id}/tagged_images",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -209,7 +209,7 @@ async def test_person_translations(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/person/{person_id}/translations",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -231,7 +231,7 @@ async def test_people_latest(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/person/latest",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -253,7 +253,7 @@ async def test_people_popular(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/person/popular",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",

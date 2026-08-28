@@ -16,7 +16,7 @@ async def test_discover_movie(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/discover/movie",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -40,7 +40,7 @@ async def test_discover_tv(get_data, assert_data):
             "GET",
             "https://api.themoviedb.org/3/discover/tv",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",

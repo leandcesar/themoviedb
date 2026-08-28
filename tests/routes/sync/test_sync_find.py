@@ -14,7 +14,7 @@ def test_find_by_imdb(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/find/{imdb_id}",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -37,7 +37,7 @@ def test_find_by_tvdb(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/find/{tvdb_id}",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -60,7 +60,7 @@ def test_find_by_freebase_mid(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/find/{freebase_mid}",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -83,7 +83,7 @@ def test_find_by_freebase(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/find/{freebase_id}",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -106,7 +106,7 @@ def test_find_by_tvrage(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/find/{tvrage_id}",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -129,7 +129,7 @@ def test_find_by_facebook(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/find/{facebook_id}",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -152,7 +152,7 @@ def test_find_by_instagram(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/find/{instagram_id}",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
@@ -175,7 +175,7 @@ def test_find_by_twitter(get_data, assert_data):
             "GET",
             f"https://api.themoviedb.org/3/find/{twitter_id}",
             params={
-                "api_key": "TEST_TMDB_KEY",
+                "api_key": "TEST_TMDB_API_KEY",
                 "language": "TEST_TMDB_LANGUAGE",
                 "region": "TEST_TMDB_REGION",
                 "watch_region": "TEST_TMDB_REGION",
